@@ -6,6 +6,7 @@
 
 - `GET /` - loads React web app
 
+
 ## JSON API
 
 ### Users
@@ -21,6 +22,7 @@
 - `DELETE /session`
 
 
+
 ### Profiles
 
 - `GET /profiles/new`
@@ -30,6 +32,7 @@
 ### Questions
 
 - `GET /questions` with answers
+
 
 ### ProfileQuestions
 

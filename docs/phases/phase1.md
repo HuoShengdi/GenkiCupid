@@ -3,7 +3,9 @@
 ## Rails
 ### Models
 * User
+
 * Profile
+
 
 ### Controllers
 * UsersController (create, new)
@@ -15,6 +17,7 @@
 * session/new.html.erb
 * profiles/index.json.jbuilder
 * profiles/show.json.jbuilder
+
 
 ## Flux
 ### Views (React Components)

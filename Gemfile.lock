@@ -79,6 +79,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
+<<<<<<< HEAD
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -86,6 +87,11 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     pg (0.18.4)
+=======
+    nokogiri (1.6.8-x86-mingw32)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+>>>>>>> f154b3ee7a4cb8388819b95a42f9ab957c647640
     pg (0.18.4-x86-mingw32)
     pkg-config (1.1.7)
     pry (0.10.3)
@@ -158,7 +164,10 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
 
 PLATFORMS
+<<<<<<< HEAD
   ruby
+=======
+>>>>>>> f154b3ee7a4cb8388819b95a42f9ab957c647640
   x86-mingw32
 
 DEPENDENCIES
@@ -178,4 +187,8 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.12.4
+=======
+   1.12.3
+>>>>>>> f154b3ee7a4cb8388819b95a42f9ab957c647640

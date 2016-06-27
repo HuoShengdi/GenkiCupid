@@ -22,6 +22,8 @@ column name     | data type | details
 id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key (references users)
 location        | string    | not null
+visit_history   | string    | array
+location        | string    | not null, json
 birthdate       | datetime  | not null
 gender          | string    | not null
 orientation     | string    | not null
@@ -43,6 +45,7 @@ id              | integer   | not null, primary key
 body            | text      | not null
 
 ## answeroptions
+
 column name     | data type | details
 ----------------|-----------|----------------------
 id              | integer   | not null, primary key
