@@ -34,12 +34,12 @@
 - `GET /questions` with answers
 
 
-### ProfileQuestions
+### Answers
 
-- `GET /profilequestions`
-- `POST /profilequestion`
-- `PATCH /profilequestion`
-- `DELETE /profilequestion`
+- `GET answers`
+- `POST answer`
+- `PATCH answer`
+- `DELETE answer`
 
 ### Messages
 

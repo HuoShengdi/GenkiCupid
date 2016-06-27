@@ -63,41 +63,41 @@ what you'll need to do.
   0. invoked from API callback
   0. `Question` store updates `_newQuestion` and emits change.
 
-## ProfileQuestion Cycles
+## Answer Cycles
 
-### ProfileQuestion API Request Actions
+### Answer API Request Actions
 
-* `fetchProfileQuestions`
+* `fetchAnswers`
   0. invoked from `QuestionList`
-  0. `GET /api/profiles/:username/profilequestions` is called
-  0. `receiveProfileQuestions` is set as the callback
+  0. `GET /api/profiles/:username/answers` is called
+  0. `receiveAnswers` is set as the callback
 
-* `addProfileQuestion`
+* `addAnswer`
   0. invoked from `QuestionForm` submit button `onClick`
-  0. `POST /api/profiles/:username/profilequestions` is called
-  0. `receiveSingleProfileQuestion` is set as the callback
+  0. `POST /api/profiles/:username/answers` is called
+  0. `receiveSingleAnswer` is set as the callback
 
-* `updateProfileQuestion`
+* `updateAnswer`
   0. invoked from `QuestionForm` submit button `onClick`
-  0. `PATCH /api/profiles/:username/profilequestion/:id` is called
-  0. `receiveSingleProfileQuestion` is set as the callback
+  0. `PATCH /api/profiles/:username/answer/:id` is called
+  0. `receiveSingleAnswer` is set as the callback
 
-* `destroyProfileQuestion`
+* `destroyAnswer`
   0. invoked from `QuestionListItem` delete button `onClick`
-  0. `DELETE /api/profiles/:username/profilequestion/:id` is called
-  0. `removeProfileQuestion` is set as the callback
+  0. `DELETE /api/profiles/:username/answer/:id` is called
+  0. `removeAnswer` is set as the callback
 
-### ProfileQuestion API Response Actions
+### Answer API Response Actions
 
-* `receiveProfileQuestions`
+* `receiveAnswers`
   0. invoked from API callback
   0. `Question` store updates `_questions` and emits change
 
-* `receiveSingleProfileQuestion`
+* `receiveSingleAnswer`
   0. invoked from API callback
   0. `Question` store updates `_questions[id]` and emits change
 
-* `destroyProfileQuestion`
+* `destroyAnswer`
   0. invoked from API callback
   0. `Question` store removes `_questions[id]` and emits change
 
