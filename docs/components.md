@@ -11,6 +11,8 @@ _**exactly**_ match the nesting of your routes.)
     * Suggestions
     * Visits
       * VisitItem
+    * NewQuestion
+      * QuestionForm
   * **MatchesIndex**
     * MatchList
       * MatchListItem
