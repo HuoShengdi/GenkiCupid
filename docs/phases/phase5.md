@@ -1,4 +1,4 @@
-# Phase 5: Questions
+# Phase 5: Questions  1 day
 ## Rails
 ### Models
 * Question
@@ -11,6 +11,7 @@
 
 ### Views
 * questions/show.json.jbuilder
+* answers/show.json.jbuilder
 
 ## Flux
 ### Views (React Components)
@@ -33,8 +34,15 @@
 * AnswerActions.addAnswer
 * AnswerActions.updateAnswer
 * AnswerActions.destroyAnswer
+* AnswerActions.removeAnswer
 
 ### ApiUtil
+* ApiUtil.fetchQuestion
+* ApiUtil.fetchAnswers
+* ApiUtil.fetchAnswer
+* ApiUtil.addAnswer
+* ApiUtil.updateAnswer
+* ApiUtil.destroyAnswer
 
 
 ## Gems/Libraries

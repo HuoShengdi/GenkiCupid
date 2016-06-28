@@ -26,15 +26,17 @@
 
 ### Stores
 * Profile
-* Essays
+* Visits
 
 ### Actions
-* ProfileActions.fetchProfile
+* ProfileActions.fetchProfile - essays packaged with profile
 * ProfileActions.receiveProfile
 * ProfileActions.createProfile
 * ProfileActions.updateProfile
 * ProfileActions.destroyProfile
-
+* ProfileActions.removeProfile
+* VisitActions.fetchVisited
+* VisitActions.receiveVisited
 
 
 ### ApiUtil
@@ -42,6 +44,7 @@
 * ApiUtil.createProfile
 * ApiUtil.editProfile
 * ApiUtil.destroyProfile
+* ApiUtil.fetchVisited
 
 ## Gems/Libraries
 * Flux Dispatcher (npm)

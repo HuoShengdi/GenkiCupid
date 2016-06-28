@@ -110,12 +110,13 @@ what you'll need to do.
 
 ### Message API Request Actions
 
-* `fetchConversation`
-  0. invoked from `ConversationDetail`
+* `fetchMessages`
+  0. invoked from `ConversationList`
   0. `GET /api/messages` is called
-  0. `receiveConversation` is set as the callback
+  0. passes current user's id as param, matches both author and recipient ids
+  0. `receiveMessages` is set as the callback
 
-* `addMessage`
+* `postMessage`
   0. invoked from `MessageForm` submit button `onClick`
   0. `POST /api/messages` is called
   0. `receiveSingleMessage` is set as the callback
@@ -133,11 +134,11 @@ what you'll need to do.
 
 * `receiveSingleMessage`
   0. invoked from API callback
-  0. `Message` store updates `_messages[id]` and emits change
+  0. `Message` store updates `_messages[other_id]` and emits change
 
 * `removeMessage`
   0. invoked from API callback
-  0. `Message` store removes `_messages[id]` and emits change
+  0. `Message` store removes `_messages[other_id]` and emits change
 
 ### Store Listeners
   * `ConversationDetail` component listens to `Message` store
