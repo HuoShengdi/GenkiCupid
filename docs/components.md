@@ -21,7 +21,7 @@ _**exactly**_ match the nesting of your routes.)
     * ProfileDetails
     * ProfileTabs
     * ProfileContent
-      * ProfileAbout
+      * **ProfileAbout**
         * EssayItem
       * **ProfileQuestions**
         * AnswerList
@@ -43,5 +43,6 @@ _**exactly**_ match the nesting of your routes.)
   * **component:** `Home` **path:** `home`
   * **component:** `MatchesIndex` **path:** `matches`
   * **component:** `Profile` **path:** `profiles/:username`
-    * **component:** `Questions` **path:** `/questions`
+    * **component:** `ProfileAbout` **path:** `/about`
+    * **component:** `ProfileQuestions` **path:** `/questions`
   * **component:** `Messages` **path:** `messages`
