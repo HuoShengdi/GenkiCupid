@@ -7,35 +7,46 @@ id              | integer   | not null, primary key
 username        | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
-
+avatar_url      | string    | default: placeholder image
+postal_code     | string    | not null, indexed
+birthdate       | datetime  | not null, indexed
+gender          | string    | not null, indexed
+orientation     | string    | not null, indexed
+rel_status      | string    | not null, indexed
 
 ## visits
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 visitor_id      | integer   | not null, foreign key (references users)
-profile_id      | integer   | not null, foreign key (references profiles)
+user_id         | integer   | not null, foreign key (references users)
 
-## profiles
+## searchparams
 column name     | data type | details
-----------------|-----------|-----------------------
+----------------|-----------|----------------------
 id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key (references users)
-avatar_url      | string    | not null, default value
-location        | string    | not null
-visit_history   | string    | array
-location        | string    | not null, json
-birthdate       | datetime  | not null
 gender          | string    | not null
 orientation     | string    | not null
+min_age         | integer   | not null, default: 18 (minimum: 15)
+max_age         | integer   | not null, default: 49
 rel_status      | string    | not null
-looking_for     | json      |
+postal_code     | string    | not null
+distance        | integer   | not null
+
+## matches
+column name     | data type | details
+----------------|-----------|----------------------
+id              | integer   | not null, primary key
+user_id         | integer   | not null, foreign key
+match_id        | integer   | not null, foreign key
+
 
 ## essays
 column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
-profile_id      | integer   | not null, foreign key (references profiles)
+user_id         | integer   | not null, foreign key (references users)
 title           | string    | not null
 body            | text      | not null
 
@@ -51,13 +62,13 @@ column name     | data type | details
 ----------------|-----------|----------------------
 id              | integer   | not null, primary key
 question_id     | integer   | not null, foreign key (references questions), indexed
-match_params    | string    | not null, json {attribute: points}
+
 
 ## answers
 column name     | data type | details
 ----------------|-----------|----------------------
 id              | integer   | not null, primary key
-profile_id      | integer   | not null, foreign key (references profiles), indexed, unique [question_id]
+user_id      | integer   | not null, foreign key (references users), indexed, unique [question_id]
 question_id     | integer   | not null, foreign key (references questions), indexed
 option_id       | integer   | not null, foreign key (references answeroptions), indexed
 

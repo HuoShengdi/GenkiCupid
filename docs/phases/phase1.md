@@ -3,12 +3,12 @@
 ## Rails
 ### Models
 * User
-* Profile
+
 
 ### Controllers
-* UsersController (create, new)
-* SessionsController (create, new, destroy)
-* Api::ProfilesController (create, index, show, update)
+* Api::UsersController (create, new)
+* Api::SessionsController (create, new, destroy)
+* Api::ProfilesController (index, show, update) (display logic for users)
 
 ### Views
 * profiles/show.json.jbuilder
