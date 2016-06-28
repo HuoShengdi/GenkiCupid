@@ -16,12 +16,14 @@ _**exactly**_ match the nesting of your routes.)
       * MatchListItem
   * **Profile**
     * ProfileHeader
+    * ProfileDetails
     * ProfileTabs
     * ProfileContent
       * ProfileAbout
-      * ProfileQuestions
-        * QuestionList
-          * QuestionListItem
+        * EssayItem
+      * **ProfileQuestions**
+        * AnswerList
+          * AnswerListItem
         * NewQuestion
           * QuestionForm
   * **Messages**
@@ -39,3 +41,5 @@ _**exactly**_ match the nesting of your routes.)
   * **component:** `Home` **path:** `home`
   * **component:** `MatchesIndex` **path:** `matches`
   * **component:** `Profile` **path:** `profiles/:username`
+    * **component:** `Questions` **path:** `/questions`
+  * **component:** `Messages` **path:** `messages`

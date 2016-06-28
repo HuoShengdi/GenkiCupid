@@ -39,7 +39,7 @@ what you'll need to do.
 * `fetchVisited`
   0. invoked from `Visits` `didMount`
   0. `GET /api/profiles` is called
-  0. user `visit_history` (array of user ids) is passed into parameters
+  0. user `visits`is passed into parameters
   0. `receiveVisited` is set as the callback
 
 ### Visit API Response Actions

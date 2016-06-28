@@ -53,9 +53,9 @@ GenkiCupid is a web application inspired by OKCupid that will be built using Rub
 - [ ] authentication
 - [ ] user signup/signin pages
 - [ ] blank landing page after signin
-- [ ] two seed user profiles for testing purposes
+- [ ] create `Profile` model
 
-### Phase 2: Profile Model, API, and basic APIUtil (1.5 days, W1 Th 12pm)
+### Phase 2: Profile Model, dependent models, API, and basic APIUtil (1.5 days, W1 Th 12pm)
 
 ### Phase 3: Flux Architecture and Router (1.5 days, W1 F 6pm)
 

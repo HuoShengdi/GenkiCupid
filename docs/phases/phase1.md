@@ -1,11 +1,9 @@
-# Phase 1: User Authentication, Note Model and JSON API
+# Phase 1: User Authentication, Profile Model and JSON API
 
 ## Rails
 ### Models
 * User
-
 * Profile
-
 
 ### Controllers
 * UsersController (create, new)
@@ -13,9 +11,6 @@
 * Api::ProfilesController (create, index, show, update)
 
 ### Views
-* users/new.html.erb
-* session/new.html.erb
-* profiles/index.json.jbuilder
 * profiles/show.json.jbuilder
 
 
