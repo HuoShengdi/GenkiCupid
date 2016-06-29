@@ -26,5 +26,5 @@ module.exports = {
       }
     ]
   },
-  devtools: 'source-maps'
+  devtool: 'source-maps'
 };

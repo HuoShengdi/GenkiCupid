@@ -48,7 +48,7 @@ column name     | data type | details
 id              | integer   | not null, primary key
 user_id         | integer   | not null, foreign key (references users)
 title           | string    | not null
-body            | text      | not null
+body            | text      | 
 
 ## questions
 column name     | data type | details

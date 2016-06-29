@@ -8,7 +8,7 @@
 ### Controllers
 * Api::UsersController (create, new)
 * Api::SessionsController (create, new, destroy)
-* Api::ProfilesController (index, show, update) (display logic for users)
+* Api::ProfilesController (show, update) (display logic for users)
 
 ### Views
 * profiles/show.json.jbuilder
