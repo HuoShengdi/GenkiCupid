@@ -1,14 +1,14 @@
 # GenkiCupid
 
-[Heroku link][heroku] **Note:** This should be a link to your production site
+[Heroku link][heroku]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: http://genkicupid.herokuapp.com
 
 ## Minimum Viable Product
 
 GenkiCupid is a web application inspired by OKCupid that will be built using Ruby on Rails and React.js.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria:
 
-- [ ] Hosting on Heroku
+- [x] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
 - [ ] A production README, replacing this README
 - [ ] Browse and search other users by location and ‘looking for’
@@ -48,21 +48,21 @@ GenkiCupid is a web application inspired by OKCupid that will be built using Rub
 
 **Objective:** Functioning rails project with Authentication
 
-- [ ] create new project
-- [ ] create `User` model
-- [ ] authentication
-- [ ] user signup/signin pages
-- [ ] blank landing page after signin
+- [x] create new project
+- [x] create `User` model
+- [x] authentication
+- [x] user signup/signin pages
+- [x] blank landing page after signin
 
 ### Phase 2: Profile Model, dependent models, API, and basic APIUtil (1.5 days, W1 Th 12pm)
 
 **Objective:** A single user's profile information can be created, read, and edited through the API
 
-- [ ] create `Profile` React components
-- [ ] create `Profile` store
-- [ ] set up API utils to fetch to store and update components
-- [ ] build profile API actions
-- [ ] jbuilder views for profile
+- [x] create `Profile` React components
+- [x] create `Profile` store
+- [x] set up API utils to fetch to store and update components
+- [x] build profile API actions
+- [x] jbuilder views for profile
 - [ ] build Essay and Visit models and jbuilder views
 
 ### Phase 3: Flux Architecture and Router (1.5 days, W1 F 6pm)
