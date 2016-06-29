@@ -13,6 +13,7 @@ const Profile = require('./components/profile');
 const NavBar = require('./components/nav_bar');
 
 const SessionStore = require('./stores/session_store');
+const SessionActions = require('./actions/session_actions');
 
 const App = React.createClass({
 
@@ -35,7 +36,7 @@ const appRouter = (
       <IndexRoute component={Home}/>
       <Route path="/signup" component={SignupForm}/>
       <Route path="/login" component={LoginForm}/>
-      <Route path="/profiles" component={Profile}>
+      <Route path="/profiles/:username" component={Profile}>
 
       </Route>
     </Route>
@@ -49,6 +50,7 @@ function _ensureLoggedIn(nextState, replace) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    SessionActions.receiveCurrentUser(window.currentUser);
     const root = document.getElementById('content');
     ReactDOM.render(appRouter, root);
   });

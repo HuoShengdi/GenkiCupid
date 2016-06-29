@@ -16,7 +16,7 @@ class Api::SessionsController < ApplicationController
       render json: @user.errors, status: 422
     else
       log_in!(@user)
-      redirect_to root_url
+      redirect_to '/api/'
     end
   end
 
@@ -28,5 +28,6 @@ class Api::SessionsController < ApplicationController
       render json: {}
     else
       render json: {base: ['Not logged in!']}, status: 404
+    end
   end
 end

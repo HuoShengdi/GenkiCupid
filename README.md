@@ -123,6 +123,9 @@ Essays can be read and edited on profile page, recent Visits are displayed on us
 - [ ] guest login
 - [ ] seed guest account with message history
 
+### Bonus:
+- [ ] Sendbird API real time chat
+- [ ] friendly_ids gem to access profiles by profiles/:username instead of profiles/:id
 [phase-one]: docs/phases/phase1.md
 [phase-two through phase-4]: docs/phases/phase2-4.md
 [phase-five]: docs/phases/phase5.md

@@ -42,9 +42,9 @@ const SignupForm = React.createClass({
       username: this.state.username,
       password: this.state.password,
       verify_password: this.state.verify_password,
-      birthdate: [parseInt(this.state.birthYear),
-                  parseInt(this.state.birthMonth),
-                  parseInt(this.state.birthDay)],
+      birthdate: [this.state.birthYear,
+                  this.state.birthMonth,
+                  this.state.birthDay],
       postal_code: this.state.postal_code,
       gender: this.state.gender,
       orientation: this.state.orientation,
@@ -63,7 +63,7 @@ const SignupForm = React.createClass({
       return <li key={i}>{errorMsg}</li>;
     });
 
-    return <ul>{messages}</ul>;
+    return <ul className='errors'>{messages}</ul>;
   },
 
   update(property) {

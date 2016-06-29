@@ -6,7 +6,11 @@ class Api::UsersController < ApplicationController
 
   def create
     input_params = user_params.except(:verify_password, :birthdate)
-    input_params[:birthdate] = DateTime.new(*user_params[:birthdate].map{|el| el.to_i})
+    begin
+      input_params[:birthdate] = DateTime.new(*user_params[:birthdate].map{|el| el.to_i})
+    rescue ArgumentError => e
+      input_params[:birthdate] = nil
+    end
     @user = User.new(input_params)
 
     unless user_params[:password] == user_params[:verify_password]
@@ -16,7 +20,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       log_in!(@user)
-      redirect_to api_profile_url(@user)
+      render 'api/users/show'
     else
       render json: @user.errors, status: 422
     end
