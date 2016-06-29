@@ -10,6 +10,8 @@ const Home = require('./components/home');
 const SignupForm = require('./components/signup_form');
 const LoginForm = require('./components/login_form');
 const Profile = require('./components/profile');
+const ProfileAbout = require('./components/profile_components/profile_about');
+const ProfileQuestions = require('./components/profile_components/profile_questions');
 const NavBar = require('./components/nav_bar');
 
 const SessionStore = require('./stores/session_store');
@@ -36,8 +38,9 @@ const appRouter = (
       <IndexRoute component={Home}/>
       <Route path="/signup" component={SignupForm}/>
       <Route path="/login" component={LoginForm}/>
-      <Route path="/profiles/:username" component={Profile}>
-
+      <Route path="/profiles/:username" component={Profile} onEnter={_ensureLoggedIn}>
+        <Route path="/profiles/:username/about" component={ProfileAbout}/>
+        <Route path="/profiles/:username/questions" component={ProfileQuestions}/>
       </Route>
     </Route>
   </Router>
@@ -50,7 +53,9 @@ function _ensureLoggedIn(nextState, replace) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (window.currentUser){
     SessionActions.receiveCurrentUser(window.currentUser);
+  }
     const root = document.getElementById('content');
     ReactDOM.render(appRouter, root);
-  });
+});

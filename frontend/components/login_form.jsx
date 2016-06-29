@@ -9,8 +9,7 @@ const LoginForm = React.createClass({
   getInitialState() {
     return {
       username: "",
-      password: "",
-      verify_password: ""
+      password: ""
     };
   },
   componentDidMount() {
@@ -33,8 +32,7 @@ const LoginForm = React.createClass({
 
     const formData = {
       username: this.state.username,
-      password: this.state.password,
-      verify_password: this.state.verify_password
+      password: this.state.password
     };
 
     SessionActions.logIn(formData);

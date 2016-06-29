@@ -19,3 +19,15 @@ ul.errors {
   line-height: 1;
   display: inline-block;
 }
+
+#content {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  background: #ffdddd;
+}

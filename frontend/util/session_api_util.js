@@ -28,6 +28,7 @@ module.exports = {
     $.ajax({
       url: 'api/session',
       type: 'DELETE',
+      success,
       error: function () {
         console.log("Logout error: SessionApiUtil#logout");
       }

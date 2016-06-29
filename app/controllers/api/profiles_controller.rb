@@ -9,12 +9,12 @@ class Api::ProfilesController < ApplicationController
     begin
       update_params[:birthdate] = DateTime.new(*user_params[:birthdate].map{|el| el.to_i})
     rescue ArgumentError => e
-      
+
     end
     if @user.update_attributes(user_params)
       render :show
     else
-      render json: @user.errors.full_messages
+      render json: @user.errors
     end
   end
 

@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.create(:username => "rakuraku15",
+            :password => "chitoge",
+            :postal_code => "92127",
+            :gender => "male",
+            :orientation => "straight",
+            :rel_status => "single",
+            :birthdate => DateTime.new(1998, 5, 15))

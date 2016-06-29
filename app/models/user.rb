@@ -5,10 +5,12 @@ class User < ActiveRecord::Base
   validates :password, length: {minimum: 6, allow_nil: true}
   validates :password_digest, presence: true
   validates :username, presence: true, uniqueness: true
-  validates :session_token, presence:true, uniqueness: true
+  validates :session_token, presence: true, uniqueness: true
   validates :avatar_url, :postal_code, :birthdate, :gender, :orientation, :rel_status, presence: true
 
-
+  def age
+    age = ((Time.current - self.birthdate.comparable_time).to_int/(365*24*60*60))
+  end
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -37,7 +39,7 @@ class User < ActiveRecord::Base
   end
 
   def ensure_avatar
-    self.avatar_url ||= "images/default"
+    self.avatar_url ||= "assets/default.png"
   end
 
 end

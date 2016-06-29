@@ -2,7 +2,27 @@ const React = require('react');
 
 const Home = React.createClass({
   render () {
-    return <div/>;
+    return (
+      <div>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        <h1>GenkiCupid Home</h1>
+        
+      </div>
+    );
   }
 });
 
