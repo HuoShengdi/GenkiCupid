@@ -13,4 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require bundle
-//= require bundle.js.map
