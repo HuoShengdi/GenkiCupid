@@ -4,6 +4,7 @@ const ProfileActions = require('../actions/profile_actions');
 const ProfileStore = require('../stores/profile_store');
 const ProfileHeader = require('./profile_components/profile_header');
 const ProfileTabs = require('./profile_components/profile_tabs');
+const ProfileDetails = require('./profile_components/profile_details');
 
 const Profile = React.createClass({
   getInitialState(){

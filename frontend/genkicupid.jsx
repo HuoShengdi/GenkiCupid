@@ -39,6 +39,7 @@ const appRouter = (
       <Route path="/signup" component={SignupForm}/>
       <Route path="/login" component={LoginForm}/>
       <Route path="/profiles/:username" component={Profile} onEnter={_ensureLoggedIn}>
+        <IndexRoute component={ProfileAbout}/>
         <Route path="/profiles/:username/about" component={ProfileAbout}/>
         <Route path="/profiles/:username/questions" component={ProfileQuestions}/>
       </Route>

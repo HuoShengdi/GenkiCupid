@@ -20,6 +20,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       log_in!(@user)
+      Essay.generate_essays(@user.id)
       render 'api/users/show'
     else
       render json: @user.errors, status: 422

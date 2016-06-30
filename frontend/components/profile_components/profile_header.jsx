@@ -1,14 +1,11 @@
 const React = require('react');
-
+const StringUtils = require('../../util/string_utils');
 
 const ProfileHeader = React.createClass({
-  capitalize(string) {
-    return string[0].toUpperCase() + string.slice(1);
-  },
   render () {
     let genderStr = this.props.profile.gender;
     if (genderStr) {
-      genderStr = this.capitalize(genderStr);
+      genderStr = StringUtils.capitalize(genderStr);
     }
     return (
         <header className='profile-header'>

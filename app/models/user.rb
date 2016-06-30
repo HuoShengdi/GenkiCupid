@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   validates :session_token, presence: true, uniqueness: true
   validates :avatar_url, :postal_code, :birthdate, :gender, :orientation, :rel_status, presence: true
 
+  has_many :essays
+
   def age
     age = ((Time.current - self.birthdate.comparable_time).to_int/(365*24*60*60))
   end
