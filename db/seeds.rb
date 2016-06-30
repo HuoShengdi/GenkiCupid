@@ -12,4 +12,5 @@ User.create(:username => "rakuraku15",
             :gender => "male",
             :orientation => "straight",
             :rel_status => "single",
-            :birthdate => DateTime.new(1998, 5, 15))
+            :birthdate => Date.new(1998, 5, 15))
+Essay.generate_essays(1);

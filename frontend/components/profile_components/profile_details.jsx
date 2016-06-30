@@ -1,11 +1,13 @@
 const React = require('react');
 const StringUtils = require('../../util/string_utils');
 const ProfileDetailItem = require('./profile_detail_item');
+const SessionStore = require('../../stores/session_store');
 
 
 const ProfileDetails = React.createClass({
+  openEditForm(){
 
-
+  },
   render: function() {
     const keys = Object.keys(this.props.profile);
     const details = keys.map((key)=>{
@@ -35,7 +37,9 @@ const ProfileDetails = React.createClass({
     });
     return (
       <div className="profile-details">
-        <h4>Details</h4>
+        <h4>Details
+        {(this.props.profile.id === SessionStore.currentUser.id ?
+          <span onClick={this.openEditForm}>Edit</span> : "")}</h4>
         {details}
       </div>
     );

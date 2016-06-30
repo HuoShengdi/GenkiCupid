@@ -7,7 +7,7 @@ class Api::UsersController < ApplicationController
   def create
     input_params = user_params.except(:verify_password, :birthdate)
     begin
-      input_params[:birthdate] = DateTime.new(*user_params[:birthdate].map{|el| el.to_i})
+      input_params[:birthdate] = Date.new(*user_params[:birthdate])
     rescue ArgumentError => e
       input_params[:birthdate] = nil
     end

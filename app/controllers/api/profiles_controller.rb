@@ -7,7 +7,7 @@ class Api::ProfilesController < ApplicationController
     @user = User.find_by_username(params[:username])
     update_params = user_params.except(:birthdate)
     begin
-      update_params[:birthdate] = DateTime.new(*user_params[:birthdate].map{|el| el.to_i})
+      update_params[:birthdate] = Date.new(*user_params[:birthdate])
     rescue ArgumentError => e
 
     end

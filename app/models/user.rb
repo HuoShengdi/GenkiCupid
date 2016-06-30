@@ -11,7 +11,11 @@ class User < ActiveRecord::Base
   has_many :essays
 
   def age
-    age = ((Time.current - self.birthdate.comparable_time).to_int/(365*24*60*60))
+    age = ((Date.today - self.birthdate.to_date)/365).to_i
+  end
+
+  def birthday
+    self.birthdate.to_date.to_formatted_s
   end
 
   def self.find_by_credentials(username, password)
