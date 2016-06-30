@@ -42,9 +42,7 @@ const SignupForm = React.createClass({
       username: this.state.username,
       password: this.state.password,
       verify_password: this.state.verify_password,
-      birthdate: [this.state.birthYear,
-                  this.state.birthMonth,
-                  this.state.birthDay],
+      birthdate: this.state.birthdate,
       postal_code: this.state.postal_code,
       gender: this.state.gender,
       orientation: this.state.orientation,
@@ -101,20 +99,9 @@ const SignupForm = React.createClass({
             </label>
             <br/>
             <label> Birthdate: {this.fieldErrors("birthdate")}
-              <input type="text"
-                value={this.state.birthYear}
-                onChange={this.update("birthYear")}
-                placeholder="YYYY"
-                className="login-input" />
-              <input type="text"
-                value={this.state.birthMonth}
-                onChange={this.update("birthMonth")}
-                placeholder="MM"
-                className="login-input" />
-              <input type="text"
-                value={this.state.birthDay}
-                onChange={this.update("birthDay")}
-                placeholder="DD"
+              <input type="date"
+                value={this.state.birthdate}
+                onChange={this.update("birthdate")}
                 className="login-input" />
             </label>
             <br/>

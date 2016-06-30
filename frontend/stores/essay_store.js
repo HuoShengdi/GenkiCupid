@@ -28,7 +28,9 @@ EssayStore.__onDispatch = function (payload) {
       EssayStore.__emitChange();
       break;
     case EssayConstants.ESSAYS_RECEIVED:
-
+      _resetEssays(payload.essays);
+      EssayStore.__emitChange();
+      break;
   }
 };
 
