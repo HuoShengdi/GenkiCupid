@@ -10,6 +10,7 @@ module.exports = {
     $.ajax( {
       url: '/api/profiles/' + profileData.username,
       type: 'PATCH',
+      data: {user: profileData},
       success
     });
   }

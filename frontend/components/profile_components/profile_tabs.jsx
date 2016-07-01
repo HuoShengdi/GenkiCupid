@@ -13,7 +13,7 @@ const ProfileTabs = React.createClass({
     const aboutPath = "/profiles/" + this.props.profile.username + "/about";
     const questionsPath = "/profiles/" + this.props.profile.username + "/questions";
     return (
-      <div>
+      <div className='profile-tab-container'>
         <span className='profile-tab'
           onClick={this.redirect(aboutPath)}>
           About

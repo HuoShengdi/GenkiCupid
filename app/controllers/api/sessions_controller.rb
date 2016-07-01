@@ -13,7 +13,7 @@ class Api::SessionsController < ApplicationController
 
     if @user.nil?
       @user = User.new(username: params[:user][:username])
-      render json: @user.errors, status: 422
+      render json: {base: ["Invalid username/password"]}, status: 422
     else
       log_in!(@user)
       render 'api/users/show'

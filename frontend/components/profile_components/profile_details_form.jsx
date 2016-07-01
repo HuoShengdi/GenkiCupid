@@ -3,17 +3,26 @@ const ProfileActions = require('../../actions/profile_actions');
 
 const ProfileDetailsForm = React.createClass({
   getInitialState(){
-    return this.props.profile;
+    let profile = this.props.profile;
+    return profile;
   },
   update(property){
     return (e) => this.setState({[property]: e.target.value});
+
   },
+  // openModal(){
+  //
+  // },
+  // hideModal(){
+  //   this.setState({visible: false});
+  //   document.getElementById('windowshade').classList.remove("show");
+  // },
   handleSubmit(e){
     e.preventDefault();
 
     const formData = {
       username: this.state.username,
-      birthdate: this.state.birthdate,
+      birthdate: this.state.birthday,
       postal_code: this.state.postal_code,
       gender: this.state.gender,
       orientation: this.state.orientation,
@@ -21,15 +30,20 @@ const ProfileDetailsForm = React.createClass({
     };
 
     ProfileActions.editProfile(formData);
+    this.props.close();
   },
   render () {
     return (
-      <div id='details-edit-modal' className="modal profile_modal">
+      <div id='details-edit'>
+        <h3>Edit Your Details
+          <a id='form-close' href="javascript:void[0]" onClick={this.props.close}>Close</a>
+        </h3>
+
         <form>
           <label> Birthdate:
             <input type="date"
-              value={this.state.birthdate}
-              onChange={this.update("birthdate")}
+              value={this.state.birthday}
+              onChange={this.update("birthday")}
               className="login-input" />
           </label>
           <br/>
@@ -70,6 +84,7 @@ const ProfileDetailsForm = React.createClass({
               <option value="married">Married</option>
             </select>
           </label>
+          <button onClick={this.handleSubmit}>Submit</button>
         </form>
       </div>
     );

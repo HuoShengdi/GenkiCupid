@@ -18,16 +18,21 @@ const ProfileAbout = React.createClass({
   componentWillUnmount(){
     this.listener.remove();
   },
+  componentWillReceiveProps(props){
+    EssayActions.fetchEssays(props.params.username);
+  },
   render () {
     const keys = Object.keys(this.state.essays);
     const essayItems = keys.map((key)=>{
       return (
-        <EssayItem key={key} essay={this.state.essays[key]}/>
+        <EssayItem key={key}
+          essay={this.state.essays[key]}
+          username={this.props.params.username}/>
       );
     });
     return (
-      <div>
-        <ul>{essayItems}</ul>
+      <div className='profile-about'>
+        <ul id='essay-list'>{essayItems}</ul>
       </div>
     );
   }

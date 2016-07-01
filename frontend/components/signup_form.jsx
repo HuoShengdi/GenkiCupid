@@ -11,9 +11,7 @@ const SignupForm = React.createClass({
       username: "",
       password: "",
       verify_password: "",
-      birthYear: "",
-      birthMonth: "",
-      birthDay: "",
+      birthdate:"",
       postal_code: "",
       gender: "",
       orientation: "",
@@ -48,7 +46,6 @@ const SignupForm = React.createClass({
       orientation: this.state.orientation,
       rel_status: this.state.rel_status
     };
-
     SessionActions.signUp(formData);
   },
 

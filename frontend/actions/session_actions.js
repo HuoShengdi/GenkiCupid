@@ -31,7 +31,6 @@ const SessionActions = {
       actionType: SessionConstants.LOGIN,
       currentUser: currentUser
     });
-    hashHistory.push("/");
   },
   removeCurrentUser() {
     AppDispatcher.dispatch({

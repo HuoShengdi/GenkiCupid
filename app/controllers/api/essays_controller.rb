@@ -20,6 +20,7 @@ class Api::EssaysController < ApplicationController
   end
 
   def essay_params
+    puts params
     params.require(:essay).permit(:title, :body)
   end
 end

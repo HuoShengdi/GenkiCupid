@@ -14,7 +14,7 @@ class Essay < ActiveRecord::Base
 
   def self.generate_essays(user_id)
     ESSAY_TITLES.each do |title|
-      Essay.create({user_id: user_id, title: title})
+      Essay.create({user_id: user_id, title: title, body: ""})
     end
   end
 

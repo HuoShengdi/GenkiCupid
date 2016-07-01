@@ -18,6 +18,7 @@ module.exports = {
     $.ajax({
       url: '/api/profiles/' + essayData.username + '/essays/' + essayData.id,
       type: 'PATCH',
+      data: essayData,
       success
     });
   }

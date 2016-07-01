@@ -3,9 +3,71 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .profile-header {
-  height: 250px;
+  height: 280px;
 }
 
+.profile-pane * {
+  background: #fafbfd;
+  list-style: none;
+}
 .profile-header > * {
   float: left;
+}
+
+#profile-header-info{
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#profile-header-avatar {
+  border-radius: 50%;
+  margin: 20px;
+}
+.profile-pane {
+  padding: 20px;
+  width: 940px;
+  display: block;
+  margin: auto;
+}
+
+.profile-pane::after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.profile-details {
+  float:right;
+  margin-top: 20px;
+  width: 30%;
+  padding: 10px;
+}
+
+.details-top{
+  margin: 10px;
+}
+
+.detail-item{
+  margin: 10px;
+}
+.profile-tab-container {
+  background-color: transparent;
+  padding: 10px;
+}
+
+.profile-tab {
+  padding: 10px;
+}
+
+
+.profile-info-content {
+  margin-top: 20px;
+  float:left;
+  width: 65%
+}
+
+#form-close{
+  float: right;
+  margin-right: 20px;
 }

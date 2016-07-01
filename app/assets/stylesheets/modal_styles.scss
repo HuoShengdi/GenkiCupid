@@ -1,4 +1,4 @@
-#windowshade {
+.windowshade {
     position: fixed;
     overflow: auto;
     top: 0;
@@ -22,7 +22,7 @@
     border-radius: 5px;
 }
 
-#windowshade, .modal {
+.windowshade, .modal {
     visibility: hidden;
     opacity: 0;
     -webkit-transition-property: visibility,opacity,background;
@@ -39,11 +39,11 @@
     transition-delay: 200ms,0ms,0ms;
 }
 
-#windowshade .modal.show {
+.windowshade .modal.show {
   position: relative;
 }
 
-#windowshade.show, .modal.show {
+.windowshade.show, .modal.show {
     visibility: visible;
     opacity: 1;
     -webkit-transition: opacity 200ms ease-in;

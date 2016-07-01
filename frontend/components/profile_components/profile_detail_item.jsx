@@ -7,7 +7,7 @@ const ProfileDetailItem = React.createClass({
 
   render: function() {
     return (
-      <dl>
+      <dl className="detail-item">
         <dt>{this.props.field}</dt>
         <dd>{this.props.value}</dd>
       </dl>

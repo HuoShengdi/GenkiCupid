@@ -5,6 +5,7 @@ const ReactRouter = require('react-router');
   const Route = ReactRouter.Route;
   const IndexRoute = ReactRouter.IndexRoute;
   const hashHistory = ReactRouter.hashHistory;
+const Modal = require('react-modal');
 
 const Home = require('./components/home');
 const SignupForm = require('./components/signup_form');
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.currentUser){
     SessionActions.receiveCurrentUser(window.currentUser);
   }
-    const root = document.getElementById('content');
-    ReactDOM.render(appRouter, root);
+  Modal.setAppElement(document.body);
+  const root = document.getElementById('content');
+  ReactDOM.render(appRouter, root);
 });

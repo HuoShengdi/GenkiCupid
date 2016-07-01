@@ -47,7 +47,7 @@ const LoginForm = React.createClass({
       return <li key={i}>{errorMsg}</li>;
     });
 
-    return <ul>{messages}</ul>;
+    return <ul className='errors'>{messages}</ul>;
   },
 
   update(property) {

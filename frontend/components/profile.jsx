@@ -19,19 +19,21 @@ const Profile = React.createClass({
     this.profileListener = ProfileStore.addListener(this.handleChange);
     ProfileActions.fetchProfile(this.props.params.username);
   },
+  componentWillReceiveProps(props){
+    ProfileActions.fetchProfile(props.params.username);
+  },
   componentWillUnmount(){
     this.profileListener.remove();
   },
   render () {
     return (
       <div className='profile-pane'>
-        <div id='windowshade'>
-          <ProfileDetailsForm profile={this.state.profile}/>
-        </div>
         <ProfileHeader profile={this.state.profile}/>
         <div className='profile-info'>
           <ProfileTabs profile={this.state.profile}/>
-          {this.props.children}
+          <div className='profile-info-content'>
+            {this.props.children}
+          </div>
         </div>
         <ProfileDetails profile={this.state.profile}/>
       </div>);
