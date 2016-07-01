@@ -70,13 +70,13 @@ GenkiCupid is a web application inspired by OKCupid that will be built using Rub
 **Objective:** Essays belong to a profile and Visits belong to a user
 Essays can be read and edited on profile page, recent Visits are displayed on user Home page
 
-- [ ] attach profile pic and username to Visit list items
+- [ ] attach profile pic and username to Visit list items *bonus*
 - [x] be able to fetch a user's essays
 - [ ] create `Visit` store *bonus*
 - [ ] build `Visit` API actions and requests *bonus*
 - [x] build basic router path
 - [x] build `Home` page stub, set as root path
-- [ ] complete `EssayItem` and `Visit` components
+- [x] complete `EssayItem` and `Visit` *bonus* components
 
 ### Phase 4: Start Styling (0.5 days, W2 M 12pm)
 
