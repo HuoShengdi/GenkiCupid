@@ -59,8 +59,7 @@ const LoginForm = React.createClass({
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to GenkiCupid!
-          <br/>
+          <h3>Welcome to GenkiCupid!</h3>
           New? {signupLink}
 
           {this.fieldErrors("base")}
