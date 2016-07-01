@@ -1,8 +1,8 @@
 class Question < ActiveRecord::Base
   validates :body, presence: true
 
-  has_many :answer_options
-  has_many :answers
+  has_many :answer_options, dependent: :destroy
+  has_many :answers, dependent: :destroy
 
 
   def self.generate(text, answer_array)
