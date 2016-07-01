@@ -11,28 +11,41 @@
   height: 64px;
   background: #EC6695;
   border: solid #ddd 1px;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fa82f7), to(#EC6695));
-  background: -webkit-linear-gradient(top, #EC6695, #fa82f7);
-  background: -moz-linear-gradient(top, #EC6695, #fa82f7);
-  background: -ms-linear-gradient(top, #EC6695, #fa82f7);
-  background: -o-linear-gradient(top, #EC6695, #fa82f7);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f3b7d5), to(#EC6695));
+  background: -webkit-linear-gradient(top, #EC6695, #f3b7d5);
+  background: -moz-linear-gradient(top, #EC6695, #f3b7d5);
+  background: -ms-linear-gradient(top, #EC6695, #f3b7d5);
+  background: -o-linear-gradient(top, #EC6695, #f3b7d5);
 }
+
+.navbar:hover *{
+  cursor: pointer;
+}
+
 
 .navbar-logo {
   float: left;
   line-height: 1;
   height: 64px;
-  margin: 0;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .navbar-button {
-  padding: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   float: left;
-  height: 64px;
+  height: 44px;
+  color: #f3e7f5;
+  font-size: 16px;
+  padding-top: 20px;
+  width: 60px;
+  text-align: center;
 }
 
+.navbar-button:hover {
+  color: white;
+}
 .app-main {
   margin-top: 66px;
   padding-top: 20px;
@@ -41,5 +54,13 @@
 
 .app-main > * {
   margin:auto;
-  background: #f5e9f7;
+  background: #f3e7f5;
+}
+
+#login, #signup, #logout, #profile {
+  float: right;
+}
+
+h1, h2, h3, h4, h5, h6{
+  line-height: normal;
 }

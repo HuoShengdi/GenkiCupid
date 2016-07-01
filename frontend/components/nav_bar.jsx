@@ -10,38 +10,43 @@ const NavBar = React.createClass({
   redirect(path){
     return function() {
       hashHistory.push(path);
+      return false;
     };
   },
   render () {
     const userProfilePath = ("/profiles/"+ SessionStore.currentUser().username);
     const logoutButton = (
-      <button
+      <a
         onClick={this.handleLogout}
         key='logout'
-        className="navbar-button">
+        className="navbar-button"
+        id='logout'>
         Log Out
-      </button>);
+      </a>);
     const signUpButton = (
-      <button
+      <a
         onClick={this.redirect("/signup")}
         key='signup'
-        className="navbar-button">
+        className="navbar-button"
+        id='signup'>
         Sign Up
-      </button>);
+      </a>);
     const loginButton = (
-      <button
+      <a
         onClick={this.redirect("/login")}
         key='login'
-        className="navbar-button">
+        className="navbar-button"
+        id='login'>
         Log In
-      </button>);
+      </a>);
     const profileButton = (
-      <button
+      <a
         onClick={this.redirect(userProfilePath)}
         key='profile'
-        className="navbar-button">
+        className="navbar-button"
+        id='profile'>
         Profile
-      </button>);
+      </a>);
     const logo = <h4 onClick={this.redirect("/")} className="navbar-logo">GenkiCupid</h4>;
     return <div className='navbar'>
       {logo}
