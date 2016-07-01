@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   validates :avatar_url, :postal_code, :birthdate, :gender, :orientation, :rel_status, presence: true
 
   has_many :essays
+  has_many :answers
 
   def age
     age = ((Date.today - self.birthdate.to_date)/365).to_i

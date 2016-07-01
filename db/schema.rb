@@ -11,10 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630180203) do
+ActiveRecord::Schema.define(version: 20160701164706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answer_options", force: :cascade do |t|
+    t.integer  "question_id", null: false
+    t.string   "body",        null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "answer_options", ["question_id"], name: "index_answer_options_on_question_id", using: :btree
+
+  create_table "answers", force: :cascade do |t|
+    t.integer  "user_id",     null: false
+    t.integer  "question_id", null: false
+    t.integer  "option_id",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "answers", ["user_id", "question_id"], name: "index_answers_on_user_id_and_question_id", unique: true, using: :btree
+  add_index "answers", ["user_id"], name: "index_answers_on_user_id", using: :btree
 
   create_table "essays", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -26,6 +46,14 @@ ActiveRecord::Schema.define(version: 20160630180203) do
 
   add_index "essays", ["user_id", "title"], name: "index_essays_on_user_id_and_title", unique: true, using: :btree
   add_index "essays", ["user_id"], name: "index_essays_on_user_id", using: :btree
+
+  create_table "questions", force: :cascade do |t|
+    t.text     "body",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "questions", ["body"], name: "index_questions_on_body", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false
@@ -48,5 +76,15 @@ ActiveRecord::Schema.define(version: 20160630180203) do
   add_index "users", ["rel_status"], name: "index_users_on_rel_status", using: :btree
   add_index "users", ["session_token"], name: "index_users_on_session_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
+
+  create_table "visits", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "visitor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "visits", ["user_id"], name: "index_visits_on_user_id", using: :btree
+  add_index "visits", ["visitor_id"], name: "index_visits_on_visitor_id", using: :btree
 
 end

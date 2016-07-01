@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: huoshengdi
+  api_key: '659634625464326'
+  api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: huoshengdi
+  api_key: '659634625464326'
+  api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: huoshengdi
+  api_key: '659634625464326'
+  api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
+  enhance_image_tag: true
+  static_image_support: false

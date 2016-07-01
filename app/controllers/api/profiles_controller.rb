@@ -13,7 +13,8 @@ class Api::ProfilesController < ApplicationController
       render json: @user.errors
     end
   end
-
+  
+  private
   def user_params
     params.require(:user).permit(:username,:avatar_url, :postal_code, :gender, :orientation, :rel_status, :birthdate)
   end
