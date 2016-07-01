@@ -9,8 +9,7 @@ const LoginForm = React.createClass({
   getInitialState() {
     return {
       username: "",
-      password: "",
-      verify_password: ""
+      password: ""
     };
   },
   componentDidMount() {
@@ -33,8 +32,7 @@ const LoginForm = React.createClass({
 
     const formData = {
       username: this.state.username,
-      password: this.state.password,
-      verify_password: this.state.verify_password
+      password: this.state.password
     };
 
     SessionActions.logIn(formData);
@@ -49,7 +47,7 @@ const LoginForm = React.createClass({
       return <li key={i}>{errorMsg}</li>;
     });
 
-    return <ul>{messages}</ul>;
+    return <ul className='errors'>{messages}</ul>;
   },
 
   update(property) {
@@ -61,8 +59,7 @@ const LoginForm = React.createClass({
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to GenkiCupid!
-          <br/>
+          <h3>Welcome to GenkiCupid!</h3>
           New? {signupLink}
 
           {this.fieldErrors("base")}

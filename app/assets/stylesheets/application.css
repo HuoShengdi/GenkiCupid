@@ -14,8 +14,19 @@
  *= require_self
  */
 
-ul.errors {
-  list-style: none;
-  line-height: 1;
-  display: inline-block;
+#content {
+  width: 100%;
+}
+
+body {
+  font-family: 'Open Sans',sans-serif;
+  margin: 0;
+}
+
+html {
+  background: #ffdddd;
+}
+
+textarea {
+  font-family: 'Open Sans', sans-serif;
 }

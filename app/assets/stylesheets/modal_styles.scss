@@ -1,0 +1,52 @@
+.windowshade {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(17,17,17,0.7);
+    z-index: 92000;
+}
+
+.modal {
+    position: absolute;
+    margin: 60px 0;
+    left: 50%;
+    top: 0;
+    width: 720px;
+    margin-left: -360px;
+    padding: 30px 30px 30px;
+    background: #fafbfd;
+    z-index: 20002;
+    border-radius: 5px;
+}
+
+.windowshade, .modal {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: visibility,opacity,background;
+    -moz-transition-property: visibility,opacity,background;
+    transition-property: visibility,opacity,background;
+    -webkit-transition-duration: 0ms,200ms,200ms;
+    -moz-transition-duration: 0ms,200ms,200ms;
+    transition-duration: 0ms,200ms,200ms;
+    -webkit-transition-timing-function: linear,ease-in,ease-in;
+    -moz-transition-timing-function: linear,ease-in,ease-in;
+    transition-timing-function: linear,ease-in,ease-in;
+    -webkit-transition-delay: 200ms,0ms,0ms;
+    -moz-transition-delay: 200ms,0ms,0ms;
+    transition-delay: 200ms,0ms,0ms;
+}
+
+.windowshade .modal.show {
+  position: relative;
+}
+
+.windowshade.show, .modal.show {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+}

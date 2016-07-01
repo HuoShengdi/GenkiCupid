@@ -11,9 +11,7 @@ const SignupForm = React.createClass({
       username: "",
       password: "",
       verify_password: "",
-      birthYear: "",
-      birthMonth: "",
-      birthDay: "",
+      birthdate:"",
       postal_code: "",
       gender: "",
       orientation: "",
@@ -42,15 +40,12 @@ const SignupForm = React.createClass({
       username: this.state.username,
       password: this.state.password,
       verify_password: this.state.verify_password,
-      birthdate: [this.state.birthYear,
-                  this.state.birthMonth,
-                  this.state.birthDay],
+      birthdate: this.state.birthdate,
       postal_code: this.state.postal_code,
       gender: this.state.gender,
       orientation: this.state.orientation,
       rel_status: this.state.rel_status
     };
-
     SessionActions.signUp(formData);
   },
 
@@ -73,10 +68,9 @@ const SignupForm = React.createClass({
   render () {
     let loginLink = <Link to="/login">login here</Link>;
     return (
-      <div className="signup-form-container">
+      <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
-          Welcome to GenkiCupid!
-          <br/>
+          <h3>Welcome to GenkiCupid!</h3>
           If you have an account, {loginLink}.
 
           {this.fieldErrors("base")}
@@ -101,20 +95,9 @@ const SignupForm = React.createClass({
             </label>
             <br/>
             <label> Birthdate: {this.fieldErrors("birthdate")}
-              <input type="text"
-                value={this.state.birthYear}
-                onChange={this.update("birthYear")}
-                placeholder="YYYY"
-                className="login-input" />
-              <input type="text"
-                value={this.state.birthMonth}
-                onChange={this.update("birthMonth")}
-                placeholder="MM"
-                className="login-input" />
-              <input type="text"
-                value={this.state.birthDay}
-                onChange={this.update("birthDay")}
-                placeholder="DD"
+              <input type="date"
+                value={this.state.birthdate}
+                onChange={this.update("birthdate")}
                 className="login-input" />
             </label>
             <br/>

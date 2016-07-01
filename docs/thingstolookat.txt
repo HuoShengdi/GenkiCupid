@@ -1,0 +1,5 @@
+fontawesome - icons
+google fonts
+cloudinary
+sendbird
+bootstrap

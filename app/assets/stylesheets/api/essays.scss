@@ -1,0 +1,21 @@
+// Place all the styles related to the Api::Essays controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#essay-list {
+  margin: 0;
+  padding: 10px;
+}
+
+.essay textarea {
+  height: 150px;
+  width: 100%;
+}
+
+.essay-body *{
+  font-size: 14px;
+}
+
+.essay-body {
+  white-space: pre-wrap;
+}

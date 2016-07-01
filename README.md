@@ -1,14 +1,14 @@
 # GenkiCupid
 
-[Heroku link][heroku] **Note:** This should be a link to your production site
+[Heroku link][heroku]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: http://genkicupid.herokuapp.com
 
 ## Minimum Viable Product
 
 GenkiCupid is a web application inspired by OKCupid that will be built using Ruby on Rails and React.js.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria:
 
-- [ ] Hosting on Heroku
+- [x] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
 - [ ] A production README, replacing this README
 - [ ] Browse and search other users by location and ‘looking for’
@@ -48,22 +48,21 @@ GenkiCupid is a web application inspired by OKCupid that will be built using Rub
 
 **Objective:** Functioning rails project with Authentication
 
-- [ ] create new project
-- [ ] create `User` model
-- [ ] authentication
-- [ ] user signup/signin pages
-- [ ] blank landing page after signin
-- [ ] create `Profile` model
+- [x] create new project
+- [x] create `User` model
+- [x] authentication
+- [x] user signup/signin pages
+- [x] blank landing page after signin
 
 ### Phase 2: Profile Model, dependent models, API, and basic APIUtil (1.5 days, W1 Th 12pm)
 
-**Objective:** A single user's profile information can be created, read, edited, and destroyed through the API
+**Objective:** A single user's profile information can be created, read, and edited through the API
 
-- [ ] create `Profile` React components
-- [ ] create `Profile` store
-- [ ] set up API utils to fetch to store and update components
-- [ ] build profile API actions
-- [ ] jbuilder views for profile
+- [x] create `Profile` React components
+- [x] create `Profile` store
+- [x] set up API utils to fetch to store and update components
+- [x] build profile API actions
+- [x] jbuilder views for profile
 - [ ] build Essay and Visit models and jbuilder views
 
 ### Phase 3: Flux Architecture and Router (1.5 days, W1 F 6pm)
@@ -71,13 +70,13 @@ GenkiCupid is a web application inspired by OKCupid that will be built using Rub
 **Objective:** Essays belong to a profile and Visits belong to a user
 Essays can be read and edited on profile page, recent Visits are displayed on user Home page
 
-- [ ] attach profile pic and username to Visit list items
-- [ ] attach essays by user to fetch data of user's profile
-- [ ] create `Visit` store
-- [ ] build `Visit` API actions and requests
-- [ ] build basic router path
-- [ ] build `Home` page stub, set as root path
-- [ ] complete `EssayItem` and `Visit` components
+- [ ] attach profile pic and username to Visit list items *bonus*
+- [x] be able to fetch a user's essays
+- [ ] create `Visit` store *bonus*
+- [ ] build `Visit` API actions and requests *bonus*
+- [x] build basic router path
+- [x] build `Home` page stub, set as root path
+- [x] complete `EssayItem` and `Visit` *bonus* components
 
 ### Phase 4: Start Styling (0.5 days, W2 M 12pm)
 
