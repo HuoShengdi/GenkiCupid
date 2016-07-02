@@ -14,9 +14,11 @@ const ProfileAbout = React.createClass({
   componentDidMount(){
     this.listener = EssayStore.addListener(this.onChange);
     EssayActions.fetchEssays(this.props.params.username);
+    document.getElementById('pnav-about').classList.add('active');
   },
   componentWillUnmount(){
     this.listener.remove();
+    document.getElementById('pnav-about').classList.remove('active');
   },
   componentWillReceiveProps(props){
     EssayActions.fetchEssays(props.params.username);

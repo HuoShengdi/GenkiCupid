@@ -56,8 +56,24 @@
   padding: 10px;
 }
 
+.profile-tab-container::after{
+  content:"";
+  display:table;
+  clear:both;
+}
+
 .profile-tab {
-  padding: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.profile-tab.active{
+  color: #f3d;
+  border-bottom: 3px solid #f3d;
 }
 
 

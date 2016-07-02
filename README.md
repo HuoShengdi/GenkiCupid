@@ -63,7 +63,7 @@ GenkiCupid is a web application inspired by OKCupid that will be built using Rub
 - [x] set up API utils to fetch to store and update components
 - [x] build profile API actions
 - [x] jbuilder views for profile
-- [ ] build Essay and Visit models and jbuilder views
+- [x] build Essay and Visit models and jbuilder views
 
 ### Phase 3: Flux Architecture and Router (1.5 days, W1 F 6pm)
 
@@ -88,7 +88,7 @@ Essays can be read and edited on profile page, recent Visits are displayed on us
 
 **Objective:** Questions and their answers are required to generate a user's match profile
 
-- [ ] create `Question`, `AnswerOption`, and `Answer` models
+- [x] create `Question`, `AnswerOption`, and `Answer` models
 - [ ] Build API, Flux loop, and components for CRUD on Answers
 - [ ] have basic set of seed data for Questions and AnswerOptions
 - [ ] be able to generate a match profile object to compare with other users' profiles

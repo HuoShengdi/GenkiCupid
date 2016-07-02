@@ -13,20 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-#content {
-  width: 100%;
-}
-
-body {
-  font-family: 'Open Sans',sans-serif;
-  margin: 0;
-}
-
-html {
-  background: #ffdddd;
-}
-
-textarea {
-  font-family: 'Open Sans', sans-serif;
-}

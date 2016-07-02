@@ -1,8 +1,4 @@
 class Api::UsersController < ApplicationController
-  def new
-    @user = User.new
-    render :new
-  end
 
   def create
     unless user_params[:password] == user_params[:verify_password]
@@ -23,6 +19,7 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  private
   def user_params
     params.require(:user).permit(:username, :password,  :verify_password, :avatar_url, :postal_code, :gender, :orientation, :rel_status, :birthdate)
   end

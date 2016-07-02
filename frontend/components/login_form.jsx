@@ -27,8 +27,16 @@ const LoginForm = React.createClass({
     }
   },
 
-  handleSubmit(e){
+  guestLogin(e){
     e.preventDefault();
+    this.setState({username: "ItoshikiWish", password:"franzkafka"});
+    window.setTimeout(this.handleSubmit, 2000);
+  },
+
+  handleSubmit(e){
+    if (e){
+      e.preventDefault();
+    }
 
     const formData = {
       username: this.state.username,
@@ -78,7 +86,10 @@ const LoginForm = React.createClass({
                 className="login-input" />
             </label>
             <br/>
-            <input type="submit" value="Submit" />
+            <input className='login-form-button' type="submit" value="Submit" />
+            <a href='javascript.void[0]' id='guest-login'
+              className='login-form-button'
+              onClick={this.guestLogin}>Guest Login</a>
           </div>
         </form>
       </div>

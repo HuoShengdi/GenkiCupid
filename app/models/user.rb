@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
   validates :session_token, presence: true, uniqueness: true
   validates :avatar_url, :postal_code, :birthdate, :gender, :orientation, :rel_status, presence: true
 
-  has_many :essays
+  has_many :essays, dependent: :destroy
+  has_many :answers, dependent: :destroy
 
   def age
     age = ((Date.today - self.birthdate.to_date)/365).to_i

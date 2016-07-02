@@ -1,3 +1,35 @@
 // Place all the styles related to the Api::Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+form label {
+  line-height: 2;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.login-form-container > form {
+  font-size: 12px;
+}
+
+form h3 {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.login-form-button{
+  font: 14px OpenSans;
+  line-height: normal;
+  padding: 4px;
+  text-decoration: none;
+  background: #ec6695;
+  color: #fed;
+  border: none;
+  -webkit-appearance: push-button;
+  box-sizing: border-box;
+}
+
+#guest-login{
+  float:right;
+  cursor: default;
+}
