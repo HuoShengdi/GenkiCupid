@@ -1,12 +1,4 @@
 module.exports = {
-
-  fetchEssays(username, success) {
-    $.ajax( {
-      url: '/api/profiles/' + username + '/answers',
-      type: 'GET',
-      success
-    });
-  },
   fetchQuestion(id, success) {
     $.ajax( {
       url: '/api/questions/' + id,
@@ -14,11 +6,11 @@ module.exports = {
       success
     });
   },
-  updateAnswer(answerData, success) {
+  fetchRandomQuestion(username, success){
     $.ajax({
-      url: '/api/profiles/' + answerData.username + '/answers/' + answerData.id,
-      type: 'PATCH',
-      data: answerData,
+      url: '/api/questions',
+      type: 'GET',
+      data: {username: username},
       success
     });
   }

@@ -16,3 +16,20 @@ form h3 {
   font-size: 18px;
   line-height: 2;
 }
+
+.login-form-button{
+  font: 14px OpenSans;
+  line-height: normal;
+  padding: 4px;
+  text-decoration: none;
+  background: #ec6695;
+  color: #fed;
+  border: none;
+  -webkit-appearance: push-button;
+  box-sizing: border-box;
+}
+
+#guest-login{
+  float:right;
+  cursor: default;
+}

@@ -12,4 +12,10 @@ class Question < ActiveRecord::Base
     end
     return q_new
   end
+
+  def self.unanswered_questions(username)
+    user = User.find_by_username(username)
+    answered_questions = user.answers.map {|el| el.question_id}
+    unanswered_questions = Question.all.reject{ |q| answered_questions.include?(q.id)}
+  end
 end
