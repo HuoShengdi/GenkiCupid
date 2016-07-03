@@ -1,4 +1,4 @@
-const QuestionConstants = require('../constants/answer_constants');
+const QuestionConstants = require('../constants/question_constants');
 const Store = require('flux/utils').Store;
 const AppDispatcher = require('../dispatcher/dispatcher');
 

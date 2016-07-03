@@ -9,7 +9,7 @@
 GenkiCupid is a web application inspired by OKCupid that will be built using Ruby on Rails and React.js.  By the end of Week 9, this app will, at a minimum, satisfy the following criteria:
 
 - [x] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
+- [x] New account creation, login, and guest/demo login
 - [ ] A production README, replacing this README
 - [ ] Browse and search other users by location and ‘looking for’
     - [ ] Smooth, bug-free navigation
@@ -63,26 +63,23 @@ GenkiCupid is a web application inspired by OKCupid that will be built using Rub
 - [x] set up API utils to fetch to store and update components
 - [x] build profile API actions
 - [x] jbuilder views for profile
-- [x] build Essay and Visit models and jbuilder views
+- [x] build Essay model and jbuilder views
 
 ### Phase 3: Flux Architecture and Router (1.5 days, W1 F 6pm)
 
 **Objective:** Essays belong to a profile and Visits belong to a user
 Essays can be read and edited on profile page, recent Visits are displayed on user Home page
 
-- [ ] attach profile pic and username to Visit list items *bonus*
 - [x] be able to fetch a user's essays
-- [ ] create `Visit` store *bonus*
-- [ ] build `Visit` API actions and requests *bonus*
 - [x] build basic router path
 - [x] build `Home` page stub, set as root path
-- [x] complete `EssayItem` and `Visit` *bonus* components
+- [x] complete `EssayItem` components
 
 ### Phase 4: Start Styling (0.5 days, W2 M 12pm)
 
 **Objective:** Style components into readable state
 
-- [ ] Use CSS to style all components
+- [x] Use CSS to style all components
 
 ### Phase 5: Questions (1 day, W2 Tu 12pm)
 
@@ -119,12 +116,14 @@ Essays can be read and edited on profile page, recent Visits are displayed on us
 
 - [ ] generate at least 20 profiles and 20 questions to be answered on the profiles
 - [ ] pleasing color scheme
-- [ ] guest login
+- [x] guest login
 - [ ] seed guest account with message history
 
 ### Bonus:
 - [ ] Sendbird API real time chat
 - [ ] friendly_ids gem to access profiles by profiles/:username instead of profiles/:id
+- [ ] Ability to see profiles you have recently visited and profiles of those who have visited you
+
 [phase-one]: docs/phases/phase1.md
 [phase-two through phase-4]: docs/phases/phase2-4.md
 [phase-five]: docs/phases/phase5.md

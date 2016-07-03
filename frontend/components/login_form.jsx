@@ -86,8 +86,10 @@ const LoginForm = React.createClass({
                 className="login-input" />
             </label>
             <br/>
-            <input className='login-form-button' type="submit" value="Submit" />
-            <a href='javascript.void[0]' id='guest-login'
+            <a href="#" id='login-submit'
+              className='login-form-button'
+              onClick={this.handleSubmit}>Submit</a>
+            <a href='#' id='guest-login'
               className='login-form-button'
               onClick={this.guestLogin}>Guest Login</a>
           </div>

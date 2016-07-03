@@ -6,7 +6,7 @@ const EssayItem = require('./essay_item');
 
 const ProfileAbout = React.createClass({
   getInitialState(){
-    return { essays: {}};
+    return { essays: EssayStore.essays()};
   },
   onChange(){
     this.setState({essays: EssayStore.essays()});

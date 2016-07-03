@@ -48,6 +48,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+input[type="submit" i]:focus {
+	outline:0;
+	-webkit-filter: brightness(90%);
+	filter: brightness(90%);
+}
+
+input{
+
+}
 
 button:focus {
   outline:0;

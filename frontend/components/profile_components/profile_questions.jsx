@@ -3,6 +3,7 @@ const QuestionStore = require('../../stores/question_store');
 const AnswerStore = require('../../stores/answer_store');
 const QuestionActions = require('../../actions/question_actions');
 const AnswerActions = require('../../actions/answer_actions');
+const SessionStore = require('../../stores/session_store');
 
 const NewQuestion = require('./new_question');
 const AnswerList = require('./answer_list');
@@ -10,7 +11,7 @@ const AnswerList = require('./answer_list');
 
 const ProfileQuestions = React.createClass({
   getInitialState(){
-    return {question: {}, answers: {}};
+    return {question: QuestionStore.question(), answers: AnswerStore.answers()};
   },
   onNewQuestion(){
     this.setState({question: QuestionStore.question()});
@@ -21,8 +22,7 @@ const ProfileQuestions = React.createClass({
   componentDidMount(){
     this.questionListener = QuestionStore.addListener(this.onNewQuestion);
     this.answerListener = AnswerStore.addListener(this.onAnswerChange);
-    QuestionActions.fetchRandomQuestion(this.props.params.username);
-    AnswerActions.fetchAnswers(this.props.params.username);
+
     document.getElementById('pnav-questions').classList.add('active');
   },
   componentWillUnmount(){
@@ -34,7 +34,9 @@ const ProfileQuestions = React.createClass({
   render () {
     return (
       <div>
-        <NewQuestion question={this.state.question} />
+        {(this.props.params.username === SessionStore.currentUser().username) ?
+          <NewQuestion question={this.state.question} username={this.props.params.username} /> : ""
+        }
         <AnswerList answers={this.state.answers} />
       </div>
     );
