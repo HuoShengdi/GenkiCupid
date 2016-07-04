@@ -40,22 +40,22 @@ const ProfileDetailsForm = React.createClass({
         </h3>
 
         <form>
-          <label> Birthdate:
+          <label className='detail-field'> Birthdate:
             <input type="date"
               value={this.state.birthday}
               onChange={this.update("birthday")}
-              className="login-input" />
+              className="detail-input" />
           </label>
           <br/>
-          <label>ZIP Code:
+          <label className='detail-field'>ZIP Code:
             <input type="text"
               value={this.state.postal_code}
               onChange={this.update("postal_code")}
-              className="login-input" />
+              className="detail-input" />
           </label>
           <br/>
-          <label>Gender:
-            <select className="login-select"
+          <label className='detail-field'>Gender:
+            <select className="detail-select"
               value={this.state.gender}
               onChange={this.update("gender")}>
               <option></option>
@@ -63,8 +63,8 @@ const ProfileDetailsForm = React.createClass({
               <option value="male">Male</option>
             </select>
           </label>
-          <label>Orientation:
-            <select className="login-select"
+          <label className='detail-field'>Orientation:
+            <select className="detail-select"
               value={this.state.orientation}
               onChange={this.update("orientation")}>
               <option></option>
@@ -74,8 +74,8 @@ const ProfileDetailsForm = React.createClass({
             </select>
           </label>
           <br/>
-          <label>Relationship Status:
-            <select className="login-select"
+          <label className='detail-field'>Relationship Status:
+            <select className="detail-select"
               value={this.state.rel_status}
               onChange={this.update("rel_status")}>
               <option></option>
@@ -84,7 +84,8 @@ const ProfileDetailsForm = React.createClass({
               <option value="married">Married</option>
             </select>
           </label>
-          <button onClick={this.handleSubmit}>Submit</button>
+          <br/>
+          <button className='details-form-button' onClick={this.handleSubmit}>Submit</button>
         </form>
       </div>
     );

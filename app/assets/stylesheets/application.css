@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ form input, select, option{
+   border: 1px solid #a4a4a4;
+   font-size: 14px;
+   font-family: 'Open Sans', sans-serif;
+ }

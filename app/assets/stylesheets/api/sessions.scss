@@ -6,6 +6,7 @@ form label {
   line-height: 2;
   margin-right: 10px;
   font-size: 16px;
+  position: relative;
 }
 
 .login-form-container > form {
@@ -22,14 +23,36 @@ form h3 {
   line-height: normal;
   padding: 4px;
   text-decoration: none;
-  background: #ec6695;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EC6695), to(#f3b7d5));
+  background: -webkit-linear-gradient(top, #f3b7d5, #EC6695);
+  background: -moz-linear-gradient(top, #f3b7d5, #EC6695);
+  background: -ms-linear-gradient(top, #f3b7d5, #EC6695);
+  background: -o-linear-gradient(top, #f3b7d5, #EC6695);
   color: #fed;
-  border: none;
-  -webkit-appearance: push-button;
+  border: 1px #999;
   box-sizing: border-box;
+}
+
+.login-form-button:hover{
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f3b7d5), to(#EC6695));
+  background: -webkit-linear-gradient(top, #EC6695, #f3b7d5);
+  background: -moz-linear-gradient(top, #EC6695, #f3b7d5);
+  background: -ms-linear-gradient(top, #EC6695, #f3b7d5);
+  background: -o-linear-gradient(top, #EC6695, #f3b7d5);
+}
+
+#login-submit{
+  float:left;
 }
 
 #guest-login{
   float:right;
-  cursor: default;
+}
+
+#button-box{
+  margin-top: 10px;
+}
+
+#button-box::after{
+
 }

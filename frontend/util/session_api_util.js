@@ -30,7 +30,7 @@ module.exports = {
       type: 'DELETE',
       success,
       error: function () {
-        console.log("Logout error: SessionApiUtil#logout");
+        success();
       }
     });
   }

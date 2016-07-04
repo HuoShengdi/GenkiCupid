@@ -24,22 +24,24 @@ const NewQuestion = React.createClass({
   render() {
     if ($.isEmptyObject(this.props.question)) {
       return (
-        <div>
+        <div id='no-questions-message'>
           <span>You've answered all available questions!</span>
         </div>
       );
     }else if(!this.state.answering){
     return (
-      <div>
-        <span>{this.props.question.body}</span>
-        <a href="#" onClick={this.openForm}>Answer</a>
-        <a href="#" onClick={this.skipQuestion}>Skip</a>
+      <div className='inner-question-box'>
+        <div className='question-text'>{this.props.question.body}</div>
+        <a href="#" className='question-button'
+          onClick={this.openForm}>Answer</a>
+        <a href="#" className='question-button'
+          onClick={this.skipQuestion}>Skip</a>
       </div>
     );
   }else {
     return (
-      <div>
-        <span>{this.props.question.body}</span>
+      <div className='inner-question-box'>
+        <span className='question-text'>{this.props.question.body}</span>
         <QuestionForm username={this.props.username} question={this.props.question} closeForm={this.closeForm}/>
       </div>
     );

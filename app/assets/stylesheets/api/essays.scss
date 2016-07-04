@@ -7,9 +7,19 @@
   padding: 10px;
 }
 
+.essay-title {
+  font-size: 20px;
+  color: #402;
+  line-height: 2;
+}
+
 .essay textarea {
   height: 150px;
   width: 100%;
+}
+
+.essay-edit-button{
+  margin-left: 20px;
 }
 
 .essay-body *{

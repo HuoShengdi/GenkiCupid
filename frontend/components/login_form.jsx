@@ -30,7 +30,7 @@ const LoginForm = React.createClass({
   guestLogin(e){
     e.preventDefault();
     this.setState({username: "ItoshikiWish", password:"franzkafka"});
-    window.setTimeout(this.handleSubmit, 2000);
+    window.setTimeout(this.handleSubmit, 1000);
   },
 
   handleSubmit(e){
@@ -44,7 +44,7 @@ const LoginForm = React.createClass({
     };
 
     SessionActions.logIn(formData);
-    return false
+    return false;
   },
 
   fieldErrors(field) {
@@ -87,12 +87,15 @@ const LoginForm = React.createClass({
                 className="login-input" />
             </label>
             <br/>
-            <a href="#" id='login-submit'
-              className='login-form-button'
-              onClick={this.handleSubmit}>Submit</a>
-            <a href='#' id='guest-login'
-              className='login-form-button'
-              onClick={this.guestLogin}>Guest Login</a>
+            <div id='button-box'>
+              <a href="#" id='login-submit'
+                className='login-form-button'
+                onClick={this.handleSubmit}>Submit</a>
+              <a href='#' id='guest-login'
+                className='login-form-button'
+                onClick={this.guestLogin}>Guest Login</a>
+            </div>
+
           </div>
         </form>
       </div>

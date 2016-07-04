@@ -20,10 +20,10 @@ const EssayItem = React.createClass({
                         close={this.closeEdit}
                         essay={this.props.essay}
                         username={this.props.username}/>);
-    const editButton = (<button onClick={this.openEdit}>Edit</button>);
+    const editButton = (<button className='essay-edit-button' onClick={this.openEdit}>Edit</button>);
     return (
       <li className="essay">
-        <h3>{this.props.essay.title}
+        <h3 className='essay-title'>{this.props.essay.title}
           {(this.state.editing ||
             this.props.username !== SessionStore.currentUser().username) ?
             "" : editButton}</h3>

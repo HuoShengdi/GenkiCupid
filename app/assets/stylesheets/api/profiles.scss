@@ -37,20 +37,7 @@
   clear:both;
 }
 
-.profile-details {
-  float:right;
-  margin-top: 20px;
-  width: 30%;
-  padding: 10px;
-}
 
-.details-top{
-  margin: 10px;
-}
-
-.detail-item{
-  margin: 10px;
-}
 .profile-tab-container {
   background-color: transparent;
   padding: 10px;
@@ -76,11 +63,25 @@
   border-bottom: 3px solid #f3d;
 }
 
+#mini-details-username {
+  font-size: 32px;
+  font-weight: 300;
+}
 
 .profile-info-content {
   margin-top: 20px;
   float:left;
-  width: 65%
+  width: 65%;
+  background: none;
+  -webkit-transition: opacity 300ms ease,-webkit-transform 300ms ease;
+  -moz-transition: opacity 300ms ease,-moz-transform 300ms ease;
+  transition: opacity 300ms ease,transform 300ms ease;
+}
+
+.profile-info-content > * {
+  -webkit-transition: opacity 300ms ease,-webkit-transform 300ms ease;
+  -moz-transition: opacity 300ms ease,-moz-transform 300ms ease;
+  transition: opacity 300ms ease,transform 300ms ease;
 }
 
 #form-close{

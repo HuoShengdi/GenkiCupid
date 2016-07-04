@@ -1,34 +1,47 @@
-// Place all the styles related to the Api::Questions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.questions-box{
-  background: none;
+.profile-details {
+  float:right;
+  margin-top: 20px;
+  width: 30%;
+  padding: 10px;
 }
 
-.inner-question-box{
-  padding: 20px;
+form input, select, option{
+  border: 1px solid #a4a4a4;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
 }
 
-#no-questions-message {
-  background: none;
-  margin: 30px;
+.details-top{
+  margin: 10px;
 }
 
-#no-questions-message *{
-  background: none;
+#details-title{
   font-size: 20px;
   color: #402;
 }
 
-.question-text {
-  font-size: 18px;
-  color: #402;
-  line-height: 2;
+.detail-item{
+  margin: 10px;
 }
 
-.question-button{
-  font: 14px OpenSans;
+.detail-field{
+  font-size: 18px;
+  color: #402;
+  padding-bottom: 5px;
+}
+
+#details-edit:focus{
+  outline: none;
+}
+
+#details-edit h3 {
+  font-size: 24px;
+  color: #402;
+  padding-bottom: 5px;
+}
+
+.details-form-button {
+  font: 18px OpenSans;
   line-height: normal;
   padding: 4px;
   text-decoration: none;
@@ -40,11 +53,9 @@
   color: #fed;
   border: 1px #999;
   box-sizing: border-box;
-  margin-right: 20px;
-  margin-top: 20px;
 }
 
-.question-button:hover{
+.details-form-button:hover {
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f3b7d5), to(#EC6695));
   background: -webkit-linear-gradient(top, #EC6695, #f3b7d5);
   background: -moz-linear-gradient(top, #EC6695, #f3b7d5);

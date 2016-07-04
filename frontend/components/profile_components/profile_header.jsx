@@ -11,8 +11,10 @@ const ProfileHeader = React.createClass({
         <header id='profile-header' className='profile-header'>
           <img id='profile-header-avatar' src={this.props.profile.avatar_url}/>
           <span id='profile-header-info'>
-            <h2>{this.props.profile.username}</h2>
-            <p>{this.props.profile.age} • {this.props.profile.postal_code} • {genderStr}</p>
+            <h2 id='mini-details-username'>{this.props.profile.username}</h2>
+            <p id='mini-details'>
+              {this.props.profile.age} • {this.props.profile.postal_code} • {genderStr}
+            </p>
           </span>
         </header>);
   }
