@@ -10,15 +10,15 @@ module.exports = {
     $.ajax({
       url: '/api/profiles/' + answerData.username + '/answers/' + answerData.id,
       type: 'PATCH',
-      data: answerData,
+      data: {answer:answerData},
       success
     });
   },
   createAnswer(answerData, success) {
     $.ajax({
-      url: '/api/profiles' + answerData.username + '/answers',
+      url: '/api/profiles/' + answerData.username + '/answers',
       type: 'POST',
-      data: answerData,
+      data: {answer:answerData},
       success
     })
   }

@@ -15,8 +15,9 @@ const QuestionForm = React.createClass({
       option_id: this.state.selected
     }
     AnswerActions.createAnswer(formData);
+    QuestionActions.fetchRandomQuestion(this.props.username);
   },
-  componentWillReceiveProps(props){
+  componentWillReceiveProps(){
     this.setState({selected: 0});
   },
   optionChange(e){
@@ -28,20 +29,19 @@ const QuestionForm = React.createClass({
   },
   render () {
     const options = this.props.question.answer_options.map(
-      (el)=>{return (
-        <input type="radio"
-          value={el.id}
-          onChange={this.optionChange}
-          checked={this.state.selected === el.id}
-          key={el.id}>
-          {StringUtils.capitalize(el.body)}
-        </input>
+      (el)=>{
+        return (
+        <div key={el.id}>
+          <input type="radio"
+            value={el.id}
+            onChange={this.optionChange}
+            checked={this.state.selected === el.id.toString()} />
+          <label>{StringUtils.capitalize(el.body)}</label>
+        </div>
       );}
     )
-    console.log(options);
     return (
       <form onSubmit={this.handleSubmit}>
-        {this.props.question.body}
         {options}
         <a href="#" onClick={this.handleSubmit}>Save Answer</a>
         <a href="#" onClick={this.skipQuestion}>Skip</a>
