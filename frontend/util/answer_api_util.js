@@ -13,5 +13,13 @@ module.exports = {
       data: answerData,
       success
     });
+  },
+  createAnswer(answerData, success) {
+    $.ajax({
+      url: '/api/profiles' + answerData.username + '/answers',
+      type: 'POST',
+      data: answerData,
+      success
+    })
   }
 };

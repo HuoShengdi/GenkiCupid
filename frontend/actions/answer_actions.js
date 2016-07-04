@@ -17,6 +17,9 @@ const AnswerActions = {
       answer: answer
     });
   },
+  createAnswer(answerData) {
+    AnswerApiUtil.createAnswer(answerData, this.receiveAnswer);
+  },
   editAnswer(answerData) {
     AnswerApiUtil.updateAnswer(answerData, this.receiveAnswer);
   },

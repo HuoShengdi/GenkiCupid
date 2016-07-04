@@ -44,6 +44,7 @@ const LoginForm = React.createClass({
     };
 
     SessionActions.logIn(formData);
+    return false
   },
 
   fieldErrors(field) {

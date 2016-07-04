@@ -28,8 +28,8 @@ const Profile = React.createClass({
   },
   componentWillReceiveProps(props){
     ProfileActions.fetchProfile(props.params.username);
-    AnswerActions.fetchAnswers(this.props.params.username);
-    EssayActions.fetchEssays(this.props.params.username);
+    AnswerActions.fetchAnswers(props.params.username);
+    EssayActions.fetchEssays(props.params.username);
   },
   componentWillUnmount(){
     this.profileListener.remove();
