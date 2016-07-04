@@ -10,6 +10,20 @@ class User < ActiveRecord::Base
 
   has_many :essays, dependent: :destroy
   has_many :answers, dependent: :destroy
+  has_many (
+    :self_matches,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: 'Match',
+    dependent: :destroy
+  )
+  has_many (
+    :other_matches,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: 'Match',
+    dependent: :destroy
+  )
 
   def age
     age = ((Date.today - self.birthdate.to_date)/365).to_i

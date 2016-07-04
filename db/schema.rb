@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160701164706) do
+ActiveRecord::Schema.define(version: 20160704221450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(version: 20160701164706) do
 
   add_index "essays", ["user_id", "title"], name: "index_essays_on_user_id_and_title", unique: true, using: :btree
   add_index "essays", ["user_id"], name: "index_essays_on_user_id", using: :btree
+
+  create_table "matches", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "match_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "matches", ["match_id"], name: "index_matches_on_match_id", using: :btree
+  add_index "matches", ["user_id", "match_id"], name: "index_matches_on_user_id_and_match_id", unique: true, using: :btree
+  add_index "matches", ["user_id"], name: "index_matches_on_user_id", using: :btree
 
   create_table "questions", force: :cascade do |t|
     t.text     "body",       null: false

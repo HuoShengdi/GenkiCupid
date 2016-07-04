@@ -1,5 +1,6 @@
 class Answer < ActiveRecord::Base
   validates :user_id, :question_id, :option_id, presence: true
+  validates :question_id, uniqueness: {scope: [:user_id]}
 
   belongs_to :user
   belongs_to :question
