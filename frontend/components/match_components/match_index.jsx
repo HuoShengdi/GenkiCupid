@@ -6,7 +6,10 @@ const MatchIndex = React.createClass({
     return {matches: []};
   },
   componentDidMount(){
-    
+
+  },
+  componentWillUnmount(){
+
   },
   render: function() {
     return (

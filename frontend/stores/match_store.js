@@ -55,6 +55,8 @@ MatchStore.sortByMatchPercent = function() {
 };
 
 MatchStore.matches = function () {
+  MatchStore.sortByMatchPercent();
+  _filterMatches();
   return _displayMatches;
 };
 

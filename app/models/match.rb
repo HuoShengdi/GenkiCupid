@@ -38,10 +38,9 @@ class Match < ActiveRecord::Base
 
   def self.make_matches(username)
     user = User.find_by_username(username)
-      User.all.each do |match|
-        next if user == match
-        Match.create(user_id: user.id, match_id: match.id)
-      end
+    User.all.each do |match|
+      next if user == match
+      Match.create(user_id: user.id, match_id: match.id)
     end
   end
 
