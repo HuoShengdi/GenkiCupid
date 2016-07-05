@@ -10,14 +10,14 @@ class User < ActiveRecord::Base
 
   has_many :essays, dependent: :destroy
   has_many :answers, dependent: :destroy
-  has_many (
-    :self_matches,
+  has_many(
+    :matches,
     primary_key: :id,
     foreign_key: :user_id,
     class_name: 'Match',
     dependent: :destroy
   )
-  has_many (
+  has_many(
     :other_matches,
     primary_key: :id,
     foreign_key: :user_id,
@@ -31,6 +31,15 @@ class User < ActiveRecord::Base
 
   def birthday
     self.birthdate.to_date.to_formatted_s
+  end
+
+  def self.make_matches
+    User.all.each do |user|
+      User.all.each do |match|
+        next if user == match
+        Match.create(user_id: user.id, match_id: match.id)
+      end
+    end
   end
 
   def self.find_by_credentials(username, password)
