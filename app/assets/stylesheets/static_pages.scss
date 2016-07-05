@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url("http://fonts.googleapis.com/earlyaccess/notosansjp.css");
+
 .navbar {
   position: fixed;
   top: 0;
@@ -48,15 +50,22 @@
 }
 .app-main {
   margin-top: 66px;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .app-main > * {
   margin:auto;
   background: #f3e7f5;
+  margin-top: 100px;
 }
 
 #login, #signup, #logout, #profile {
   float: right;
+}
+
+#splash {
+  background-image: url("/assets/gkc-bg-szs.png");
+  height: 540px;
+  width: 960px;
+  background-size: contain;
+  position: relative;
 }

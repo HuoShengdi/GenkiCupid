@@ -1,6 +1,3 @@
-const ReactRouter = require('react-router');
-const hashHistory = ReactRouter.hashHistory;
-
 const AppDispatcher = require('../dispatcher/dispatcher');
 const EssayConstants = require('../constants/essay_constants');
 const EssayApiUtil = require('../util/essay_api_util');

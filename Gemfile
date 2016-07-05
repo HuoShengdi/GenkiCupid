@@ -29,6 +29,8 @@ gem 'figaro'
 gem 'carrierwave'
 
 gem 'cloudinary'
+
+gem 'font-awesome-sass'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

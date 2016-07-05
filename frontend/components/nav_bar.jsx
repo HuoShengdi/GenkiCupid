@@ -47,7 +47,13 @@ const NavBar = React.createClass({
         id='profile'>
         Profile
       </a>);
-    const logo = <h4 onClick={this.redirect("/")} className="navbar-logo">GenkiCupid</h4>;
+    const logo = (
+      <h1 id='logo' className="navbar-logo">
+        <a href='#' onClick={this.redirect("/")}>
+          <img src="assets/gkclogo.png" alt="GenkiCupid"/>
+        </a>
+      </h1>);
+
     return <div className='navbar'>
       {logo}
       {SessionStore.isUserLoggedIn() ? [logoutButton, profileButton] : [signUpButton, loginButton]}

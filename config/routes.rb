@@ -9,6 +9,6 @@ Rails.application.routes.draw do
       resources :answers, only: [:index, :show, :update, :create, :destroy]
     end
     resources :questions, only:[:show, :index]
-    resources :matches, only:[:show, :index]
+    resources :matches, param: :username, only:[:index]
   end
 end

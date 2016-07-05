@@ -10,13 +10,13 @@ class Match < ActiveRecord::Base
     )
 
   belongs_to(
-    :user_match,
+    :profile,
     primary_key: :id,
     foreign_key: :match_id,
     class_name: 'User')
 
 
-  def match_calc
+  def match_percent
     questions_answered = self.user.answers.length
     if questions_answered == 0
       return 0
@@ -33,7 +33,7 @@ class Match < ActiveRecord::Base
       end
     end
 
-    (same_answers.to_f/(questions_answered - not_answered)).round(2)
+    ((same_answers.to_f/(questions_answered - not_answered)).round(2) * 100).to_i
   end
 
   def self.make_matches(username)
@@ -45,6 +45,11 @@ class Match < ActiveRecord::Base
     end
   end
 
-
+  def profile_details
+    {image: profile.avatar_url,
+    username: profile.username,
+    age: profile.age,
+    gender: profile.gender}
+  end
 
 end

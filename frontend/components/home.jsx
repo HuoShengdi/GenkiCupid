@@ -3,7 +3,7 @@ const React = require('react');
 const Home = React.createClass({
   render () {
     return (
-      <div>
+      <div id='splash'>
         <h1>Welcome to GenkiCupid!</h1>
 
       </div>

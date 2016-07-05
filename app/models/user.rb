@@ -63,4 +63,7 @@ class User < ActiveRecord::Base
     self.avatar_url ||= "assets/default.png"
   end
 
+  def ensure_filter_default
+    
+  end
 end

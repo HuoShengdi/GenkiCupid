@@ -1,5 +1,3 @@
-const ReactRouter = require('react-router');
-const hashHistory = ReactRouter.hashHistory;
 
 const AppDispatcher = require('../dispatcher/dispatcher');
 const ProfileConstants = require('../constants/profile_constants');
