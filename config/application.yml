@@ -1,2 +1,64 @@
-CLOUD_NAME: 'huoshengdi'
-UPLOAD_PRESET: 'sbnqx4ms'
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+
+common: &default_settings
+  # Required license key associated with your New Relic account.
+  license_key: 5fdaeb52c584c56ddda05410b6acead46ec9f2af
+
+  # Your application name. Renaming here affects where data displays in New
+  # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications
+  app_name: GenkiCupid
+
+  # To disable the agent regardless of other settings, uncomment the following:
+  # agent_enabled: false
+
+  # Logging level for log/newrelic_agent.log
+  log_level: info
+
+
+# Environment-specific settings are in this section.
+# RAILS_ENV or RACK_ENV (as appropriate) is used to determine the environment.
+# If your application has other named environments, configure them here.
+development:
+  <<: *default_settings
+  app_name: GenkiCupid (Development)
+  cloud_name: huoshengdi
+  api_key: '659634625464326'
+  api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
+  enhance_image_tag: "true"
+  static_image_support: "false"
+
+  # NOTE: There is substantial overhead when running in developer mode.
+  # Do not use for production or load testing.
+  developer_mode: "true"
+
+test:
+  <<: *default_settings
+  # It doesn't make sense to report to New Relic from automated test runs.
+  monitor_mode: "false"
+  cloud_name: huoshengdi
+  api_key: '659634625464326'
+  api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
+  enhance_image_tag: "true"
+  static_image_support: "false"
+
+staging:
+  <<: *default_settings
+  app_name: GenkiCupid (Staging)
+
+production:
+  <<: *default_settings
+  cloud_name: huoshengdi
+  api_key: '659634625464326'
+  api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
+  enhance_image_tag: "true"
+  static_image_support: "true"

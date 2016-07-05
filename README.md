@@ -86,9 +86,9 @@ Essays can be read and edited on profile page, recent Visits are displayed on us
 **Objective:** Questions and their answers are required to generate a user's match profile
 
 - [x] create `Question`, `AnswerOption`, and `Answer` models
-- [ ] Build API, Flux loop, and components for CRUD on Answers
-- [ ] have basic set of seed data for Questions and AnswerOptions
-- [ ] be able to generate a match profile object to compare with other users' profiles
+- [x] Build API, Flux loop, and components for CRUD on Answers
+- [x] have basic set of seed data for Questions and AnswerOptions
+- [x] be able to generate match relation between users (`Match` model)
 
 ### Phase 6: Matches (1.5 days, W2 W 6pm)
 

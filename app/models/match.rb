@@ -12,7 +12,7 @@ class Match < ActiveRecord::Base
   belongs_to(
     :user_match,
     primary_key: :id,
-    foreign_key: :user_id,
+    foreign_key: :match_id,
     class_name: 'User')
 
 
@@ -35,6 +35,16 @@ class Match < ActiveRecord::Base
 
     (same_answers.to_f/(questions_answered - not_answered)).round(2)
   end
+
+  def self.make_matches(username)
+    user = User.find_by_username(username)
+      User.all.each do |match|
+        next if user == match
+        Match.create(user_id: user.id, match_id: match.id)
+      end
+    end
+  end
+
 
 
 end
