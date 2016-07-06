@@ -4,8 +4,14 @@ const MatchItem = require('./match_item');
 const MatchList = React.createClass({
 
   render: function() {
+
+    const matchItems = this.props.matches.map((match)=>{
+      return <MatchItem key={match.id} match={match}/>;
+    });
     return (
-      <div />
+      <div id='match-list'>
+        {matchItems}
+      </div>
     );
   }
 

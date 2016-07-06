@@ -54,8 +54,11 @@ input[type="submit" i]:focus {
 	filter: brightness(90%);
 }
 
-input{
-
+a {
+    display: inline;
+    text-decoration: none;
+    outline: none;
+    color: #3260c7;
 }
 
 button:focus {

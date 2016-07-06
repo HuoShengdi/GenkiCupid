@@ -53,10 +53,19 @@ const NavBar = React.createClass({
           <img src="assets/gkclogo.png" alt="GenkiCupid"/>
         </a>
       </h1>);
+    const matchButton = (
+      <a
+        onClick={this.redirect('/match')}
+        key='match'
+        className="navbar-button"
+        id='match'>
+        Browse Matches
+      </a>
+    );
 
     return <div className='navbar'>
       {logo}
-      {SessionStore.isUserLoggedIn() ? [logoutButton, profileButton] : [signUpButton, loginButton]}
+      {SessionStore.isUserLoggedIn() ? [logoutButton, profileButton, matchButton] : [signUpButton, loginButton]}
     </div>;
   }
 });

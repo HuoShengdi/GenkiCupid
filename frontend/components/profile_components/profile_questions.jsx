@@ -35,7 +35,8 @@ const ProfileQuestions = React.createClass({
     return (
       <div className='questions-box'>
         {(this.props.params.username === SessionStore.currentUser().username) ?
-          <NewQuestion question={this.state.question} username={this.props.params.username} /> : ""
+          <NewQuestion question={this.state.question} 
+            username={this.props.params.username} /> : ""
         }
         <AnswerList answers={this.state.answers} />
       </div>

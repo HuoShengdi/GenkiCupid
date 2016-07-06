@@ -7,7 +7,6 @@ const AnswerListItem = React.createClass({
   },
 
   render: function() {
-    console.log(typeof(this.state.selected));
     const keys = Object.keys(this.props.answer.question_options);
     const options = keys.map(
       (key)=>{

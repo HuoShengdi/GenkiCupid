@@ -32,9 +32,18 @@ function _applyFilter (match) {
   });
   return passed;
 }
+function _resetDisplay (){
+  _displayMatches = Object.keys(_matches).map((key)=>{
+    return _matches[key];
+  });
+}
 
 function _filterMatches (){
-  _displayMatches = _displayMatches.filter(_applyFilter);
+  if ($.isEmptyObject(_currentFilter)){
+    return;
+  } else {
+    _displayMatches = _displayMatches.filter(_applyFilter);
+  }
 }
 
 function compareMatchPercent(a, b){
@@ -47,16 +56,15 @@ function compareMatchPercent(a, b){
   return 0;
 }
 
-MatchStore.sortByMatchPercent = function() {
-  let sorted = Object.keys(_matches).map((key)=>{
-    return _matches[key];
-  }).sort(compareMatchPercent);
-  _displayMatches = sorted;
-};
+function _sortByMatchPercent(){
+  _displayMatches = _displayMatches.sort(compareMatchPercent);
+}
 
 MatchStore.matches = function () {
-  MatchStore.sortByMatchPercent();
+  _resetDisplay();
   _filterMatches();
+  _sortByMatchPercent();
+  console.log(_displayMatches[0]);
   return _displayMatches;
 };
 

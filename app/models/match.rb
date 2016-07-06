@@ -23,7 +23,7 @@ class Match < ActiveRecord::Base
     end
     same_answers = 0
     not_answered = 0
-    self.user_match.answers.each do |answer|
+    self.profile.answers.each do |answer|
       self_answer = self.user.answers.where(:question_id == answer.question_id)[0]
       if !answer
         not_answered += 1
