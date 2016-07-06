@@ -32,6 +32,7 @@ development:
   <<: *default_settings
   app_name: GenkiCupid (Development)
   cloud_name: huoshengdi
+  upload_preset: sbnqx4ms
   api_key: '659634625464326'
   api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
   enhance_image_tag: "true"
@@ -46,6 +47,7 @@ test:
   # It doesn't make sense to report to New Relic from automated test runs.
   monitor_mode: "false"
   cloud_name: huoshengdi
+  upload_preset: sbnqx4ms
   api_key: '659634625464326'
   api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
   enhance_image_tag: "true"
@@ -58,6 +60,7 @@ staging:
 production:
   <<: *default_settings
   cloud_name: huoshengdi
+  upload_preset: sbnqx4ms
   api_key: '659634625464326'
   api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
   enhance_image_tag: "true"
