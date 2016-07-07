@@ -131,6 +131,6 @@ Question.create!([
 ])
 User.create!([
   {username: "rakuraku15", password_digest: "$2a$10$Om1ZTZTjfbi/3DTMNo/B3.g8ion69G/RNu5vOCaMrNs9vALecXTqa", session_token: "CCPQcAbnuAmVZeZpNdlYLg", avatar_url: "GenkiCupid_Avatars/d3vtyklamxulew3xxplh.jpg", postal_code: "92127", birthdate: "1998-05-15 00:00:00", gender: "male", orientation: "straight", rel_status: "single"},
-  {username: "GoriGurrl", password_digest: "$2a$10$jNaMRcB4//jU50bH88C8WOz6kfTllMkhtXgUvoEY7jIwCgAkYH5pO", session_token: "fLYx7hQ9IGCcPavxsyXa2A", avatar_url: "GenkiCupid_Avatars/pmpct75kf79wzr0wlk6f.png", postal_code: "92127", birthdate: "1998-07-07 00:00:00", gender: "female", orientation: "straight", rel_status: "single"},
   {username: "ItoshikiWish", password_digest: "$2a$10$DDdryKDm4UY/K0phU8w9felP/K0Dnn0c3oJ3xPsDTSEN3.CVHq4my", session_token: "o1S_SdfNW2CfxS_qI-cJ_g", avatar_url: "GenkiCupid_Avatars/teakyle58tqndstu1bvh.jpg", postal_code: "44444", birthdate: "1982-11-04 00:00:00", gender: "male", orientation: "straight", rel_status: "single"}
+  {username: "GoriGurrl", password_digest: "$2a$10$jNaMRcB4//jU50bH88C8WOz6kfTllMkhtXgUvoEY7jIwCgAkYH5pO", session_token: "fLYx7hQ9IGCcPavxsyXa2A", avatar_url: "GenkiCupid_Avatars/pmpct75kf79wzr0wlk6f.png", postal_code: "92127", birthdate: "1998-07-07 00:00:00", gender: "female", orientation: "straight", rel_status: "single"},
 ])
