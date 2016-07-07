@@ -10,6 +10,12 @@ module.exports = {
   resolve: {
     extensions: ["", ".js", ".jsx"]
   },
+  externals: {
+    fs: '{}',
+    tls: '{}',
+    net: '{}',
+    console: '{}'
+  },
   module: {
     loaders: [
       {
@@ -26,5 +32,6 @@ module.exports = {
       }
     ]
   },
+
   devtool: 'source-maps'
 };

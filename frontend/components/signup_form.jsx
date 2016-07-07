@@ -142,7 +142,7 @@ const SignupForm = React.createClass({
             <div id='button-box'>
               <a href="#" id='login-submit'
                 className='login-form-button'
-                onClick={this.handleSubmit}>Submit</a>
+                onClick={this.handleSubmit}>Sign Up</a>
             </div>
           </div>
         </form>

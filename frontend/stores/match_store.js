@@ -1,4 +1,5 @@
 const MatchConstants = require('../constants/match_constants');
+const SessionConstants = require('../constants/session_constants');
 const Store = require('flux/utils').Store;
 const AppDispatcher = require('../dispatcher/dispatcher');
 
@@ -25,13 +26,19 @@ function _loadFilter(filter){
 
 function _applyFilter (match) {
   let passed = true;
-  Object.keys(_currentFilter).forEach((key)=>{
-    if (!_currentFilter[key](match.profile_details[key])){
+    if (_currentFilter.gender !== match.profile_details.gender){
       passed = false;
     }
-  });
+    if (_currentFilter.min_age && match.profile_details.age < _currentFilter.min_age){
+      passed = false;
+    }
+    if (_currentFilter.max_age && match.profile_details.age > _currentFilter.max_age){
+      passed = false;
+    }
+
   return passed;
 }
+
 function _resetDisplay (){
   _displayMatches = Object.keys(_matches).map((key)=>{
     return _matches[key];
@@ -48,10 +55,10 @@ function _filterMatches (){
 
 function compareMatchPercent(a, b){
   if (a.match_percent > b.match_percent){
-    return 1;
+    return -1;
   }
   if (a.match_percent < b.match_percent){
-    return -1;
+    return 1;
   }
   return 0;
 }
@@ -60,12 +67,21 @@ function _sortByMatchPercent(){
   _displayMatches = _displayMatches.sort(compareMatchPercent);
 }
 
+function _clearStore(){
+  _matches = {};
+  _displayMatches = [];
+  _currentFilter = {};
+}
+
 MatchStore.matches = function () {
   _resetDisplay();
   _filterMatches();
   _sortByMatchPercent();
-  console.log(_displayMatches[0]);
-  return _displayMatches;
+  return _displayMatches.slice(0);
+};
+
+MatchStore.searchFilter = function() {
+  return Object.assign({}, _currentFilter);
 };
 
 MatchStore.__onDispatch = function (payload) {
@@ -81,6 +97,9 @@ MatchStore.__onDispatch = function (payload) {
     case MatchConstants.FILTER_SET:
       _loadFilter(payload.filter);
       MatchStore.__emitChange();
+      break;
+    case SessionConstants.LOGOUT:
+      _clearStore();
       break;
   }
 };

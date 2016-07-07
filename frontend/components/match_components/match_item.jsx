@@ -1,8 +1,17 @@
 const React = require('react');
+const cloudinary = require('cloudinary');
+
+cloudinary.config({
+  cloud_name: 'huoshengdi'
+});
+
 
 const MatchItem = React.createClass({
 
   render: function() {
+
+    const avUrl = cloudinary.url(this.props.match.profile_details.image,
+      {secure: true, width: 280, height: 280, crop: 'fill', gravity: 'face'});
     return (
       <div id={'usr-' + this.props.match.profile_details.username}
         className='match_card_wrapper'>
@@ -10,7 +19,7 @@ const MatchItem = React.createClass({
           <a className='image_link'
             href={'/#/profiles/'+this.props.match.profile_details.username}>
             <span className='image_wrapper'>
-              <img className='match-avatar' src={this.props.match.profile_details.image}/>
+              <img className='match-avatar' src={avUrl}/>
             </span>
           </a>
         </div>

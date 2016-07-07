@@ -3,7 +3,7 @@ const React = require("react");
 const UploadButton = React.createClass({
   upload: function (e) {
     e.preventDefault();
-    cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, results){
+    cloudinary.openUploadWidget(cloudinary_options, function(error, results){
       if(!error){
         this.props.postImage(results[0]);
       }
@@ -12,7 +12,7 @@ const UploadButton = React.createClass({
   render: function () {
     return (
       <div className="upload-form">
-        <button className="upload-button" onClick={this.upload}>Upload new image!</button>
+        <button className="upload-button" onClick={this.upload}>Add</button>
       </div>
     );
   }

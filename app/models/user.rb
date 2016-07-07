@@ -24,6 +24,14 @@ class User < ActiveRecord::Base
     class_name: 'Match',
     dependent: :destroy
   )
+  has_one(
+    :search_filter,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: 'Filter',
+    dependent: :destroy
+  )
+
 
   def age
     age = ((Date.today - self.birthdate.to_date)/365).to_i
@@ -60,10 +68,37 @@ class User < ActiveRecord::Base
   end
 
   def ensure_avatar
-    self.avatar_url ||= "assets/default.png"
+    self.avatar_url ||= "GenkiCupid_Avatars/default.png"
   end
 
   def ensure_filter_default
-    
+    gender = nil
+    if self.gender == "male"
+      if self.orientation == "straight"
+        gender = "female"
+      elsif self.orientation == "gay"
+        gender = "male"
+      end
+    elsif self.gender == "female"
+      if self.orientation == "straight"
+        gender = "male"
+      elsif self.orientation == "gay"
+        gender = "female"
+      end
+    end
+
+    if self.age <= 20
+      min_age = self.age/2 + 6
+    else
+      min_age = 18
+    end
+
+    if self.age < 26
+      max_age = 35
+    else
+      max_age = self.age + 10
+    end
+
+    self.create_search_filter(gender: gender, min_age: min_age, max_age: max_age)
   end
 end

@@ -23,12 +23,15 @@ class Match < ActiveRecord::Base
     end
     same_answers = 0
     not_answered = 0
-    self.profile.answers.each do |answer|
-      self_answer = self.user.answers.where(:question_id == answer.question_id)[0]
-      if !answer
+    match_answers = self.profile.answers
+    self_answers = self.user.answers
+    self_answers.each do |answer|
+
+      match_answer = (match_answers.select {|ans| ans.question_id == answer.question_id})[0]
+      if match_answer == nil
         not_answered += 1
         next
-      elsif answer.option == self_answer.option
+      elsif answer.option_id == match_answer.option_id
         same_answers += 1
       end
     end

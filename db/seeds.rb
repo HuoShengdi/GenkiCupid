@@ -1,5 +1,38 @@
 Answer.create!([
-  {user_id: 1, question_id: 1, option_id: 1}
+  {user_id: 1, question_id: 1, option_id: 1},
+  {user_id: 2, question_id: 7, option_id: 20},
+  {user_id: 2, question_id: 14, option_id: 33},
+  {user_id: 2, question_id: 5, option_id: 13},
+  {user_id: 2, question_id: 10, option_id: 26},
+  {user_id: 2, question_id: 12, option_id: 30},
+  {user_id: 2, question_id: 3, option_id: 6},
+  {user_id: 2, question_id: 9, option_id: 24},
+  {user_id: 2, question_id: 15, option_id: 35},
+  {user_id: 2, question_id: 13, option_id: 31},
+  {user_id: 1, question_id: 12, option_id: 30},
+  {user_id: 1, question_id: 16, option_id: 38},
+  {user_id: 1, question_id: 13, option_id: 32},
+  {user_id: 1, question_id: 10, option_id: 26},
+  {user_id: 1, question_id: 11, option_id: 27},
+  {user_id: 1, question_id: 14, option_id: 33},
+  {user_id: 1, question_id: 2, option_id: 4},
+  {user_id: 1, question_id: 9, option_id: 23},
+  {user_id: 1, question_id: 17, option_id: 40},
+  {user_id: 1, question_id: 3, option_id: 7},
+  {user_id: 1, question_id: 6, option_id: 16},
+  {user_id: 1, question_id: 7, option_id: 17},
+  {user_id: 1, question_id: 4, option_id: 9},
+  {user_id: 1, question_id: 15, option_id: 36},
+  {user_id: 1, question_id: 5, option_id: 12},
+  {user_id: 1, question_id: 8, option_id: 22},
+  {user_id: 2, question_id: 6, option_id: 16},
+  {user_id: 2, question_id: 1, option_id: 1},
+  {user_id: 2, question_id: 17, option_id: 40},
+  {user_id: 2, question_id: 8, option_id: 22},
+  {user_id: 2, question_id: 16, option_id: 37},
+  {user_id: 2, question_id: 11, option_id: 27},
+  {user_id: 2, question_id: 4, option_id: 8},
+  {user_id: 2, question_id: 2, option_id: 5}
 ])
 AnswerOption.create!([
   {question_id: 1, body: "The Sun"},
@@ -43,7 +76,7 @@ AnswerOption.create!([
   {question_id: 16, body: "Not inclined"},
   {question_id: 17, body: "Admirable and desirable. Chivalry's not dead."},
   {question_id: 17, body: "Unnecessary but appreciated."},
-  {question_id: 17, body: "Sexist and insulting; women are perfectly capable."},
+  {question_id: 17, body: "Sexist and insulting; women are perfectly capable."}
 ])
 Essay.create!([
   {user_id: 1, title: "I'm really good at", body: "Cooking things of all kinds"},
@@ -51,11 +84,15 @@ Essay.create!([
   {user_id: 1, title: "What I'm doing with my life", body: "Trying to figure out love ;__;"},
   {user_id: 1, title: "I spend a lot of time thinking about", body: "Animals! I love taking care of them. They don't like me very much though..."},
   {user_id: 1, title: "You should message me if", body: "you like animals or sweets\nyou think you can get along well with my dad's goons. They're way too clingy, honestly."},
-  {user_id: 2, title: "My self-summary", body: ""},
   {user_id: 2, title: "What I'm doing with my life", body: ""},
   {user_id: 2, title: "I'm really good at", body: ""},
   {user_id: 2, title: "I spend a lot of time thinking about", body: ""},
-  {user_id: 2, title: "You should message me if", body: ""}
+  {user_id: 2, title: "You should message me if", body: ""},
+  {user_id: 2, title: "My self-summary", body: "I'm in despair!"}
+])
+Match.create!([
+  {user_id: 2, match_id: 1},
+  {user_id: 1, match_id: 2}
 ])
 Question.create!([
   {body: "What do the planets of the solar system revolve around?"},
@@ -77,6 +114,6 @@ Question.create!([
   {body: "When men show extra courtesy toward women (opening doors, pulling out chairs, etc.), this is:"}
 ])
 User.create!([
-  {username: "rakuraku15", password_digest: "$2a$10$Om1ZTZTjfbi/3DTMNo/B3.g8ion69G/RNu5vOCaMrNs9vALecXTqa", session_token: "eU-ubTbSYltUHofBBmFeLg", avatar_url: "assets/default.png", postal_code: "92127", birthdate: "1998-05-15 00:00:00", gender: "male", orientation: "straight", rel_status: "single"},
-  {username: "ItoshikiWish", password_digest: "$2a$10$DDdryKDm4UY/K0phU8w9felP/K0Dnn0c3oJ3xPsDTSEN3.CVHq4my", session_token: "fhFoGTZHJeXJ6cbEFZ3B2A", avatar_url: "assets/default.png", postal_code: "44444", birthdate: "1982-11-04 00:00:00", gender: "male", orientation: "straight", rel_status: "single"}
+  {username: "rakuraku15", password_digest: "$2a$10$Om1ZTZTjfbi/3DTMNo/B3.g8ion69G/RNu5vOCaMrNs9vALecXTqa", session_token: "GpuxP9QPJNEl3ejDxC2Fxw", avatar_url: "GenkiCupid_Avatars/d3vtyklamxulew3xxplh.jpg", postal_code: "92127", birthdate: "1998-05-15 00:00:00", gender: "male", orientation: "straight", rel_status: "single"},
+  {username: "ItoshikiWish", password_digest: "$2a$10$DDdryKDm4UY/K0phU8w9felP/K0Dnn0c3oJ3xPsDTSEN3.CVHq4my", session_token: "67AZb567WkRJ4x-MLQwQfw", avatar_url: "GenkiCupid_Avatars/teakyle58tqndstu1bvh.jpg", postal_code: "44444", birthdate: "1982-11-04 00:00:00", gender: "male", orientation: "straight", rel_status: "single"}
 ])

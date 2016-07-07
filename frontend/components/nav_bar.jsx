@@ -50,7 +50,8 @@ const NavBar = React.createClass({
     const logo = (
       <h1 id='logo' className="navbar-logo">
         <a href='#' onClick={this.redirect("/")}>
-          <img src="assets/gkclogo.png" alt="GenkiCupid"/>
+          <img src="https://res.cloudinary.com/huoshengdi/image/upload/v1467782164/GenkiCupid/gkclogo.png"
+            alt="GenkiCupid"/>
         </a>
       </h1>);
     const matchButton = (

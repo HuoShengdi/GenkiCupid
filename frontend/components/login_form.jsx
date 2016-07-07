@@ -90,7 +90,7 @@ const LoginForm = React.createClass({
             <div id='button-box'>
               <a href="#" id='login-submit'
                 className='login-form-button'
-                onClick={this.handleSubmit}>Submit</a>
+                onClick={this.handleSubmit}>Login</a>
               <a href='#' id='guest-login'
                 className='login-form-button'
                 onClick={this.guestLogin}>Guest Login</a>

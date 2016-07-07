@@ -15,8 +15,16 @@
  */
 
 
- form input, select, option{
-   border: 1px solid #a4a4a4;
-   font-size: 14px;
-   font-family: 'Open Sans', sans-serif;
- }
+form input, select, option{
+ border: 1px solid #a4a4a4;
+ font-size: 14px;
+ font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  background: url("https://res.cloudinary.com/huoshengdi/image/upload/c_scale,w_1024/v1467782175/GenkiCupid/gkc-bg-szs.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

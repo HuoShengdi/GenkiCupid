@@ -14,11 +14,17 @@ const MatchActions = {
       matches: matches
     });
   },
+  getFilter() {
+    MatchApiUtil.getFilter(this.setFilter);
+  },
   setFilter(filter) {
     AppDispatcher.dispatch({
       actionType: MatchConstants.FILTER_SET,
       filter: filter
     });
+  },
+  updateFilter(filterData){
+    MatchApiUtil.updateFilter(filterData, this.setFilter);
   }
 };
 
