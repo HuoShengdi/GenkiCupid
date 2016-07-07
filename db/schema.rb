@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160706202852) do
+ActiveRecord::Schema.define(version: 20160707183553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,16 @@ ActiveRecord::Schema.define(version: 20160706202852) do
   add_index "matches", ["user_id", "match_id"], name: "index_matches_on_user_id_and_match_id", unique: true, using: :btree
   add_index "matches", ["user_id"], name: "index_matches_on_user_id", using: :btree
 
+  create_table "messages", force: :cascade do |t|
+    t.integer  "author_id",    null: false
+    t.integer  "recipient_id", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "messages", ["author_id"], name: "index_messages_on_author_id", using: :btree
+  add_index "messages", ["recipient_id"], name: "index_messages_on_recipient_id", using: :btree
+
   create_table "questions", force: :cascade do |t|
     t.text     "body",       null: false
     t.datetime "created_at", null: false
@@ -92,10 +102,13 @@ ActiveRecord::Schema.define(version: 20160706202852) do
     t.string   "rel_status",      null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "users", ["birthdate"], name: "index_users_on_birthdate", using: :btree
   add_index "users", ["gender"], name: "index_users_on_gender", using: :btree
+  add_index "users", ["latitude", "longitude"], name: "index_users_on_latitude_and_longitude", using: :btree
   add_index "users", ["orientation"], name: "index_users_on_orientation", using: :btree
   add_index "users", ["postal_code"], name: "index_users_on_postal_code", using: :btree
   add_index "users", ["rel_status"], name: "index_users_on_rel_status", using: :btree

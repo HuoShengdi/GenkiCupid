@@ -24,6 +24,7 @@ common: &default_settings
   # Logging level for log/newrelic_agent.log
   log_level: info
 
+  google_maps_api_key: AIzaSyCnRqR_zMAN9ZiWc_HEOmtZa33kDa4b0_M
 
 # Environment-specific settings are in this section.
 # RAILS_ENV or RACK_ENV (as appropriate) is used to determine the environment.
@@ -37,6 +38,7 @@ development:
   api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
   enhance_image_tag: "true"
   static_image_support: "false"
+  google_maps_api_key: AIzaSyCnRqR_zMAN9ZiWc_HEOmtZa33kDa4b0_M
 
   # NOTE: There is substantial overhead when running in developer mode.
   # Do not use for production or load testing.
@@ -52,6 +54,7 @@ test:
   api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
   enhance_image_tag: "true"
   static_image_support: "false"
+  google_maps_api_key: AIzaSyCnRqR_zMAN9ZiWc_HEOmtZa33kDa4b0_M
 
 staging:
   <<: *default_settings
@@ -65,3 +68,4 @@ production:
   api_secret: iJW6GTk2Fi1bS-d4S4AOqA3sR0o
   enhance_image_tag: "true"
   static_image_support: "true"
+  google_maps_api_key: AIzaSyCnRqR_zMAN9ZiWc_HEOmtZa33kDa4b0_M

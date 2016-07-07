@@ -31,6 +31,8 @@ gem 'carrierwave'
 gem 'cloudinary'
 
 gem 'font-awesome-sass'
+
+gem 'geocoder'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

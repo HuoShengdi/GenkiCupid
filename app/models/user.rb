@@ -1,12 +1,15 @@
 class User < ActiveRecord::Base
   attr_reader :password
 
-  after_initialize :ensure_session_token, :ensure_avatar, :ensure_filter_default
+  after_initialize :ensure_session_token, :ensure_avatar
+  after_save :ensure_filter_default
   validates :password, length: {minimum: 6, allow_nil: true}
   validates :password_digest, presence: true
   validates :username, presence: true, uniqueness: true
   validates :session_token, presence: true, uniqueness: true
   validates :avatar_url, :postal_code, :birthdate, :gender, :orientation, :rel_status, presence: true
+  geocoded_by :postal_code
+  after_validation :geocode, if: :should_query?
 
   has_many :essays, dependent: :destroy
   has_many :answers, dependent: :destroy
@@ -63,6 +66,10 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
+  def should_query?
+    self.postal_code.present? && self.postal_code_changed?
+  end
+
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64(16)
   end
@@ -88,7 +95,7 @@ class User < ActiveRecord::Base
     end
 
     if self.age <= 20
-      min_age = self.age/2 + 6
+      min_age = self.age - 2
     else
       min_age = 18
     end
@@ -99,6 +106,6 @@ class User < ActiveRecord::Base
       max_age = self.age + 10
     end
 
-    self.create_search_filter(gender: gender, min_age: min_age, max_age: max_age)
+    self.search_filter ||= Filter.new(user_id: self.id, gender: gender, min_age: min_age, max_age: max_age)
   end
 end

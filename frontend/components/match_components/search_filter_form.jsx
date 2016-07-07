@@ -12,9 +12,6 @@ const SearchFilterForm = React.createClass({
   onChange(){
     this.setState(MatchStore.searchFilter());
   },
-  genderChange(e){
-    this.setState({gender: e.target.value});
-  },
   updateFilter(){
     MatchActions.updateFilter(this.state);
   },
@@ -34,27 +31,30 @@ const SearchFilterForm = React.createClass({
       genderStr = (this.state.gender === "male" ? "Men" : "Women");
     }
     const ageStr = `ages ${this.state.min_age}-${this.state.max_age}`;
+
+    const distStr = (this.state.distance ? ` within ${this.state.distance} miles` : `anywhere`);
+
     const genderPopover = (
       <Popover id='gender-popover' className='filter-popover' title="Show me">
         <div className='content-wrapper'>
           <label className='filter-label'>
           <input type="radio"
             value="male"
-            onChange={this.genderChange}
+            onChange={this.update('gender')}
             checked={this.state.gender === "male"} />
             Men
           </label>
           <label className='filter-label'>
           <input type="radio"
             value="female"
-            onChange={this.genderChange}
+            onChange={this.update('gender')}
             checked={this.state.gender === "female"} />
             Women
           </label>
           <label className='filter-label'>
           <input type="radio"
             value={"everyone"}
-            onChange={this.genderChange}
+            onChange={this.update('gender')}
             checked={this.state.gender === "everyone"} />
             Everyone
           </label>
@@ -77,6 +77,19 @@ const SearchFilterForm = React.createClass({
         </div>
       </Popover>
     );
+
+    const distPopover = (
+      <Popover id='dist-popover' className='filter-popover' title='Distance'>
+        <div className='content-wrapper'>
+          <input type="text"
+            value={this.state.distance ? this.state.distance : ""}
+            onChange={this.update('distance')}
+            className='dist-filter-input'/>
+          <span>miles away</span>
+        </div>
+      </Popover>
+    );
+
     return (
       <div id='search-filter-form'>
         <span className='filter-wrapper'>
@@ -94,6 +107,14 @@ const SearchFilterForm = React.createClass({
             overlay={agePopover}
             onExiting={this.updateFilter}>
             <button className='search-filter-button'>{ageStr}</button>
+          </OverlayTrigger>
+        </span>
+        <span className='filter-wrapper'>
+          <OverlayTrigger trigger="click" rootClose
+            placement="bottom"
+            overlay={distPopover}
+            onExiting={this.updateFilter}>
+            <button className='search-filter-button'>{distStr}</button>
           </OverlayTrigger>
         </span>
 

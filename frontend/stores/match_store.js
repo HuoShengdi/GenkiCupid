@@ -38,7 +38,9 @@ function _applyFilter (match) {
     if (_currentFilter.max_age && match.profile_details.age > _currentFilter.max_age){
       passed = false;
     }
-
+    if (_currentFilter.distance && match.profile_details.distance > _currentFilter.distance){
+      passed = false;
+    }
   return passed;
 }
 

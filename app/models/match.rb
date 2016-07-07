@@ -39,6 +39,10 @@ class Match < ActiveRecord::Base
     ((same_answers.to_f/(questions_answered - not_answered)).round(2) * 100).to_i
   end
 
+  def distance_away
+    self.user.distance_from([self.profile.latitude, self.profile.longitude])
+  end
+
   def self.make_matches(username)
     user = User.find_by_username(username)
     User.all.each do |match|
@@ -48,10 +52,13 @@ class Match < ActiveRecord::Base
   end
 
   def profile_details
-    {image: profile.avatar_url,
-    username: profile.username,
-    age: profile.age,
-    gender: profile.gender}
+    {
+      image: profile.avatar_url,
+      username: profile.username,
+      age: profile.age,
+      gender: profile.gender,
+      distance: self.distance_away
+    }
   end
 
 end

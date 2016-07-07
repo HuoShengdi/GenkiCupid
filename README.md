@@ -19,14 +19,14 @@ GenkiCupid is a web application inspired by OKCupid that will be built using Rub
   - [ ] Smooth, bug-free navigation
   - [ ] Adequate seed data to demonstrate the site's features
   - [ ] Adequate CSS styling
-- [ ] Personality questions   
-  - [ ] Smooth, bug-free navigation
-  - [ ] Adequate seed data to demonstrate the site's features
-  - [ ] Adequate CSS styling
+- [x] Personality questions   
+  - [x] Smooth, bug-free navigation
+  - [x] Adequate seed data to demonstrate the site's features
+  - [x] Adequate CSS styling
 - [ ] Match percentages based on question answers
-  - [ ] Smooth, bug-free navigation
+  - [x] Smooth, bug-free navigation
   - [ ] Adequate seed data to demonstrate the site's features
-  - [ ] Adequate CSS styling
+  - [x] Adequate CSS styling
 
 
 ## Design Docs
@@ -95,17 +95,17 @@ Essays can be read and edited on profile page, recent Visits are displayed on us
 **Objective:** Matches are simply other users' profiles, matching the user's `looking_for` parameters and sorted by match %
 
 - [ ] be able to view and edit user's "looking for" through profile
-- [ ] search other profiles by "looking for"
-- [ ] create `Match` store, storing basic profile information
-- [ ] jbuilder view for profiles found through match search
-- [ ] `MatchesIndex` component displays set number of found matches
-- [ ] sort matches by comparing match profiles from Answer data and sort descending
+- [x] search other profiles by "looking for"
+- [x] create `Match` store, storing basic profile information
+- [x] jbuilder view for profiles found through match search
+- [x] `MatchesIndex` component displays set number of found matches
+- [x] sort matches by comparing match profiles from Answer data and sort descending
 
 ### Phase 7: Messaging (1.5 days, W2 F 12pm)
 
 **Objective:** Users can send messages to each other
 
-- [ ] create `Message` model
+- [x] create `Message` model
 - [ ] Build API, Flux loop, and components for CRUD on Messages
 - [ ] Messages are sorted into conversations, sorted by id of other party in each message and ordered by timestamps
 - [ ] *Bonus* Attempt to integrate Sendbird API for real time chat windows
@@ -115,7 +115,7 @@ Essays can be read and edited on profile page, recent Visits are displayed on us
 **Objective:** Improve UX with good styling and seed data
 
 - [ ] generate at least 20 profiles and 20 questions to be answered on the profiles
-- [ ] pleasing color scheme
+- [x] pleasing color scheme
 - [x] guest login
 - [ ] seed guest account with message history
 
