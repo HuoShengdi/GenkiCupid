@@ -26,9 +26,12 @@ function _loadFilter(filter){
 
 function _applyFilter (match) {
   let passed = true;
-    if (_currentFilter.gender !== match.profile_details.gender){
-      passed = false;
+    if (_currentFilter.gender){
+      if (_currentFilter.gender !== "everyone" && _currentFilter.gender !== match.profile_details.gender){
+        passed = false;
+      }
     }
+
     if (_currentFilter.min_age && match.profile_details.age < _currentFilter.min_age){
       passed = false;
     }

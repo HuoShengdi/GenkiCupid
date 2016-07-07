@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   attr_reader :password
 
-  after_initialize :ensure_session_token, :ensure_avatar
+  after_initialize :ensure_session_token, :ensure_avatar, :ensure_filter_default
   validates :password, length: {minimum: 6, allow_nil: true}
   validates :password_digest, presence: true
   validates :username, presence: true, uniqueness: true
