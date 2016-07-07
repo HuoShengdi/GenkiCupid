@@ -15,5 +15,14 @@ module.exports = {
       type: 'GET',
       success
     });
+  },
+  updateFilter(filterData, success){
+    const username = SessionStore.currentUser().username;
+    $.ajax({
+      url: '/api/profiles/' + username + '/filter',
+      type: 'PATCH',
+      data: {search_filter: filterData},
+      success
+    });
   }
 };
