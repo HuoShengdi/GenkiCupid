@@ -29,7 +29,7 @@ const LoginForm = React.createClass({
 
   guestLogin(e){
     e.preventDefault();
-    this.setState({username: "ItoshikiWish", password:"franzkafka"});
+    this.setState({username: "DiamondJoe", password:"franzkafka"});
     window.setTimeout(this.handleSubmit, 1000);
   },
 
