@@ -14,7 +14,9 @@ const Home = React.createClass({
     this.listener = MatchStore.addListener(this.onChange);
     MatchActions.fetchMatches();
   },
-
+  componentWillUnmount(){
+    this.listener.remove();
+  },
   render () {
     const randomUsers = this.state.matches.map((match)=>{
       return <SplashUserDetail match={match} key={match.id}/>;
