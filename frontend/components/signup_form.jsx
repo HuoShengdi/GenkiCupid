@@ -72,7 +72,6 @@ const SignupForm = React.createClass({
         <form onSubmit={this.handleSubmit} className="signup-form-box">
           <h3>Welcome to GenkiCupid!</h3>
           If you have an account, {loginLink}.
-
           {this.fieldErrors("base")}
           <div className="signup-form">
             <label> Username: {this.fieldErrors("username")}
@@ -87,12 +86,15 @@ const SignupForm = React.createClass({
                 value={this.state.password}
                 onChange={this.update("password")}
                 className="login-input" />
+            </label>
+            <label> <span className="spacer" />
               <input type="password"
                 value={this.state.verify_password}
                 onChange={this.update("verify_password")}
                 placeholder="Verify Password"
                 className="login-input" />
             </label>
+            <br/>
             <br/>
             <label> Birthdate: {this.fieldErrors("birthdate")}
               <input type="date"
@@ -117,6 +119,7 @@ const SignupForm = React.createClass({
                 <option value="male">Male</option>
               </select>
             </label>
+            <br/>
             <label>Orientation: {this.fieldErrors("orientation")}
               <select className="login-select"
                 value={this.state.orientation}

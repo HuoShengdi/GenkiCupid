@@ -50,6 +50,36 @@
   clear:both;
 }
 
+.standard-button{
+  font: 14px 'OpenSans';
+  line-height: normal;
+  padding: 4px;
+  text-decoration: none;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EC6695), to(#f3b7d5));
+  background: -webkit-linear-gradient(top, #f3b7d5, #EC6695);
+  background: -moz-linear-gradient(top, #f3b7d5, #EC6695);
+  background: -ms-linear-gradient(top, #f3b7d5, #EC6695);
+  background: -o-linear-gradient(top, #f3b7d5, #EC6695);
+  color: #fed;
+  border: 1px #999;
+  box-sizing: border-box;
+}
+
+.standard-button:hover{
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f3b7d5), to(#EC6695));
+  background: -webkit-linear-gradient(top, #EC6695, #f3b7d5);
+  background: -moz-linear-gradient(top, #EC6695, #f3b7d5);
+  background: -ms-linear-gradient(top, #EC6695, #f3b7d5);
+  background: -o-linear-gradient(top, #EC6695, #f3b7d5);
+}
+
+#message-button{
+  font-size: 18px;
+  font-family: 'OpenSans', sans-serif;
+  float: right;
+  padding: 15px;
+}
+
 #profile-avatar-wrapper .upload-button{
   position: absolute;
   left: 50%;
@@ -65,7 +95,7 @@
 }
 
 .upload-button {
-  font: 18px OpenSans;
+  font: 18px 'OpenSans', sans-serif;
   line-height: normal;
   padding: 4px;
   text-decoration: none;

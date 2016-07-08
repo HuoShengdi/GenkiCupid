@@ -1,0 +1,12 @@
+class CreateMessageThreads < ActiveRecord::Migration
+  def change
+    create_table :message_threads do |t|
+      t.integer :sender_id, null: false
+      t.integer :recipient_id, null: false
+      t.timestamps null: false
+    end
+
+    add_index :message_threads, :sender_id
+    add_index :message_threads, :recipient_id
+  end
+end

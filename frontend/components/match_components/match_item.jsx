@@ -32,7 +32,7 @@ const MatchItem = React.createClass({
               </a>
             </div>
             <div className='userinfo'>
-              {this.props.match.profile_details.age} • {this.props.match.profile_details.gender}
+              {this.props.match.profile_details.age} • {this.props.match.profile_details.location}
             </div>
           </div>
           <div className='percentage'>

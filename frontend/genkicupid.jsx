@@ -15,6 +15,12 @@ const ProfileAbout = require('./components/profile_components/profile_about');
 const ProfileQuestions = require('./components/profile_components/profile_questions');
 const NavBar = require('./components/nav_bar');
 const MatchIndex = require('./components/match_components/match_index');
+const MessageInbox = require('./components/message_components/message_inbox');
+const MessageThread = require('./components/message_components/message_thread');
+const NewThreadForm = require('./components/message_components/new_thread_form');
+
+const MessageActions = require('./actions/message_actions');
+const ThreadActions = require('./actions/thread_actions');
 
 const SessionStore = require('./stores/session_store');
 const SessionActions = require('./actions/session_actions');
@@ -46,6 +52,11 @@ const appRouter = (
         <Route path="/profiles/:username/about" component={ProfileAbout}/>
         <Route path="/profiles/:username/questions" component={ProfileQuestions}/>
       </Route>
+      <Route path="/messages" component={MessageInbox} onEnter={_ensureLoggedIn}>
+        <Route path="/messages/:threadId" component={MessageThread}/>
+        <Route path="/messages/new/:username" component={NewThreadForm}/>
+      </Route>
+
     </Route>
   </Router>
 );
@@ -61,6 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
     SessionActions.receiveCurrentUser(window.currentUser);
   }
   Modal.setAppElement(document.body);
+  window.messageActions = MessageActions;
+  window.threadActions = ThreadActions;
   const root = document.getElementById('content');
   ReactDOM.render(appRouter, root);
 });

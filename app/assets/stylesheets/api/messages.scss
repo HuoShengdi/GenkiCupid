@@ -1,0 +1,109 @@
+// Place all the styles related to the Api::Messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.thread-pane {
+  display:inline-block;
+  width: 720px;
+  height: 640px;
+  position: relative;
+  left:200px;
+  padding: 10px;
+  background-color: #fde;
+}
+
+.thread-display-box{
+  display:flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.messages-box{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  height: 480px;
+  background: #fafbfd;
+  overflow-y: scroll;
+}
+
+.message-wrapper{
+  padding:10px;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  max-width: 580px;
+}
+
+.message-wrapper.other{
+  background-color: #edf
+}
+
+.message-wrapper.self{
+  align-self: flex-end;
+  background-color: #dcf;
+}
+
+.message-form-wrapper{
+  align-self:stretch;
+  margin-top: 10px;
+}
+
+.message-form-wrapper form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-form-wrapper textarea{
+  width: 600px;
+  height: 90px;
+  float: left;
+  resize: none;
+}
+.message-form-wrapper button{
+  width: 70px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.message-avatar-wrapper img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 5px;
+}
+
+.message-wrapper.self img{
+  display:none;
+}
+
+.message-detail {
+  font-size: 12px;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.message-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.messages-title {
+  background-color: #fde;
+  width: 100%;
+  padding-top: 5px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.message-window-wrapper {
+  width: 100%;
+}

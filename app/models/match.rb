@@ -40,7 +40,7 @@ class Match < ActiveRecord::Base
   end
 
   def distance_away
-    self.user.distance_from([self.profile.latitude, self.profile.longitude])
+    self.user.distance_from([profile.latitude, profile.longitude])
   end
 
   def self.make_matches(username)
@@ -57,7 +57,8 @@ class Match < ActiveRecord::Base
       username: profile.username,
       age: profile.age,
       gender: profile.gender,
-      distance: self.distance_away
+      location: profile.location,
+      distance: distance_away
     }
   end
 

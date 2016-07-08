@@ -63,10 +63,19 @@ const NavBar = React.createClass({
         Browse Matches
       </a>
     );
+    const messagesButton = (
+      <a
+        onClick={this.redirect('/messages')}
+        key='messages'
+        className='navbar-button'
+        id='messages'>
+        Inbox
+      </a>
+    );
 
     return <div className='navbar'>
       {logo}
-      {SessionStore.isUserLoggedIn() ? [logoutButton, profileButton, matchButton] : [signUpButton, loginButton]}
+      {SessionStore.isUserLoggedIn() ? [logoutButton, profileButton, matchButton, messagesButton] : [signUpButton, loginButton]}
     </div>;
   }
 });

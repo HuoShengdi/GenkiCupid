@@ -11,5 +11,8 @@ Rails.application.routes.draw do
     end
     resources :questions, only:[:show, :index]
     resources :matches, param: :username, only:[:index]
+    resources :message_threads, only:[:index, :show, :create] do
+      resources :messages, only:[:index, :show, :create, :update, :destroy]
+    end
   end
 end

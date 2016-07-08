@@ -8,7 +8,14 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   validates :session_token, presence: true, uniqueness: true
   validates :avatar_url, :postal_code, :birthdate, :gender, :orientation, :rel_status, presence: true
-  geocoded_by :postal_code
+  geocoded_by :postal_code do |user, results|
+    if geo = results.first
+      user.latitude = geo.latitude
+      user.longitude = geo.longitude
+      user.location = "#{geo.city}, #{geo.state_code}"
+    end
+  end
+
   after_validation :geocode, if: :should_query?
 
   has_many :essays, dependent: :destroy
@@ -35,6 +42,10 @@ class User < ActiveRecord::Base
     dependent: :destroy
   )
 
+  has_many :messages, :foreign_key => :author_id
+  has_many :threads_started, :foreign_key => :sender_id, class_name: 'MessageThread'
+  has_many :threads_received, :foreign_key => :recipient_id, class_name: 'MessageThread'
+
 
   def age
     age = ((Date.today - self.birthdate.to_date)/365).to_i
@@ -42,6 +53,10 @@ class User < ActiveRecord::Base
 
   def birthday
     self.birthdate.to_date.to_formatted_s
+  end
+
+  def message_threads
+    threads_started + threads_received
   end
 
   def self.find_by_credentials(username, password)
@@ -67,7 +82,7 @@ class User < ActiveRecord::Base
   end
 
   def should_query?
-    self.postal_code.present? && self.postal_code_changed?
+    self.postal_code.present? && self.postal_code_changed? && self.location.present?
   end
 
   def ensure_session_token
