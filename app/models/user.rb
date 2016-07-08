@@ -82,7 +82,13 @@ class User < ActiveRecord::Base
   end
 
   def should_query?
-    self.postal_code.present? && self.postal_code_changed? && self.location.present?
+    if self.postal_code.present?
+      if self.postal_code_changed? || self.location == nil
+        return true
+      end
+    else
+      return false
+    end
   end
 
   def ensure_session_token

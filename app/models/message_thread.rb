@@ -18,14 +18,14 @@ class MessageThread < ActiveRecord::Base
   end
 
   def last_updated
-    messages.last.message_time if messages.any?
+    messages.last.message_time if messages.last
   end
 
   def last_message
-    messages.last.body if messages.any?
+    messages.last.body if messages.last
   end
 
   def update_time
-    messages.last.created_at if messages.any?
+    messages.last.created_at if messages.last
   end
 end

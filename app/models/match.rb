@@ -24,6 +24,9 @@ class Match < ActiveRecord::Base
     same_answers = 0
     not_answered = 0
     match_answers = self.profile.answers
+    if match_answers.length == 0
+      return 0
+    end
     self_answers = self.user.answers
     self_answers.each do |answer|
 

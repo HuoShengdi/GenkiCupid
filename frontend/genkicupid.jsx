@@ -43,10 +43,10 @@ const App = React.createClass({
 const appRouter = (
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home}/>
+      <IndexRoute component={Home} onEnter={_ensureLoggedIn}/>
       <Route path="/signup" component={SignupForm}/>
       <Route path="/login" component={LoginForm}/>
-      <Route path="/match" component={MatchIndex}/>
+      <Route path="/match" component={MatchIndex} onEnter={_ensureLoggedIn}/>
       <Route path="/profiles/:username" component={Profile} onEnter={_ensureLoggedIn}>
         <IndexRoute component={ProfileAbout}/>
         <Route path="/profiles/:username/about" component={ProfileAbout}/>

@@ -60,6 +60,10 @@ button:focus {
   filter: brightness(90%);
 }
 
+a:focus{
+	color: inherit;
+}
+
 #content {
   width: 100%;
 }
