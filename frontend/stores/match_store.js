@@ -88,11 +88,36 @@ function _clearStore(){
   _currentFilter = {};
 }
 
+function shuffle (array) {
+  let i = 0
+    , j = 0
+    , temp = null;
+
+  for (i = array.length - 1; i > 0; i -= 1) {
+    j = Math.floor(Math.random() * (i + 1));
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+
 MatchStore.matches = function () {
   _resetDisplay();
   _filterMatches();
   _sortByMatchPercent();
   return _displayMatches.slice(0);
+};
+
+MatchStore.random = function (num) {
+  if (!num){
+    num = 5;
+  }
+  _resetDisplay();
+  if (_displayMatches.length < num){
+    return _displayMatches;
+  }
+  return shuffle(_displayMatches).slice(0, num);
 };
 
 MatchStore.searchFilter = function() {
