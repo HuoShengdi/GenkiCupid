@@ -25,7 +25,7 @@ const ProfileHeader = React.createClass({
   },
 
   openMessageThread (){
-    hashHistory.push('/messages/'+this.props.profile.username);
+    hashHistory.push('/messages/new/'+this.props.profile.username);
   },
 
   render () {
