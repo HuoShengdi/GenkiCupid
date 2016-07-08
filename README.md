@@ -11,21 +11,21 @@ GenkiCupid is a web application inspired by OKCupid that will be built using Rub
 - [x] Hosting on Heroku
 - [x] New account creation, login, and guest/demo login
 - [ ] A production README, replacing this README
-- [ ] Browse and search other users by location and ‘looking for’
+- [x] Browse and search other users by location and ‘looking for’
     - [x] Smooth, bug-free navigation
-    - [ ] Adequate seed data to demonstrate the site's features
+    - [x] Adequate seed data to demonstrate the site's features
     - [x] Adequate CSS styling
-- [ ] Messaging
-  - [ ] Smooth, bug-free navigation
+- [x] Messaging
+  - [x] Smooth, bug-free navigation
   - [ ] Adequate seed data to demonstrate the site's features
-  - [ ] Adequate CSS styling
+  - [x] Adequate CSS styling
 - [x] Personality questions   
   - [x] Smooth, bug-free navigation
   - [x] Adequate seed data to demonstrate the site's features
   - [x] Adequate CSS styling
-- [ ] Match percentages based on question answers
+- [x] Match percentages based on question answers
   - [x] Smooth, bug-free navigation
-  - [ ] Adequate seed data to demonstrate the site's features
+  - [x] Adequate seed data to demonstrate the site's features
   - [x] Adequate CSS styling
 
 

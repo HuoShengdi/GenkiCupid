@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160707221703) do
+ActiveRecord::Schema.define(version: 20160708202706) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,8 +57,12 @@ ActiveRecord::Schema.define(version: 20160707221703) do
     t.integer  "distance"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "postal_code"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
+  add_index "filters", ["latitude", "longitude"], name: "index_filters_on_latitude_and_longitude", using: :btree
   add_index "filters", ["user_id"], name: "index_filters_on_user_id", unique: true, using: :btree
 
   create_table "matches", force: :cascade do |t|

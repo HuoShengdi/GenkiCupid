@@ -51,7 +51,41 @@ Answer.create!([
   {user_id: 4, question_id: 9, option_id: 24},
   {user_id: 4, question_id: 16, option_id: 37},
   {user_id: 4, question_id: 2, option_id: 4},
-  {user_id: 4, question_id: 10, option_id: 26}
+  {user_id: 4, question_id: 10, option_id: 26},
+  {user_id: 5, question_id: 11, option_id: 27},
+  {user_id: 5, question_id: 10, option_id: 26},
+  {user_id: 5, question_id: 12, option_id: 30},
+  {user_id: 5, question_id: 14, option_id: 33},
+  {user_id: 5, question_id: 17, option_id: 41},
+  {user_id: 5, question_id: 2, option_id: 5},
+  {user_id: 5, question_id: 8, option_id: 22},
+  {user_id: 5, question_id: 13, option_id: 32},
+  {user_id: 5, question_id: 16, option_id: 38},
+  {user_id: 5, question_id: 5, option_id: 12},
+  {user_id: 5, question_id: 1, option_id: 1},
+  {user_id: 5, question_id: 3, option_id: 7},
+  {user_id: 5, question_id: 6, option_id: 16},
+  {user_id: 5, question_id: 7, option_id: 17},
+  {user_id: 5, question_id: 4, option_id: 9},
+  {user_id: 5, question_id: 9, option_id: 23},
+  {user_id: 5, question_id: 15, option_id: 36},
+  {user_id: 6, question_id: 15, option_id: 36},
+  {user_id: 6, question_id: 17, option_id: 40},
+  {user_id: 6, question_id: 12, option_id: 30},
+  {user_id: 6, question_id: 5, option_id: 10},
+  {user_id: 6, question_id: 7, option_id: 17},
+  {user_id: 6, question_id: 6, option_id: 16},
+  {user_id: 6, question_id: 14, option_id: 34},
+  {user_id: 6, question_id: 3, option_id: 6},
+  {user_id: 6, question_id: 16, option_id: 37},
+  {user_id: 6, question_id: 11, option_id: 28},
+  {user_id: 6, question_id: 10, option_id: 25},
+  {user_id: 6, question_id: 8, option_id: 21},
+  {user_id: 6, question_id: 1, option_id: 1},
+  {user_id: 6, question_id: 2, option_id: 4},
+  {user_id: 6, question_id: 9, option_id: 23},
+  {user_id: 6, question_id: 13, option_id: 32},
+  {user_id: 6, question_id: 4, option_id: 9}
 ])
 AnswerOption.create!([
   {question_id: 1, body: "The Sun"},
@@ -103,7 +137,7 @@ Essay.create!([
   {user_id: 1, title: "What I'm doing with my life", body: "Trying to figure out love ;__;"},
   {user_id: 1, title: "I spend a lot of time thinking about", body: "Animals! I love taking care of them. They don't like me very much though..."},
   {user_id: 1, title: "You should message me if", body: "you like animals or sweets\nyou think you can get along well with my dad's goons. They're way too clingy, honestly."},
-  {user_id: 2, title: "My self-summary", body: "I'm in despair!"},
+  {user_id: 2, title: "My self-summary", body: "My hair is the best, don't knock it."},
   {user_id: 2, title: "What I'm doing with my life", body: ""},
   {user_id: 2, title: "I'm really good at", body: ""},
   {user_id: 2, title: "I spend a lot of time thinking about", body: ""},
@@ -117,13 +151,27 @@ Essay.create!([
   {user_id: 4, title: "What I'm doing with my life", body: ""},
   {user_id: 4, title: "I'm really good at", body: ""},
   {user_id: 4, title: "I spend a lot of time thinking about", body: ""},
-  {user_id: 4, title: "You should message me if", body: ""}
-])
-Filter.create!([
-  {user_id: 1, gender: "female", orientation: nil, min_age: 15, max_age: 35, location: nil, distance: nil},
-  {user_id: 2, gender: "female", orientation: nil, min_age: 18, max_age: 43, location: nil, distance: nil},
-  {user_id: 3, gender: "male", orientation: nil, min_age: 15, max_age: 35, location: nil, distance: nil},
-  {user_id: 4, gender: "male", orientation: nil, min_age: 15, max_age: 35, location: nil, distance: nil}
+  {user_id: 4, title: "You should message me if", body: ""},
+  {user_id: 5, title: "My self-summary", body: ""},
+  {user_id: 5, title: "What I'm doing with my life", body: ""},
+  {user_id: 5, title: "I'm really good at", body: ""},
+  {user_id: 5, title: "I spend a lot of time thinking about", body: ""},
+  {user_id: 5, title: "You should message me if", body: ""},
+  {user_id: 6, title: "My self-summary", body: ""},
+  {user_id: 6, title: "What I'm doing with my life", body: ""},
+  {user_id: 6, title: "I'm really good at", body: ""},
+  {user_id: 6, title: "I spend a lot of time thinking about", body: ""},
+  {user_id: 6, title: "You should message me if", body: ""},
+  {user_id: 7, title: "My self-summary", body: ""},
+  {user_id: 7, title: "What I'm doing with my life", body: ""},
+  {user_id: 7, title: "I'm really good at", body: ""},
+  {user_id: 7, title: "I spend a lot of time thinking about", body: ""},
+  {user_id: 7, title: "You should message me if", body: ""},
+  {user_id: 8, title: "My self-summary", body: ""},
+  {user_id: 8, title: "What I'm doing with my life", body: ""},
+  {user_id: 8, title: "I'm really good at", body: ""},
+  {user_id: 8, title: "I spend a lot of time thinking about", body: ""},
+  {user_id: 8, title: "You should message me if", body: ""}
 ])
 Match.create!([
   {user_id: 2, match_id: 1},
@@ -134,7 +182,28 @@ Match.create!([
   {user_id: 2, match_id: 3},
   {user_id: 4, match_id: 1},
   {user_id: 4, match_id: 3},
-  {user_id: 4, match_id: 2}
+  {user_id: 4, match_id: 2},
+  {user_id: 2, match_id: 4},
+  {user_id: 5, match_id: 1},
+  {user_id: 5, match_id: 3},
+  {user_id: 5, match_id: 4},
+  {user_id: 5, match_id: 2},
+  {user_id: 6, match_id: 1},
+  {user_id: 6, match_id: 3},
+  {user_id: 6, match_id: 4},
+  {user_id: 6, match_id: 2},
+  {user_id: 6, match_id: 5},
+  {user_id: 8, match_id: 1},
+  {user_id: 8, match_id: 3},
+  {user_id: 8, match_id: 4},
+  {user_id: 8, match_id: 2},
+  {user_id: 8, match_id: 7},
+  {user_id: 8, match_id: 5},
+  {user_id: 8, match_id: 6},
+  {user_id: 2, match_id: 7},
+  {user_id: 2, match_id: 5},
+  {user_id: 2, match_id: 6},
+  {user_id: 2, match_id: 8}
 ])
 Question.create!([
   {body: "What do the planets of the solar system revolve around?"},
@@ -156,8 +225,12 @@ Question.create!([
   {body: "When men show extra courtesy toward women (opening doors, pulling out chairs, etc.), this is:"}
 ])
 User.create!([
-  {username: "rakuraku15", password_digest: "$2a$10$Om1ZTZTjfbi/3DTMNo/B3.g8ion69G/RNu5vOCaMrNs9vALecXTqa", session_token: "CCPQcAbnuAmVZeZpNdlYLg", avatar_url: "GenkiCupid_Avatars/d3vtyklamxulew3xxplh.jpg", postal_code: "92127", birthdate: "1998-05-15 00:00:00", gender: "male", orientation: "straight", rel_status: "single"},
+  {username: "rakuraku15", password_digest: "$2a$10$Om1ZTZTjfbi/3DTMNo/B3.g8ion69G/RNu5vOCaMrNs9vALecXTqa", session_token: "CCPQcAbnuAmVZeZpNdlYLg", avatar_url: "GenkiCupid_Avatars/d3vtyklamxulew3xxplh.jpg", postal_code: "92127", birthdate: "1998-05-15 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 33.0227476, longitude: -117.1382404, location: "San Diego, CA"},
   {username: "DiamondJoe", password_digest: "$2a$10$DDdryKDm4UY/K0phU8w9felP/K0Dnn0c3oJ3xPsDTSEN3.CVHq4my", session_token: "JVUsPQpvZ9O0nfWECetE-w", avatar_url: "GenkiCupid_Avatars/josuke_higashikata.png", postal_code: "92128", birthdate: "2000-4-04 00:00:00", gender: "male", orientation: "straight", rel_status: "single"},
-  {username: "GoriGurrl", password_digest: "$2a$10$jNaMRcB4//jU50bH88C8WOz6kfTllMkhtXgUvoEY7jIwCgAkYH5pO", session_token: "fLYx7hQ9IGCcPavxsyXa2A", avatar_url: "GenkiCupid_Avatars/pmpct75kf79wzr0wlk6f.png", postal_code: "92127", birthdate: "1998-07-07 00:00:00", gender: "female", orientation: "straight", rel_status: "single"},
-  {username: "rurin", password_digest: "$2a$10$MwfLswK4bWI6HNoCza5Ltumf/NpQpoOk7gfirWA2Dadiod6xpG5ci", session_token: "HZm5gEwj57w0UsyrSu5NzQ", avatar_url: "GenkiCupid_Avatars/mujjvlubzqqmbro3wfp7.jpg", postal_code: "92127", birthdate: "1998-03-29 00:00:00", gender: "female", orientation: "straight", rel_status: "single"}
+  {username: "GoriGurrl", password_digest: "$2a$10$jNaMRcB4//jU50bH88C8WOz6kfTllMkhtXgUvoEY7jIwCgAkYH5pO", session_token: "y1evDUcmW4A4NffDJpYYVA", avatar_url: "GenkiCupid_Avatars/pmpct75kf79wzr0wlk6f.png", postal_code: "92127", birthdate: "1998-07-07 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 33.0227476, longitude: -117.1382404, location: "San Diego, CA"},
+  {username: "rurin", password_digest: "$2a$10$MwfLswK4bWI6HNoCza5Ltumf/NpQpoOk7gfirWA2Dadiod6xpG5ci", session_token: "HZm5gEwj57w0UsyrSu5NzQ", avatar_url: "GenkiCupid_Avatars/mujjvlubzqqmbro3wfp7.jpg", postal_code: "92127", birthdate: "1998-03-29 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 33.0227476, longitude: -117.1382404, location: "San Diego, CA"},
+  {username: "tsugumin", password_digest: "$2a$10$7ary2J2AkXOrCxOUQMpIY.gnNf6kudhCIvegOnVUbCEmsYwNspaES", session_token: "ImgnPlet8BX-MpTrKYiALA", avatar_url: "GenkiCupid_Avatars/vnyevur5lzwseeopv5i6.png", postal_code: "92049", birthdate: "1998-08-08 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 33.1950781, longitude: -117.378631, location: "Oceanside, CA"},
+  {username: "Deradere", password_digest: "$2a$10$ocgwXyCNFznJvRxObT.rkOGXKVfRZ2FiZZwD0XAanLd9F6CtDO5xG", session_token: "niRNHzRJemMHqVZz6aH3Xw", avatar_url: "GenkiCupid_Avatars/gmemqp65ny8ps74vcncq.jpg", postal_code: "92023", birthdate: "1998-07-07 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 33.060208, longitude: -117.2657906, location: "Encinitas, CA"},
+  {username: "HotMike", password_digest: "$2a$10$LuLJOp6WKxIEEREquXOwEu.XdeHuCm8SNJxnwl.tUSX8FaMQ2esHq", session_token: "zyTWdA-8W1SBODFfQX2jFg", avatar_url: "GenkiCupid_Avatars/lc3l7a8hmazrducvowk0.jpg", postal_code: "92014", birthdate: "1998-01-18 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 32.9864215, longitude: -117.226457, location: "Del Mar, CA"},
+  {username: "harudera", password_digest: "$2a$10$Fjbpqo5hY2nF1ov/nV19oO3RvAVeAKCVT2EauAoMpJsIjNdnnV3Gu", session_token: "nh_TBWKqTryoenoG-Baa4w", avatar_url: "GenkiCupid_Avatars/l98qpw3deqhxllyo07be.jpg", postal_code: "92024", birthdate: "1999-09-04 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 33.052083, longitude: -117.2793685, location: "Encinitas, CA"}
 ])

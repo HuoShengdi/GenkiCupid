@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   validates :session_token, presence: true, uniqueness: true
   validates :avatar_url, :postal_code, :birthdate, :gender, :orientation, :rel_status, presence: true
+  validates :postal_code, length: {minimum: 5}
+
   geocoded_by :postal_code do |user, results|
     if geo = results.first
       user.latitude = geo.latitude
@@ -121,12 +123,14 @@ class User < ActiveRecord::Base
       min_age = 18
     end
 
-    if self.age < 26
-      max_age = 35
+    if self.age < 18
+      max_age = 20
     else
-      max_age = self.age + 10
+      max_age = self.age + 4
     end
 
-    self.search_filter ||= Filter.new(user_id: self.id, gender: gender, min_age: min_age, max_age: max_age)
+    self.search_filter ||= Filter.new(user_id: self.id, gender: gender,
+      min_age: min_age, max_age: max_age, postal_code: self.postal_code,
+      distance: 25)
   end
 end
