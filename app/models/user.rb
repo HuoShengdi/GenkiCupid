@@ -44,6 +44,10 @@ class User < ActiveRecord::Base
     dependent: :destroy
   )
 
+  has_many(
+    :answered_questions, through: :answers, source: :question
+  )
+
   has_many :messages, :foreign_key => :author_id
   has_many :threads_started, :foreign_key => :sender_id, class_name: 'MessageThread'
   has_many :threads_received, :foreign_key => :recipient_id, class_name: 'MessageThread'
@@ -81,6 +85,15 @@ class User < ActiveRecord::Base
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save!
     self.session_token
+  end
+
+  def fill_questions
+    answered_questions = self.answered_questions
+    Question.all.map do |question|
+      next if answered_questions.include?(question)
+      option_ids = question.answer_options.map {|option| option.id}
+      self.create_answer(question_id: question.id, option_id: option_ids.sample)
+    end
   end
 
   def should_query?
