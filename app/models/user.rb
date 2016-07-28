@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  after_validation :geocode, if: :should_query?
+
   has_many :essays, dependent: :destroy
   has_many :answers, dependent: :destroy
   has_many(
@@ -90,7 +92,7 @@ class User < ActiveRecord::Base
     Question.all.map do |question|
       next if answered_questions.include?(question)
       option_ids = question.answer_options.map {|option| option.id}
-      self.create_answer(question_id: question.id, option_id: option_ids.sample)
+      Answer.create(user_id: self.id, question_id: question.id, option_id: option_ids.sample)
     end
   end
 

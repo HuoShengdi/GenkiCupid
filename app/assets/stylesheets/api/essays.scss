@@ -16,16 +16,30 @@
 .essay textarea {
   height: 150px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .essay-edit-button{
   margin-left: 20px;
+  font-size: 16px;
+  line-height: normal;
+  border: none;
+  text-decoration: underline;
+}
+
+.essay-edit-button:hover{
+  color: #21f
 }
 
 .essay-body *{
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.15;
 }
 
 .essay-body {
   white-space: pre-wrap;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 1.15;
 }

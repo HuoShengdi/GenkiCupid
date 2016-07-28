@@ -34,6 +34,15 @@
   padding-bottom: 5px;
 }
 
+#details-edit-open {
+  text-decoration: underline;
+}
+
+#details-edit-open:hover{
+  cursor: pointer;
+  color: #21f;
+}
+
 .details-form-button {
   font: 18px OpenSans;
   line-height: normal;

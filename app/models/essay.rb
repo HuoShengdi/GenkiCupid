@@ -5,16 +5,29 @@ class Essay < ActiveRecord::Base
   belongs_to :user
 
   ESSAY_TITLES = [
-    "My self-summary",
-    "What I'm doing with my life",
-    "I'm really good at",
-    "I spend a lot of time thinking about",
-    "You should message me if"
+    "Favorite Pokemon",
+    "Favorite Chuck Norris fact",
+    "Favorite Star Wars quote",
+    "My superhero name and power",
+    "I would love to..."
   ]
 
   def self.generate_essays(user_id)
-    ESSAY_TITLES.each do |title|
-      Essay.create({user_id: user_id, title: title, body: ""})
+    ESSAY_TITLES.each_with_index do |title, i|
+      body = ""
+      case i
+      when 0
+        body = Faker::Pokemon.name
+      when 1
+        body = Faker::ChuckNorris.fact
+      when 2
+        body = Faker::StarWars.quote
+      when 3
+        body = Faker::Superhero.name + ", with the power of " + Faker::Superhero.power
+      when 4
+        body = Faker::Company.bs
+      end
+      Essay.create({user_id: user_id, title: title, body: body})
     end
   end
 

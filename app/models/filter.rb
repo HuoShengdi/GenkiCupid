@@ -10,6 +10,8 @@ class Filter < ActiveRecord::Base
     end
   end
 
+  after_validation :geocode, if: :should_query?
+
   belongs_to(
     :user,
     primary_key: :id,
