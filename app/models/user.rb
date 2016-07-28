@@ -18,8 +18,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  after_validation :geocode, if: :should_query?
-
   has_many :essays, dependent: :destroy
   has_many :answers, dependent: :destroy
   has_many(

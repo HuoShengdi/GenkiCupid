@@ -34,9 +34,6 @@ gem 'font-awesome-sass'
 
 gem 'geocoder'
 
-gem 'google-api-client'
-
-gem 'certified'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

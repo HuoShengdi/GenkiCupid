@@ -130,6 +130,7 @@ GEM
     minitest (5.9.0)
     multi_json (1.12.1)
     multipart-post (2.0.0)
+    net_http_ssl_fix (0.0.3)
     newrelic_rpm (3.16.0.318)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -249,6 +250,7 @@ DEPENDENCIES
   google-api-client
   jbuilder (~> 2.0)
   jquery-rails
+  net_http_ssl_fix
   newrelic_rpm
   pg (~> 0.15)
   pry-rails

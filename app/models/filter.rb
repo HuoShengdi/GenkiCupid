@@ -9,7 +9,6 @@ class Filter < ActiveRecord::Base
       fil.location = "#{geo.city}, #{geo.state_code}"
     end
   end
-  after_validation :geocode, if: :should_query?
 
   belongs_to(
     :user,

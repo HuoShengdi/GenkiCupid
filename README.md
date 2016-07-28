@@ -94,7 +94,7 @@ Essays can be read and edited on profile page, recent Visits are displayed on us
 
 **Objective:** Matches are simply other users' profiles, matching the user's `looking_for` parameters and sorted by match %
 
-- [ ] be able to view and edit user's "looking for" through profile
+- [x] be able to view and edit user's "looking for" through profile
 - [x] search other profiles by "looking for"
 - [x] create `Match` store, storing basic profile information
 - [x] jbuilder view for profiles found through match search
@@ -106,8 +106,8 @@ Essays can be read and edited on profile page, recent Visits are displayed on us
 **Objective:** Users can send messages to each other
 
 - [x] create `Message` model
-- [ ] Build API, Flux loop, and components for CRUD on Messages
-- [ ] Messages are sorted into conversations, sorted by id of other party in each message and ordered by timestamps
+- [x] Build API, Flux loop, and components for CRUD on Messages
+- [x] Messages are sorted into conversations, sorted by id of other party in each message and ordered by timestamps
 - [ ] *Bonus* Attempt to integrate Sendbird API for real time chat windows
 
 ### Phase 8: Styling Cleanup and Seeding (0.5 days, W2 F 6pm)

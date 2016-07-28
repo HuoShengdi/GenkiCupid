@@ -21,3 +21,5 @@
 
 # Ignore application configuration
 /config/application.yml
+# Ignore geocoder config : buggy https on Windows
+/config/initializers/geocoder.rb

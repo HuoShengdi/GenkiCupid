@@ -21,8 +21,6 @@ Geocoder.configure(
 
 lookup: :google,
 language: :en,
-use_https: true,
-api_key: 'AIzaSyCnRqR_zMAN9ZiWc_HEOmtZa33kDa4b0_M',
 timeout: 5
 
 )

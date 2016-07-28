@@ -1,7 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-require 'certified'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -22,6 +21,8 @@ module GenkiCupid
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    # Fixes SSL Connection Error in Windows execution of Ruby
+    # Based on fix described at: https://gist.github.com/fnichol/867550
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
