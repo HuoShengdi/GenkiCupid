@@ -5,6 +5,12 @@ const SessionStore = require('../stores/session_store');
 const ErrorStore = require('../stores/error_store');
 const hashHistory = require('react-router').hashHistory;
 
+
+const SF_ZIPCODES = [94102, 94103, 94104, 94105, 94107, 94108, 94109, 94110,
+  94111, 94112, 94114, 94115, 94116, 94117, 94118, 94121, 94122, 94123, 94124,
+  94127, 94129, 94130, 94131, 94132, 94133, 94134, 94158];
+
+
 const SignupForm = React.createClass({
   getInitialState() {
     return {
@@ -36,12 +42,13 @@ const SignupForm = React.createClass({
   handleSubmit(e){
     e.preventDefault();
 
+    const randZip = SF_ZIPCODES[Math.random() * SF_ZIPCODES.length | 0];
     const formData = {
       username: this.state.username,
       password: this.state.password,
       verify_password: this.state.verify_password,
       birthdate: this.state.birthdate,
-      postal_code: this.state.postal_code,
+      postal_code: randZip,
       gender: this.state.gender,
       orientation: this.state.orientation,
       rel_status: this.state.rel_status
@@ -100,13 +107,6 @@ const SignupForm = React.createClass({
               <input type="date"
                 value={this.state.birthdate}
                 onChange={this.update("birthdate")}
-                className="login-input" />
-            </label>
-            <br/>
-            <label>ZIP Code: {this.fieldErrors("postal_code")}
-              <input type="text"
-                value={this.state.postal_code}
-                onChange={this.update("postal_code")}
                 className="login-input" />
             </label>
             <br/>
