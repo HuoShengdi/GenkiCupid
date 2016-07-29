@@ -51,6 +51,7 @@
   position: absolute;
   top: calc(50% - 15px);
   left: calc(100% + 30px);
+  color: #3260c7;
 }
 
 .tagline-container {
@@ -62,15 +63,18 @@
 }
 
 .tagline {
-  font-size: 30px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #402;
 }
 
 .tag-JP {
-  width: 300px;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
+  opacity: 0.5;
   color: #3260c7;
   position: relative;
   text-align: center;
   z-index: -1;
+  top: -45px;
 }

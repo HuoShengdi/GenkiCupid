@@ -37,8 +37,8 @@ const Home = React.createClass({
           </i>
         </div>
         <div className='tagline-container'>
-          <h2 className='tagline tag-EN'>Experience the springtime of youth!</h2>
-          <h2 className='tagline tag-JP'>青春をかける!</h2>
+          <h2 className='tagline tag-EN'>Enjoy the springtime of youth!</h2>
+          <h2 className='tagline tag-JP'>青春お楽しみに!</h2>
         </div>
       </div>
     );
