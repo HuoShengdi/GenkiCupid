@@ -47,13 +47,6 @@ const ProfileDetailsForm = React.createClass({
               className="detail-input" />
           </label>
           <br/>
-          <label className='detail-field'>ZIP Code:
-            <input type="text"
-              value={this.state.postal_code}
-              onChange={this.update("postal_code")}
-              className="detail-input" />
-          </label>
-          <br/>
           <label className='detail-field'>Gender:
             <select className="detail-select"
               value={this.state.gender}
@@ -63,6 +56,7 @@ const ProfileDetailsForm = React.createClass({
               <option value="male">Male</option>
             </select>
           </label>
+          <br/>
           <label className='detail-field'>Orientation:
             <select className="detail-select"
               value={this.state.orientation}
@@ -71,17 +65,6 @@ const ProfileDetailsForm = React.createClass({
               <option value="straight">Straight</option>
               <option value="gay">Gay</option>
               <option value="bisexual">Bisexual</option>
-            </select>
-          </label>
-          <br/>
-          <label className='detail-field'>Relationship Status:
-            <select className="detail-select"
-              value={this.state.rel_status}
-              onChange={this.update("rel_status")}>
-              <option></option>
-              <option value="single">Single</option>
-              <option value="dating">In a Relationship</option>
-              <option value="married">Married</option>
             </select>
           </label>
           <br/>

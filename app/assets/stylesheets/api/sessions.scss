@@ -32,7 +32,11 @@
   background: -o-linear-gradient(top, #7260c7, #3260c7);
   color: #fed;
   border: 1px #999;
+  border-radius: 5px;
+  width: 80%;
   box-sizing: border-box;
+  text-align: center;
+  margin: 10px;
 }
 
 .login-form-button:hover{
@@ -46,17 +50,16 @@
 }
 
 #login-submit{
-  float:right;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 #guest-login{
-  float:right;
 }
 
 #button-box{
   margin-top: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 #button-box::after{

@@ -51,7 +51,7 @@ const SignupForm = React.createClass({
       postal_code: randZip,
       gender: this.state.gender,
       orientation: this.state.orientation,
-      rel_status: this.state.rel_status
+      rel_status: "single"
     };
     SessionActions.signUp(formData);
   },
@@ -128,17 +128,6 @@ const SignupForm = React.createClass({
                 <option value="straight">Straight</option>
                 <option value="gay">Gay</option>
                 <option value="bisexual">Bisexual</option>
-              </select>
-            </label>
-            <br/>
-            <label>Relationship Status: {this.fieldErrors("rel_status")}
-              <select className="login-select"
-                value={this.state.rel_status}
-                onChange={this.update("rel_status")}>
-                <option></option>
-                <option value="single">Single</option>
-                <option value="dating">In a Relationship</option>
-                <option value="married">Married</option>
               </select>
             </label>
             <br/>
