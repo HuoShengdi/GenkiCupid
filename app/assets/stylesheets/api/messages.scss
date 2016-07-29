@@ -17,6 +17,8 @@
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
+  height: 580px;
+
 }
 
 .messages-box{
@@ -24,9 +26,14 @@
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
-  height: 480px;
   background: #fafbfd;
-  overflow-y: scroll;
+  flex: 1 1 90%;
+}
+
+.messages-box-wrapper{
+  width: 100%;
+  height: 480px;
+  overflow-y: auto;
 }
 
 .message-wrapper{
@@ -35,6 +42,7 @@
   margin: 10px;
   display: flex;
   max-width: 580px;
+  flex-shrink: 0;
 }
 
 .message-wrapper.other{
@@ -92,7 +100,10 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  flex-shrink: 0;
 }
+
+
 .messages-title {
   background-color: #fde;
   width: 100%;

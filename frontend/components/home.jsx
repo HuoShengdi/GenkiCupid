@@ -8,6 +8,9 @@ const Home = React.createClass({
     return {matches: MatchStore.random(5)};
   },
   onChange(){
+    this.getRandom();
+  },
+  getRandom(){
     this.setState({matches: MatchStore.random(5)});
   },
   componentDidMount(){
@@ -28,6 +31,14 @@ const Home = React.createClass({
         </div>
         <div className='splash-card-container'>
           {randomUsers}
+          <i id='refresh'
+            className="fa fa-refresh fa-2"
+            onClick={this.getRandom}>
+          </i>
+        </div>
+        <div className='tagline-container'>
+          <h2 className='tagline tag-EN'>Experience the springtime of youth!</h2>
+          <h2 className='tagline tag-JP'>青春をかける!</h2>
         </div>
       </div>
     );
