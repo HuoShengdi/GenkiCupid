@@ -30,3 +30,37 @@
 .signup-form select{
   border-radius: 5px;
 }
+
+#site-info-container{
+  background-color: #f3e7f5;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 400px;
+  border-radius: 5px;
+  border: 2px solid #402;
+  font-size: 16px;
+}
+
+#site-info-container h3{
+  text-align:center;
+  color: #402;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#rules-list{
+  font-size: 14px;
+  list-style: circle;
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+#rules-list li{
+  margin-bottom: 1em;
+}

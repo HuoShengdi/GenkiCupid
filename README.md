@@ -8,7 +8,7 @@
 
 **Build your character's profile and answer personality questions, and GenkiCupid will match you with other characters based on its internal matching algorithm.**
 
-**GenkiCupid is built on a Rails/PostGres backend and React.js frontend using the Flux architecture**
+**GenkiCupid is built on a Rails/PostGres backend and React.js frontend using Flux architecture.**
 
 ## Features
 
