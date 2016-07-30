@@ -8,6 +8,7 @@
 
 .inner-question-box{
   padding: 20px;
+  position: relative;
 }
 
 #no-questions-message {
@@ -19,6 +20,13 @@
   background: none;
   font-size: 20px;
   color: #402;
+}
+
+#error{
+  color: #f22;
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
 }
 
 .question-text {
@@ -43,6 +51,7 @@
   box-sizing: border-box;
   margin-right: 20px;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 .option-radio{

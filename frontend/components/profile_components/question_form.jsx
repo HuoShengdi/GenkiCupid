@@ -1,11 +1,12 @@
 const React = require('react');
+const ReactDOM = require('react-dom');
 const QuestionActions = require('../../actions/question_actions');
 const StringUtils = require('../../util/string_utils');
 const AnswerActions = require('../../actions/answer_actions');
 
 const QuestionForm = React.createClass({
   getInitialState(){
-    return {selected: 0};
+    return {selected: 0, error: false};
   },
   handleSubmit(e){
     e.preventDefault();
@@ -14,8 +15,20 @@ const QuestionForm = React.createClass({
       question_id: this.props.question.id,
       option_id: this.state.selected
     };
-    AnswerActions.createAnswer(formData);
-    QuestionActions.fetchRandomQuestion(this.props.username);
+    if (this.state.selected === 0){
+      this.noSelect();
+    }else{
+      AnswerActions.createAnswer(formData);
+      QuestionActions.fetchRandomQuestion(this.props.username);
+    }
+  },
+  noSelect(){
+    const selfnode = ReactDOM.findDOMNode(this);
+    this.setState({error: true});
+    setTimeout(this.removeError, 3000);
+  },
+  removeError(){
+    this.setState({error: false});
   },
   componentWillReceiveProps(){
     this.setState({selected: 0});
@@ -28,6 +41,7 @@ const QuestionForm = React.createClass({
     QuestionActions.fetchRandomQuestion(this.props.username);
   },
   render () {
+    const errorMsg = <p id='error'>No option selected!</p>;
     const options = this.props.question.answer_options.map(
       (el)=>{
         return (
@@ -41,12 +55,13 @@ const QuestionForm = React.createClass({
       );}
     );
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id="question-form" onSubmit={this.handleSubmit}>
         {options}
         <a href="#" className='question-button'
           onClick={this.handleSubmit}>Save Answer</a>
         <a href="#" className='question-button'
           onClick={this.skipQuestion}>Skip</a>
+        {this.state.error ? errorMsg : ""}
       </form>
     );
   }

@@ -48,9 +48,9 @@ class User < ActiveRecord::Base
     :answered_questions, through: :answers, source: :question
   )
 
-  has_many :messages, :foreign_key => :author_id
-  has_many :threads_started, :foreign_key => :sender_id, class_name: 'MessageThread'
-  has_many :threads_received, :foreign_key => :recipient_id, class_name: 'MessageThread'
+  has_many :messages, :foreign_key => :author_id, dependent: :destroy
+  has_many :threads_started, :foreign_key => :sender_id, class_name: 'MessageThread', dependent: :destroy
+  has_many :threads_received, :foreign_key => :recipient_id, class_name: 'MessageThread', dependent: :destroy
 
 
   def age

@@ -47,6 +47,13 @@ const ProfileDetailsForm = React.createClass({
               className="detail-input" />
           </label>
           <br/>
+          <label className='detail-field'>Postal Code:
+            <input type="text"
+              value={this.state.postal_code}
+              onChange={this.update("postal_code")}
+              className='detail-input'/>
+          </label>
+          <br/>
           <label className='detail-field'>Gender:
             <select className="detail-select"
               value={this.state.gender}

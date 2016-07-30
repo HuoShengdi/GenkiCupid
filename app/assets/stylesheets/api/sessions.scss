@@ -4,7 +4,6 @@
 
 .login-form-container form label {
   line-height: 2;
-  margin-right: 10px;
   font-size: 16px;
   position: relative;
   display: flex;
@@ -16,8 +15,20 @@
 }
 
 .login-form-container form h3 {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #402;
   line-height: 2;
+}
+
+.login-form-box {
+  text-align: center;
+}
+
+.login-form input{
+  border-radius: 5px;
+  margin-left: 10px;
+  padding-left: 2px;
 }
 
 .login-form-button{
@@ -60,8 +71,4 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-}
-
-#button-box::after{
-
 }

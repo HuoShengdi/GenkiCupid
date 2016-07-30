@@ -109,6 +109,7 @@ const SearchFilterForm = React.createClass({
             <button className='search-filter-button'>{ageStr}</button>
           </OverlayTrigger>
         </span>
+        <span> and are </span>
         <span className='filter-wrapper'>
           <OverlayTrigger trigger="click" rootClose
             placement="bottom"

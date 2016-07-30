@@ -26,7 +26,7 @@ const NewMessageForm = React.createClass({
       <div className='message-form-wrapper'>
         <form onSubmit={this.handleSubmit}>
           <textarea value={this.state.body} onChange={this.update("body")} placeholder='Type your message here'/>
-          <button onClick={this.handleSubmit}>Post</button>
+          <button className='standard-button' onClick={this.handleSubmit}>Send</button>
         </form>
       </div>
     );

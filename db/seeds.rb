@@ -758,7 +758,7 @@ Essay.create!([
 ])
 Filter.create!([
   {user_id: 1, gender: "female", orientation: nil, min_age: 16, max_age: 22, location: nil, distance: 25, postal_code: "92127", latitude: nil, longitude: nil},
-    {user_id: 2, gender: "female", orientation: "", min_age: 14, max_age: 20, location: "", distance: nil, postal_code: "92128", latitude: nil, longitude: nil},
+  {user_id: 2, gender: "female", orientation: "", min_age: 14, max_age: 20, location: "", distance: nil, postal_code: "92128", latitude: nil, longitude: nil},
   {user_id: 3, gender: "male", orientation: nil, min_age: 16, max_age: 22, location: nil, distance: 25, postal_code: "92127", latitude: nil, longitude: nil},
   {user_id: 4, gender: "male", orientation: nil, min_age: 16, max_age: 22, location: nil, distance: 25, postal_code: "92127", latitude: nil, longitude: nil},
   {user_id: 5, gender: "male", orientation: nil, min_age: 15, max_age: 20, location: nil, distance: 25, postal_code: "92049", latitude: nil, longitude: nil},

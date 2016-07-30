@@ -29,6 +29,8 @@ const ProfileDetails = React.createClass({
           fieldValue = this.props.profile[key];
         }
 
+        fieldName = StringUtils.capitalize(fieldName);
+
         return (
           <ProfileDetailItem
             field={fieldName}

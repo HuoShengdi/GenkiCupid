@@ -55,12 +55,13 @@ class Match < ActiveRecord::Base
   end
 
   def profile_details
+    this_profile = self.profile
     {
-      image: profile.avatar_url,
-      username: profile.username,
-      age: profile.age,
-      gender: profile.gender,
-      location: profile.location,
+      image: this_profile.avatar_url,
+      username: this_profile.username,
+      age: this_profile.age,
+      gender: this_profile.gender,
+      location: this_profile.location,
       distance: distance_away
     }
   end
