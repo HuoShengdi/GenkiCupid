@@ -1,5 +1,6 @@
 const React = require('react');
 const MessageActions = require('../../actions/message_actions');
+const ThreadActions = require('../../actions/thread_actions');
 const SessionStore = require('../../stores/session_store');
 const PropTypes = React.PropTypes;
 
@@ -18,6 +19,7 @@ const NewMessageForm = React.createClass({
         threadId: this.props.threadId
       };
     MessageActions.createMessage(formData);
+    ThreadActions.fetchThreads();
     this.setState({body: ""});
   },
 

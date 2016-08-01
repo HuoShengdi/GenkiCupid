@@ -39,12 +39,16 @@
 .thread-list{
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-flow: column-reverse;
+  justify-content: flex-end;
 }
 
 .thread-list-item{
   width: 100%;
   height: 80px;
   padding: 5px;
+  flex-shrink: 0;
 }
 
 .thread-list-item a, .thread-list-item a:hover, .thread-list-item a:focus{

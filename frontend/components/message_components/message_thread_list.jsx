@@ -29,7 +29,7 @@ const MessageThreadList = React.createClass({
         <ThreadListItem thread={thread} key={thread.id} active={this.state.active === thread.id.toString()}/>
       );
     });
-    const noMessages = <div className='no-messages'>You don't have any messages!</div>;
+    const noMessages = <div className='no-messages'>{"You don't have any messages!"}</div>;
     return (
       <div className='thread-list'>
         {threadItems[0] ? threadItems : noMessages}
