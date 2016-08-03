@@ -56,7 +56,6 @@ group :development do
 end
 
 group :production do
-  gem 'seed_dump'
   gem 'newrelic_rpm'
   gem 'rails_12factor' # error feedback
 end
