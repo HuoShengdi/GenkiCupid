@@ -27,7 +27,7 @@ const Home = React.createClass({
     return (
       <div id='splash'>
         <div className='splash-title'>
-          Featured Users
+          Featured Characters
         </div>
         <div className='splash-card-container'>
           {randomUsers}

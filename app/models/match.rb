@@ -50,7 +50,7 @@ class Match < ActiveRecord::Base
     user = User.find_by_username(username)
     User.all.each do |match|
       next if user == match
-      Match.create(user_id: user.id, match_id: match.id)
+      Match.where(user_id: user.id, match_id: match.id).first_or_create
     end
   end
 

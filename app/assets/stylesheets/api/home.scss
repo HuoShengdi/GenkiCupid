@@ -14,6 +14,7 @@
   justify-content: space-around;
   position: relative;
   height: 160px;
+
 }
 
 .splash-card-container::after {
@@ -38,11 +39,11 @@
 #refresh {
   font-size: 30px;
   transition-duration: 200ms;
+  line-height: 0;
 }
 
 #refresh:hover {
   transform: rotate(135deg);
-  transform-origin: center;
   transition-duration: 200ms;
 }
 

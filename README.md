@@ -255,6 +255,4 @@ render: function() {
 
 ## Implementation Issues / To Dos
 
-Currently, a query for a user's matches will retrieve the matches between that user and all other users in the database. This information hits the MatchStore, which is then responsible for ordering the data and applying the filters. This solution is suboptimal; although it reduces the number of queries to the database, it also results in a large amount of potentially unnecessary data reaching the frontend, and Javascript is less suited to applications such as sorting and filtering data than the Rails PostGres database. This is a prime target for refactoring as the userbase gets larger.
-
 The interstitial page for creating a new message thread is unnecessary and is probably better handled by making the message button a separate React component and applying the same logic currently used on the interstitial page.

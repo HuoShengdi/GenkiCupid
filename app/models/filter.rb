@@ -36,5 +36,4 @@ class Filter < ActiveRecord::Base
       return false
     end
   end
-
 end

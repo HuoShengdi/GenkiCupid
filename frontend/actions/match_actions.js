@@ -24,8 +24,13 @@ const MatchActions = {
     });
   },
   updateFilter(filterData){
-    MatchApiUtil.updateFilter(filterData, this.setFilter);
+    MatchApiUtil.updateFilter(filterData, this.handleFilter.bind(this));
+  },
+  handleFilter(filter){
+    this.setFilter(filter);
+    this.fetchMatches();
   }
+
 };
 
 
