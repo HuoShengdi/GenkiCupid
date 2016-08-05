@@ -9,7 +9,7 @@ class Api::MatchesController < ApplicationController
         filter_options[:gender] = filter.gender
       end
       filter_options[:birthdate] = (Date.today - filter.max_age*365)..(Date.today - filter.min_age*365)
-      @matches = user.matches.joins(:profile).where({users:filter_options})
+      @matches = user.matches.includes(:profile, :user).joins(:profile).where({users:filter_options})
       if filter.distance
         @matches = @matches.select {|match| match.distance_away <= filter.distance}
       end

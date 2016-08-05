@@ -2,6 +2,8 @@ class Match < ActiveRecord::Base
   validates :user_id, :match_id, presence: true
   validates :match_id, uniqueness: {scope: [:user_id]}
 
+  scope :in_distance, -> (distance) {}
+
   belongs_to(
     :user,
     primary_key: :id,
@@ -48,8 +50,9 @@ class Match < ActiveRecord::Base
 
   def self.make_matches(username)
     user = User.find_by_username(username)
+    matched_ids = user.matches.map {|match| match.match_id}
     User.all.each do |match|
-      next if user == match
+      next if user == match || matched_ids.include?(match.id)
       Match.where(user_id: user.id, match_id: match.id).first_or_create
     end
   end
