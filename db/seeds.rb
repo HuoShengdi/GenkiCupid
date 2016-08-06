@@ -543,7 +543,9 @@ Answer.create!([
   {user_id: 34, question_id: 14, option_id: 33},
   {user_id: 34, question_id: 15, option_id: 36},
   {user_id: 34, question_id: 16, option_id: 38},
-  {user_id: 34, question_id: 17, option_id: 42}
+  {user_id: 34, question_id: 17, option_id: 42},
+  {user_id: 2, question_id: 11, option_id: 27},
+  {user_id: 2, question_id: 13, option_id: 32}
 ])
 AnswerOption.create!([
   {question_id: 1, body: "The Sun"},
@@ -754,17 +756,21 @@ Essay.create!([
   {user_id: 34, title: "Favorite Chuck Norris fact", body: "Chuck Norris can write multi-threaded applications with a single thread."},
   {user_id: 34, title: "Favorite Star Wars quote", body: "If you're saying that coming here was a bad idea, I'm starting to agree with you."},
   {user_id: 34, title: "My superhero name and power", body: "Sasquatch X, with the power of Pyrokinesis"},
-  {user_id: 34, title: "I would love to...", body: "enable turn-key models"}
+  {user_id: 34, title: "I would love to...", body: "enable turn-key models"},
+  {user_id: 9, title: "Favorite Pokemon", body: "Pidgeotto"},
+  {user_id: 9, title: "Favorite Chuck Norris fact", body: "When Chuck Norris' code fails to compile the compiler apologises."},
+  {user_id: 9, title: "Favorite Star Wars quote", body: "You will never find a more wretched hive of scum and villainy. We must be cautious."},
+  {user_id: 9, title: "My superhero name and power", body: "Cottonmouth Girl, with the power of Force Fields"},
+  {user_id: 9, title: "I would love to...", body: "whiteboard virtual infomediaries"}
 ])
 Filter.create!([
-  {user_id: 1, gender: "female", orientation: nil, min_age: 16, max_age: 22, location: nil, distance: 25, postal_code: "92127", latitude: nil, longitude: nil},
-  {user_id: 2, gender: "female", orientation: "", min_age: 14, max_age: 20, location: "", distance: nil, postal_code: "92128", latitude: nil, longitude: nil},
-  {user_id: 3, gender: "male", orientation: nil, min_age: 16, max_age: 22, location: nil, distance: 25, postal_code: "92127", latitude: nil, longitude: nil},
-  {user_id: 4, gender: "male", orientation: nil, min_age: 16, max_age: 22, location: nil, distance: 25, postal_code: "92127", latitude: nil, longitude: nil},
-  {user_id: 5, gender: "male", orientation: nil, min_age: 15, max_age: 20, location: nil, distance: 25, postal_code: "92049", latitude: nil, longitude: nil},
-  {user_id: 6, gender: "male", orientation: nil, min_age: 16, max_age: 22, location: nil, distance: 25, postal_code: "92023", latitude: nil, longitude: nil},
-  {user_id: 7, gender: "female", orientation: nil, min_age: 16, max_age: 22, location: nil, distance: 25, postal_code: "92014", latitude: nil, longitude: nil},
-  {user_id: 8, gender: "male", orientation: nil, min_age: 14, max_age: 20, location: nil, distance: 25, postal_code: "92024", latitude: nil, longitude: nil},
+  {user_id: 1, gender: "female", orientation: nil, min_age: 16, max_age: 22, location: "San Diego, CA", distance: 25, postal_code: "92127", latitude: 33.0227476, longitude: -117.1382404},
+  {user_id: 3, gender: "male", orientation: nil, min_age: 16, max_age: 22, location: "San Diego, CA", distance: 25, postal_code: "92127", latitude: 33.0227476, longitude: -117.1382404},
+  {user_id: 4, gender: "male", orientation: nil, min_age: 16, max_age: 22, location: "San Diego, CA", distance: 25, postal_code: "92127", latitude: 33.0227476, longitude: -117.1382404},
+  {user_id: 5, gender: "male", orientation: nil, min_age: 15, max_age: 20, location: "Oceanside, CA", distance: 25, postal_code: "92049", latitude: 33.1950781, longitude: -117.378631},
+  {user_id: 6, gender: "male", orientation: nil, min_age: 16, max_age: 22, location: "Encinitas, CA", distance: 25, postal_code: "92023", latitude: 33.060208, longitude: -117.2657906},
+  {user_id: 7, gender: "female", orientation: nil, min_age: 16, max_age: 22, location: "Del Mar, CA", distance: 25, postal_code: "92014", latitude: 32.9864215, longitude: -117.226457},
+  {user_id: 8, gender: "male", orientation: nil, min_age: 14, max_age: 20, location: "Encinitas, CA", distance: 25, postal_code: "92024", latitude: 33.052083, longitude: -117.2793685},
   {user_id: 10, gender: "female", orientation: nil, min_age: 18, max_age: 24, location: "San Francisco, CA", distance: 25, postal_code: "94103", latitude: 37.7726402, longitude: -122.4099154},
   {user_id: 11, gender: "male", orientation: nil, min_age: 16, max_age: 22, location: "San Francisco, CA", distance: 25, postal_code: "94121", latitude: 37.7813454, longitude: -122.497668},
   {user_id: 12, gender: "female", orientation: nil, min_age: 16, max_age: 22, location: "San Francisco, CA", distance: 25, postal_code: "94122", latitude: 37.7597481, longitude: -122.4750292},
@@ -789,7 +795,9 @@ Filter.create!([
   {user_id: 31, gender: "male", orientation: nil, min_age: 18, max_age: 24, location: "San Francisco, CA", distance: 25, postal_code: "94109", latitude: 37.7929789, longitude: -122.4212424},
   {user_id: 32, gender: "male", orientation: nil, min_age: 18, max_age: 24, location: "San Francisco, CA", distance: 25, postal_code: "94109", latitude: 37.7929789, longitude: -122.4212424},
   {user_id: 33, gender: "male", orientation: "", min_age: 18, max_age: 24, location: "San Francisco, CA", distance: 25, postal_code: "94108", latitude: 37.7909427, longitude: -122.4084994},
-  {user_id: 34, gender: "female", orientation: nil, min_age: 18, max_age: 25, location: "San Francisco, CA", distance: 25, postal_code: "94103", latitude: 37.7726402, longitude: -122.4099154}
+  {user_id: 34, gender: "female", orientation: nil, min_age: 18, max_age: 25, location: "San Francisco, CA", distance: 25, postal_code: "94103", latitude: 37.7726402, longitude: -122.4099154},
+  {user_id: 9, gender: "female", orientation: nil, min_age: 18, max_age: 25, location: "San Francisco, CA", distance: 25, postal_code: "94103", latitude: 37.7726402, longitude: -122.4099154},
+  {user_id: 2, gender: "female", orientation: "", min_age: 16, max_age: 20, location: "San Diego, CA", distance: 25, postal_code: "92128", latitude: 33.0013938, longitude: -117.0735241}
 ])
 Match.create!([
   {user_id: 2, match_id: 1},
@@ -1346,7 +1354,61 @@ Match.create!([
   {user_id: 2, match_id: 31},
   {user_id: 2, match_id: 32},
   {user_id: 2, match_id: 33},
-  {user_id: 2, match_id: 34}
+  {user_id: 2, match_id: 34},
+  {user_id: 2, match_id: 9},
+  {user_id: 1, match_id: 4},
+  {user_id: 1, match_id: 5},
+  {user_id: 1, match_id: 6},
+  {user_id: 1, match_id: 7},
+  {user_id: 1, match_id: 8},
+  {user_id: 1, match_id: 9},
+  {user_id: 1, match_id: 10},
+  {user_id: 1, match_id: 11},
+  {user_id: 1, match_id: 12},
+  {user_id: 1, match_id: 13},
+  {user_id: 1, match_id: 14},
+  {user_id: 1, match_id: 15},
+  {user_id: 1, match_id: 16},
+  {user_id: 1, match_id: 17},
+  {user_id: 1, match_id: 18},
+  {user_id: 1, match_id: 19},
+  {user_id: 1, match_id: 20},
+  {user_id: 1, match_id: 21},
+  {user_id: 1, match_id: 22},
+  {user_id: 1, match_id: 23},
+  {user_id: 1, match_id: 24},
+  {user_id: 1, match_id: 25},
+  {user_id: 1, match_id: 26},
+  {user_id: 1, match_id: 27},
+  {user_id: 1, match_id: 28},
+  {user_id: 1, match_id: 29},
+  {user_id: 1, match_id: 30},
+  {user_id: 1, match_id: 31},
+  {user_id: 1, match_id: 32},
+  {user_id: 1, match_id: 33},
+  {user_id: 1, match_id: 34},
+  {user_id: 20, match_id: 9},
+  {user_id: 20, match_id: 21},
+  {user_id: 20, match_id: 22},
+  {user_id: 20, match_id: 23},
+  {user_id: 20, match_id: 24},
+  {user_id: 20, match_id: 25},
+  {user_id: 20, match_id: 26},
+  {user_id: 20, match_id: 27},
+  {user_id: 20, match_id: 28},
+  {user_id: 20, match_id: 29},
+  {user_id: 20, match_id: 30},
+  {user_id: 20, match_id: 31},
+  {user_id: 20, match_id: 32},
+  {user_id: 20, match_id: 33},
+  {user_id: 20, match_id: 34}
+])
+Message.create!([
+  {author_id: 2, thread_id: 1, body: "HI there! Have we met? You seem a little familiar...\n\nThe name's Josuke, by the way.", read: false},
+  {author_id: 20, thread_id: 1, body: "No way! I know a guy named Josuke who looks almost exactly like you! FREAKY", read: false}
+])
+MessageThread.create!([
+  {sender_id: 2, recipient_id: 20}
 ])
 Question.create!([
   {body: "What do the planets of the solar system revolve around?"},
@@ -1368,14 +1430,14 @@ Question.create!([
   {body: "When men show extra courtesy toward women (opening doors, pulling out chairs, etc.), this is:"}
 ])
 User.create!([
-  {username: "rakuraku15", password_digest: "$2a$10$Om1ZTZTjfbi/3DTMNo/B3.g8ion69G/RNu5vOCaMrNs9vALecXTqa", session_token: "CCPQcAbnuAmVZeZpNdlYLg", avatar_url: "GenkiCupid_Avatars/d3vtyklamxulew3xxplh.jpg", postal_code: "94536", birthdate: "1998-05-15 00:00:00", gender: "male", orientation: "straight", rel_status: "single"},
-  {username: "DiamondJoe", password_digest: "$2a$10$DDdryKDm4UY/K0phU8w9felP/K0Dnn0c3oJ3xPsDTSEN3.CVHq4my", session_token: "K7Y7VP5uOdZqu5SdIQc0ag", avatar_url: "GenkiCupid_Avatars/josuke_higashikata.png", postal_code: "94703", birthdate: "2000-04-04 00:00:00", gender: "male", orientation: "straight", rel_status: "single"},
-  {username: "GoriGurrl", password_digest: "$2a$10$jNaMRcB4//jU50bH88C8WOz6kfTllMkhtXgUvoEY7jIwCgAkYH5pO", session_token: "y1evDUcmW4A4NffDJpYYVA", avatar_url: "GenkiCupid_Avatars/pmpct75kf79wzr0wlk6f.png", postal_code: "94536", birthdate: "1998-07-07 00:00:00", gender: "female", orientation: "straight", rel_status: "single"},
-  {username: "rurin", password_digest: "$2a$10$MwfLswK4bWI6HNoCza5Ltumf/NpQpoOk7gfirWA2Dadiod6xpG5ci", session_token: "HZm5gEwj57w0UsyrSu5NzQ", avatar_url: "GenkiCupid_Avatars/mujjvlubzqqmbro3wfp7.jpg", postal_code: "94539", birthdate: "1998-03-29 00:00:00", gender: "female", orientation: "straight", rel_status: "single"},
-  {username: "tsugumin", password_digest: "$2a$10$7ary2J2AkXOrCxOUQMpIY.gnNf6kudhCIvegOnVUbCEmsYwNspaES", session_token: "ImgnPlet8BX-MpTrKYiALA", avatar_url: "GenkiCupid_Avatars/vnyevur5lzwseeopv5i6.png", postal_code: "94536", birthdate: "1998-08-08 00:00:00", gender: "female", orientation: "straight", rel_status: "single"},
-  {username: "Deradere", password_digest: "$2a$10$ocgwXyCNFznJvRxObT.rkOGXKVfRZ2FiZZwD0XAanLd9F6CtDO5xG", session_token: "niRNHzRJemMHqVZz6aH3Xw", avatar_url: "GenkiCupid_Avatars/gmemqp65ny8ps74vcncq.jpg", postal_code: "94536", birthdate: "1998-07-07 00:00:00", gender: "female", orientation: "straight", rel_status: "single"},
-  {username: "HotMike", password_digest: "$2a$10$LuLJOp6WKxIEEREquXOwEu.XdeHuCm8SNJxnwl.tUSX8FaMQ2esHq", session_token: "zyTWdA-8W1SBODFfQX2jFg", avatar_url: "GenkiCupid_Avatars/lc3l7a8hmazrducvowk0.jpg", postal_code: "94536", birthdate: "1998-01-18 00:00:00", gender: "male", orientation: "straight", rel_status: "single"},
-  {username: "harudera", password_digest: "$2a$10$Fjbpqo5hY2nF1ov/nV19oO3RvAVeAKCVT2EauAoMpJsIjNdnnV3Gu", session_token: "nh_TBWKqTryoenoG-Baa4w", avatar_url: "GenkiCupid_Avatars/l98qpw3deqhxllyo07be.jpg", postal_code: "94536", birthdate: "1999-09-04 00:00:00", gender: "female", orientation: "straight", rel_status: "single"},
+  {username: "rakuraku15", password_digest: "$2a$10$Om1ZTZTjfbi/3DTMNo/B3.g8ion69G/RNu5vOCaMrNs9vALecXTqa", session_token: "CCPQcAbnuAmVZeZpNdlYLg", avatar_url: "GenkiCupid_Avatars/d3vtyklamxulew3xxplh.jpg", postal_code: "94536", birthdate: "1998-05-15 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 37.5641425, longitude: -122.004179, location: "Fremont, CA"},
+  {username: "DiamondJoe", password_digest: "$2a$10$DDdryKDm4UY/K0phU8w9felP/K0Dnn0c3oJ3xPsDTSEN3.CVHq4my", session_token: "ZkW1X9pmjTw3rE1r_YmNYw", avatar_url: "GenkiCupid_Avatars/josuke_higashikata.png", postal_code: "94703", birthdate: "2000-04-04 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 37.8524741, longitude: -122.2738958, location: "Berkeley, CA"},
+  {username: "GoriGurrl", password_digest: "$2a$10$jNaMRcB4//jU50bH88C8WOz6kfTllMkhtXgUvoEY7jIwCgAkYH5pO", session_token: "y1evDUcmW4A4NffDJpYYVA", avatar_url: "GenkiCupid_Avatars/pmpct75kf79wzr0wlk6f.png", postal_code: "94536", birthdate: "1998-07-07 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 37.5641425, longitude: -122.004179, location: "Fremont, CA"},
+  {username: "rurin", password_digest: "$2a$10$MwfLswK4bWI6HNoCza5Ltumf/NpQpoOk7gfirWA2Dadiod6xpG5ci", session_token: "HZm5gEwj57w0UsyrSu5NzQ", avatar_url: "GenkiCupid_Avatars/mujjvlubzqqmbro3wfp7.jpg", postal_code: "94539", birthdate: "1998-03-29 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 37.5148444, longitude: -121.9131761, location: "Fremont, CA"},
+  {username: "tsugumin", password_digest: "$2a$10$7ary2J2AkXOrCxOUQMpIY.gnNf6kudhCIvegOnVUbCEmsYwNspaES", session_token: "ImgnPlet8BX-MpTrKYiALA", avatar_url: "GenkiCupid_Avatars/vnyevur5lzwseeopv5i6.png", postal_code: "94536", birthdate: "1998-08-08 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 37.5641425, longitude: -122.004179, location: "Fremont, CA"},
+  {username: "Deradere", password_digest: "$2a$10$ocgwXyCNFznJvRxObT.rkOGXKVfRZ2FiZZwD0XAanLd9F6CtDO5xG", session_token: "niRNHzRJemMHqVZz6aH3Xw", avatar_url: "GenkiCupid_Avatars/gmemqp65ny8ps74vcncq.jpg", postal_code: "94536", birthdate: "1998-07-07 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 37.5641425, longitude: -122.004179, location: "Fremont, CA"},
+  {username: "HotMike", password_digest: "$2a$10$LuLJOp6WKxIEEREquXOwEu.XdeHuCm8SNJxnwl.tUSX8FaMQ2esHq", session_token: "zyTWdA-8W1SBODFfQX2jFg", avatar_url: "GenkiCupid_Avatars/lc3l7a8hmazrducvowk0.jpg", postal_code: "94536", birthdate: "1998-01-18 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 37.5641425, longitude: -122.004179, location: "Fremont, CA"},
+  {username: "harudera", password_digest: "$2a$10$Fjbpqo5hY2nF1ov/nV19oO3RvAVeAKCVT2EauAoMpJsIjNdnnV3Gu", session_token: "nh_TBWKqTryoenoG-Baa4w", avatar_url: "GenkiCupid_Avatars/l98qpw3deqhxllyo07be.jpg", postal_code: "94536", birthdate: "1999-09-04 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 37.5641425, longitude: -122.004179, location: "Fremont, CA"},
   {username: "lodsofemone", password_digest: "$2a$10$At8rQEgN1x9k5oYY8AZwaeOe50FPXhJ4SMoulJLWJY1h6qYKw.Vkq", session_token: "j_GLfxnxUV7WVpDJa0kHUg", avatar_url: "GenkiCupid_Avatars/xl7kaub0ifneuefasfah.jpg", postal_code: "94103", birthdate: "1995-08-08 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 37.7726402, longitude: -122.4099154, location: "San Francisco, CA"},
   {username: "IsRyudo", password_digest: "$2a$10$Pybvohp8wRb7BvQujBOrC.PqKuM1VBqE6XY9KP.ulJjH29fAeapFa", session_token: "mSDwUiL9WBy7_wBKMzZXNg", avatar_url: "GenkiCupid_Avatars/khyatod0s6fg2uqfj7xi.jpg", postal_code: "94121", birthdate: "1998-03-24 00:00:00", gender: "male", orientation: "gay", rel_status: "single", latitude: 37.7813454, longitude: -122.497668, location: "San Francisco, CA"},
   {username: "cherryai", password_digest: "$2a$10$6XtygFUehMU878Vy6Ayu8uo/ftyZ7LZsMSo9Td.Hs/hYJI4OBsXaq", session_token: "OHFbN95RWolK9orpzX_OWA", avatar_url: "GenkiCupid_Avatars/zkvisav4yofrxdpukgnj.jpg", postal_code: "94118", birthdate: "2000-05-05 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 37.7822891, longitude: -122.463708, location: "San Francisco, CA"},
@@ -1387,7 +1449,7 @@ User.create!([
   {username: "EmiyaShirou", password_digest: "$2a$10$ZfwVq.cRnrMjuCuQBFrvYu807WQjUwXfBohL1KsfU2hOM/wWh4BzK", session_token: "OOhDvpK2y6GtPF1nZinSUA", avatar_url: "GenkiCupid_Avatars/bk0mfedss0w90zddylgc.jpg", postal_code: "94121", birthdate: "1998-12-07 00:00:00", gender: "male", orientation: "bisexual", rel_status: "single", latitude: 37.7813454, longitude: -122.497668, location: "San Francisco, CA"},
   {username: "ElMelloiII", password_digest: "$2a$10$6YGLP8xQIvwO4B4eO3EBM.Pthybp/lXYiPCB8Im80ySacN5/VilFO", session_token: "eJ43ooYwS7EVY-WIHRxu-g", avatar_url: "GenkiCupid_Avatars/y8ueyh40p4gu3tnyqwvd.jpg", postal_code: "94114", birthdate: "2000-04-16 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 37.7561438, longitude: -122.4325682, location: "San Francisco, CA"},
   {username: "billionbucks", password_digest: "$2a$10$L0lB912Yn.muirPV/gOUlu9IfJe4BEQm2TozK.ITsJ1ahpfTXVPJS", session_token: "6_wGidNTtUQowotUJw56XA", avatar_url: "GenkiCupid_Avatars/kjmcbmsfmurtzmchwpf4.jpg", postal_code: "94702", birthdate: "1999-10-09 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 37.8680576, longitude: -122.2852374, location: "Berkeley, CA"},
-  {username: "PaisleyPark", password_digest: "$2a$10$zhCgMMaanli3eMi5qQwtXuUXnHshRwkFJfCLNcb0jnU6kmIDsVoui", session_token: "c6kRbcCRvOap3CNhrGvcSg", avatar_url: "GenkiCupid_Avatars/wenv4rv2wwagur7oidd6.jpg", postal_code: "94710", birthdate: "1999-06-06 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 37.8645848, longitude: -122.2965778, location: "Berkeley, CA"},
+  {username: "PaisleyPark", password_digest: "$2a$10$zhCgMMaanli3eMi5qQwtXuUXnHshRwkFJfCLNcb0jnU6kmIDsVoui", session_token: "Jwaeg19e-AOKrbZlyMBjNQ", avatar_url: "GenkiCupid_Avatars/wenv4rv2wwagur7oidd6.jpg", postal_code: "94710", birthdate: "1999-06-06 00:00:00", gender: "female", orientation: "straight", rel_status: "single", latitude: 37.8645848, longitude: -122.2965778, location: "Berkeley, CA"},
   {username: "LoveDeluxe", password_digest: "$2a$10$f3q02t4Um.cRAYmYksUzQuc4GOa78.Ho3kgQ1EoEfNj7lgJ.ARZpe", session_token: "_tgHwMhMjVZ-2gE8eW4zdQ", avatar_url: "GenkiCupid_Avatars/eqnfhqdhgh7tjqdjtkgu.jpg", postal_code: "94706", birthdate: "1999-06-23 00:00:00", gender: "female", orientation: "straight", rel_status: "dating", latitude: 37.8883952, longitude: -122.2965778, location: "Albany, CA"},
   {username: "hinata251", password_digest: "$2a$10$1M9QlPnZ1ZdtfpR6OQkY/eGo8kIqc3raDc8oxCfFMrhPZwkJ5Q2We", session_token: "WjtMwIYyBXZ--TRHeOTc0A", avatar_url: "GenkiCupid_Avatars/kvtb3wghk8zvijuwxivs.jpg", postal_code: "94804", birthdate: "1999-07-22 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 37.9158152, longitude: -122.3390936, location: "Richmond, CA"},
   {username: "TigerEye", password_digest: "$2a$10$krLQiKuIzVUD021L5yQ0jOxcdfNOSFdf/scwYrgQpOETDvTp6dWRi", session_token: "8l3JB0riZPQ0iBZDqsyQlw", avatar_url: "GenkiCupid_Avatars/igaaajwthwvmzidzmugb.png", postal_code: "94803", birthdate: "1999-06-08 00:00:00", gender: "male", orientation: "straight", rel_status: "single", latitude: 37.9587253, longitude: -122.2767313, location: "El Sobrante, CA"},

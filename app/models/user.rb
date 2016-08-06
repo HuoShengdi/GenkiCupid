@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   attr_reader :password
 
+  default_scope { order('id ASC') }
+
   after_initialize :ensure_session_token, :ensure_avatar
   after_save :ensure_filter_default
   validates :password, length: {minimum: 6, allow_nil: true}

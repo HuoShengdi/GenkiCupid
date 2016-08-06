@@ -31,4 +31,23 @@ class Essay < ActiveRecord::Base
     end
   end
 
+  def self.generate_faker_essays(user_id)
+    ESSAY_TITLES.each_with_index do |title, i|
+      body = ""
+      case i
+      when 0
+        body = Faker::Pokemon.name
+      when 1
+        body = Faker::ChuckNorris.fact
+      when 2
+        body = Faker::StarWars.quote
+      when 3
+        body = Faker::Superhero.name + ", with the power of " + Faker::Superhero.power
+      when 4
+        body = Faker::Company.bs
+      end
+      Essay.where({user_id: user_id, title: title, body: body}).first_or_create
+    end
+  end
+
 end
